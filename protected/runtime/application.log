@@ -2492,3 +2492,171 @@ Stack trace:
 REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=CatalogoRuta/admin
 HTTP_REFERER=http://localhost/~ruth/Boleteria_Cariamanga/index.php?r=Cajero/admin
 ---
+2014/11/25 13:59:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Admin/login".' in /home/ruth/public_html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Admin/login')
+#1 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=Admin/login
+---
+2014/11/25 14:00:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Admin/cliente".' in /home/ruth/public_html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Admin/cliente')
+#1 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=Admin/cliente
+---
+2014/11/25 14:00:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "cliente".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('cliente')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('cliente')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Administrador/c...')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=Administrador/cliente
+---
+2014/11/25 14:00:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "cliente".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('cliente')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('cliente')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Administrador/c...')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=Administrador/cliente
+---
+2014/11/25 14:19:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ReservaOficina/...')
+#9 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=ReservaOficina/admin
+---
+2014/11/25 14:19:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Venta/admin')
+#9 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=Venta/admin
+---
+2014/11/25 14:21:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ReservaOficina/...')
+#9 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=ReservaOficina/admin
+HTTP_REFERER=http://localhost/~ruth/Boleteria_Cariamanga/index.php?r=Venta/admin
+---
+2014/11/25 14:24:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ReservaOficina/...')
+#9 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=ReservaOficina/admin
+HTTP_REFERER=http://localhost/~ruth/Boleteria_Cariamanga/index.php?r=Venta/admin
+---
+2014/11/25 14:24:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ReservaOficina/...')
+#9 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=ReservaOficina/admin
+---
+2014/11/25 14:25:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ReservaOficina/...')
+#9 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=ReservaOficina/admin
+HTTP_REFERER=http://localhost/~ruth/Boleteria_Cariamanga/index.php?r=Venta/admin
+---
+2014/11/25 14:36:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('CambioBoleto/ad...')
+#9 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=CambioBoleto/admin
+HTTP_REFERER=http://localhost/~ruth/Boleteria_Cariamanga/index.php?r=Devolucion/admin
+---
+2014/11/25 14:42:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Cliente/admin')
+#9 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=Cliente/admin
+---
