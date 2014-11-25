@@ -96,7 +96,7 @@ class CambioBoleto extends CActiveRecord
 		$criteria->compare('hora',$this->hora,true);
 		$criteria->compare('total_anterior',$this->total_anterior);
 		$criteria->compare('total_nuevo',$this->total_nuevo);
-		$criteria->compare('idcajero',$this->idcajero);
+		$criteria->compare('idcajero',Yii::app()->session['id']);
 		$criteria->compare('idventa',$this->idventa);
 
 		return new CActiveDataProvider($this, array(

@@ -89,7 +89,7 @@ class Cancelacion extends CActiveRecord
 		$criteria->compare('idcancelacion',$this->idcancelacion);
 		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('hora',$this->hora,true);
-		$criteria->compare('idcliente',$this->idcliente);
+		$criteria->compare('idcliente',Yii::app()->session['id']);
 		$criteria->compare('idcompra',$this->idcompra);
 
 		return new CActiveDataProvider($this, array(

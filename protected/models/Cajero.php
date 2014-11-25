@@ -100,7 +100,7 @@ class Cajero extends CActiveRecord
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('estado',$this->estado,true);
-		$criteria->compare('idadministrador',$this->idadministrador);
+		$criteria->compare('idadministrador',Yii::app()->session['id']);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

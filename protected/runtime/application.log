@@ -2660,3 +2660,241 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=Cliente/admin
 ---
+2014/11/25 15:06:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Ventas".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('Ventas')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('Ventas')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Cajero/Ventas')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=Cajero/Ventas
+---
+2014/11/25 15:07:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "list".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('list')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('list')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Cajero/list')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=Cajero/list
+---
+2014/11/25 15:31:52 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`reserva_oficina`, CONSTRAINT `fk_reserva_oficina_cajero1` FOREIGN KEY (`idcajero`) REFERENCES `cajero` (`idcajero`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `reserva_oficina` (`fecha`, `hora`, `total`, `idcajero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/ReservaOficinaController.php (73)
+in /home/ruth/public_html/Boleteria_Cariamanga/index.php (13)
+2014/11/25 15:31:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`reserva_oficina`, CONSTRAINT `fk_reserva_oficina_cajero1` FOREIGN KEY (`idcajero`) REFERENCES `cajero` (`idcajero`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `reserva_oficina` (`fecha`, `hora`, `total`, `idcajero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /home/ruth/public_html/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/ReservaOficinaController.php(73): CActiveRecord->save()
+#3 /home/ruth/public_html/yii/framework/web/actions/CInlineAction.php(49): ReservaOficinaController->actionCreate()
+#4 /home/ruth/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('reservaOficina/...')
+#14 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=reservaOficina/create
+HTTP_REFERER=http://localhost/~ruth/Boleteria_Cariamanga/index.php?r=reservaOficina/create
+---
+2014/11/25 15:33:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('login')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Cajero/login')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=Cajero/login
+---
+2014/11/25 15:34:14 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`cajero`, CONSTRAINT `fk_cajero_administrador1` FOREIGN KEY (`idadministrador`) REFERENCES `administrador` (`idadministrador`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `cajero` (`nombre`, `email`, `password`, `estado`, `idadministrador`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/CajeroController.php (73)
+in /home/ruth/public_html/Boleteria_Cariamanga/index.php (13)
+2014/11/25 15:34:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`cajero`, CONSTRAINT `fk_cajero_administrador1` FOREIGN KEY (`idadministrador`) REFERENCES `administrador` (`idadministrador`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `cajero` (`nombre`, `email`, `password`, `estado`, `idadministrador`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/ruth/public_html/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/CajeroController.php(73): CActiveRecord->save()
+#3 /home/ruth/public_html/yii/framework/web/actions/CInlineAction.php(49): CajeroController->actionCreate()
+#4 /home/ruth/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cajero/create')
+#14 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=cajero/create
+HTTP_REFERER=http://localhost/~ruth/Boleteria_Cariamanga/index.php?r=cajero/create
+---
+2014/11/25 15:34:32 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`cajero`, CONSTRAINT `fk_cajero_administrador1` FOREIGN KEY (`idadministrador`) REFERENCES `administrador` (`idadministrador`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `cajero` (`nombre`, `email`, `password`, `estado`, `idadministrador`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/CajeroController.php (73)
+in /home/ruth/public_html/Boleteria_Cariamanga/index.php (13)
+2014/11/25 15:34:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`cajero`, CONSTRAINT `fk_cajero_administrador1` FOREIGN KEY (`idadministrador`) REFERENCES `administrador` (`idadministrador`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `cajero` (`nombre`, `email`, `password`, `estado`, `idadministrador`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/ruth/public_html/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/CajeroController.php(73): CActiveRecord->save()
+#3 /home/ruth/public_html/yii/framework/web/actions/CInlineAction.php(49): CajeroController->actionCreate()
+#4 /home/ruth/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cajero/create')
+#14 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=cajero/create
+HTTP_REFERER=http://localhost/~ruth/Boleteria_Cariamanga/index.php?r=cajero/create
+---
+2014/11/25 15:36:03 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`cajero`, CONSTRAINT `fk_cajero_administrador1` FOREIGN KEY (`idadministrador`) REFERENCES `administrador` (`idadministrador`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `cajero` (`nombre`, `email`, `password`, `estado`, `idadministrador`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/CajeroController.php (73)
+in /home/ruth/public_html/Boleteria_Cariamanga/index.php (13)
+2014/11/25 15:36:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`cajero`, CONSTRAINT `fk_cajero_administrador1` FOREIGN KEY (`idadministrador`) REFERENCES `administrador` (`idadministrador`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `cajero` (`nombre`, `email`, `password`, `estado`, `idadministrador`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/ruth/public_html/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/CajeroController.php(73): CActiveRecord->save()
+#3 /home/ruth/public_html/yii/framework/web/actions/CInlineAction.php(49): CajeroController->actionCreate()
+#4 /home/ruth/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cajero/create')
+#14 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=cajero/create
+HTTP_REFERER=http://localhost/~ruth/Boleteria_Cariamanga/index.php?r=cajero/create
+---
+2014/11/25 15:43:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Administrdor/admin".' in /home/ruth/public_html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Administrdor/ad...')
+#1 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=Administrdor/admin
+---
+2014/11/25 15:45:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`cajero`, CONSTRAINT `fk_cajero_administrador1` FOREIGN KEY (`idadministrador`) REFERENCES `administrador` (`idadministrador`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `cajero` (`nombre`, `email`, `password`, `estado`, `idadministrador`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/CajeroController.php (73)
+in /home/ruth/public_html/Boleteria_Cariamanga/index.php (13)
+2014/11/25 15:45:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`cajero`, CONSTRAINT `fk_cajero_administrador1` FOREIGN KEY (`idadministrador`) REFERENCES `administrador` (`idadministrador`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `cajero` (`nombre`, `email`, `password`, `estado`, `idadministrador`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/ruth/public_html/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/CajeroController.php(73): CActiveRecord->save()
+#3 /home/ruth/public_html/yii/framework/web/actions/CInlineAction.php(49): CajeroController->actionCreate()
+#4 /home/ruth/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cajero/create')
+#14 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=cajero/create
+HTTP_REFERER=http://localhost/~ruth/Boleteria_Cariamanga/index.php?r=cajero/create
+---
+2014/11/25 15:49:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`compra`, CONSTRAINT `fk_compra_usuario1` FOREIGN KEY (`idcliente`) REFERENCES `cliente` (`idusuario`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `compra` (`fecha`, `hora`, `total`, `estado`, `idcliente`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/CompraController.php (73)
+in /home/ruth/public_html/Boleteria_Cariamanga/index.php (13)
+2014/11/25 15:49:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`compra`, CONSTRAINT `fk_compra_usuario1` FOREIGN KEY (`idcliente`) REFERENCES `cliente` (`idusuario`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `compra` (`fecha`, `hora`, `total`, `estado`, `idcliente`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/ruth/public_html/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/CompraController.php(73): CActiveRecord->save()
+#3 /home/ruth/public_html/yii/framework/web/actions/CInlineAction.php(49): CompraController->actionCreate()
+#4 /home/ruth/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('compra/create')
+#14 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=compra/create
+HTTP_REFERER=http://localhost/~ruth/Boleteria_Cariamanga/index.php?r=compra/create
+---
+2014/11/25 15:55:38 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`compra`, CONSTRAINT `fk_compra_usuario1` FOREIGN KEY (`idcliente`) REFERENCES `cliente` (`idusuario`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `compra` (`fecha`, `hora`, `total`, `estado`, `idcliente`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/CompraController.php (73)
+in /home/ruth/public_html/Boleteria_Cariamanga/index.php (13)
+2014/11/25 15:55:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`compra`, CONSTRAINT `fk_compra_usuario1` FOREIGN KEY (`idcliente`) REFERENCES `cliente` (`idusuario`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `compra` (`fecha`, `hora`, `total`, `estado`, `idcliente`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/ruth/public_html/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/CompraController.php(73): CActiveRecord->save()
+#3 /home/ruth/public_html/yii/framework/web/actions/CInlineAction.php(49): CompraController->actionCreate()
+#4 /home/ruth/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('compra/create')
+#14 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=compra/create
+HTTP_REFERER=http://localhost/~ruth/Boleteria_Cariamanga/index.php?r=compra/create
+---
+2014/11/25 15:58:46 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`compra`, CONSTRAINT `fk_compra_usuario1` FOREIGN KEY (`idcliente`) REFERENCES `cliente` (`idusuario`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `compra` (`fecha`, `hora`, `total`, `estado`, `idcliente`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/CompraController.php (73)
+in /home/ruth/public_html/Boleteria_Cariamanga/index.php (13)
+2014/11/25 15:58:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`compra`, CONSTRAINT `fk_compra_usuario1` FOREIGN KEY (`idcliente`) REFERENCES `cliente` (`idusuario`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `compra` (`fecha`, `hora`, `total`, `estado`, `idcliente`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/ruth/public_html/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/ruth/public_html/Boleteria_Cariamanga/protected/controllers/CompraController.php(73): CActiveRecord->save()
+#3 /home/ruth/public_html/yii/framework/web/actions/CInlineAction.php(49): CompraController->actionCreate()
+#4 /home/ruth/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('compra/create')
+#14 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/ruth/public_html/Boleteria_Cariamanga/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?r=compra/create
+HTTP_REFERER=http://localhost/~ruth/Boleteria_Cariamanga/index.php?r=compra/create
+---

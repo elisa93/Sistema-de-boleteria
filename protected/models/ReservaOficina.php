@@ -90,7 +90,7 @@ class ReservaOficina extends CActiveRecord
 		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('hora',$this->hora,true);
 		$criteria->compare('total',$this->total,true);
-		$criteria->compare('idcajero',$this->idcajero);
+		$criteria->compare('idcajero',Yii::app()->session['id']);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -29,7 +29,7 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-			//	array('label'=>'Home', 'url'=>array('/site/index')),
+				array('label'=>'Inicio', 'url'=>array('/site/index')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
                                 array('label'=>'Administrar Cajeros', 'url'=>array('/Cajero/admin'), 'visible'=>!Yii::app()->user->isGuest),
                                 array('label'=>'Administrar Rutas', 'url'=>array('/CatalogoRuta/admin'), 'visible'=>!Yii::app()->user->isGuest),

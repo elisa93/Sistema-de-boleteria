@@ -29,9 +29,9 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
+				array('label'=>'Inicio', 'url'=>array('/site/index')),
+				array('label'=>'Acerca de', 'url'=>array('/site/page', 'view'=>'about')),
+				array('label'=>'Sugerencias', 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 			array('label'=>'Catalogo Rutas', 'url'=>array('/CatalogoRuta/admin'), 'visible'=>!Yii::app()->user->isGuest),
 			array('label'=>'Compras', 'url'=>array('/compra/admin'), 'visible'=>!Yii::app()->user->isGuest),

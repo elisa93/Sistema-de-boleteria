@@ -89,7 +89,7 @@ class Devolucion extends CActiveRecord
 		$criteria->compare('iddevolucion',$this->iddevolucion);
 		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('hora',$this->hora,true);
-		$criteria->compare('idcajero',$this->idcajero);
+		$criteria->compare('idcajero',Yii::app()->session['id']);
 		$criteria->compare('venta_idventa',$this->venta_idventa);
 
 		return new CActiveDataProvider($this, array(

@@ -98,7 +98,7 @@ class UnidadTransporte extends CActiveRecord
 		$criteria->compare('capacidad',$this->capacidad,true);
 		$criteria->compare('estado',$this->estado,true);
 		$criteria->compare('idhorario_viaje',$this->idhorario_viaje);
-		$criteria->compare('idadministrador',$this->idadministrador);
+		$criteria->compare('idadministrador',Yii::app()->session['id']);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
