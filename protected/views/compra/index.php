@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Compra', 'url'=>array('create')),
-	array('label'=>'Manage Compra', 'url'=>array('admin')),
+	array('label'=>'Crear Compra', 'url'=>array('create')),
+	array('label'=>'Compra', 'url'=>array('admin')),
 );
 ?>
 

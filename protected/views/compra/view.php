@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Compra', 'url'=>array('index')),
-	array('label'=>'Create Compra', 'url'=>array('create')),
-	array('label'=>'Update Compra', 'url'=>array('update', 'id'=>$model->idcompra)),
-	array('label'=>'Delete Compra', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idcompra),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Compra', 'url'=>array('admin')),
+	array('label'=>'Lista Compras', 'url'=>array('index')),
+	array('label'=>'Crear Compra', 'url'=>array('create')),
+	array('label'=>'Modificar Compra', 'url'=>array('update', 'id'=>$model->idcompra)),
+	array('label'=>'Eliminar Compra', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idcompra),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Lista Compras', 'url'=>array('admin')),
 );
 ?>
 

@@ -25,7 +25,7 @@
 	<?php echo CHtml::encode($data->estado); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idcliente')); ?>:</b>
+	 <b><?php echo CHtml::encode($data->getAttributeLabel('idcliente')); ?>:</b>
 	<?php echo CHtml::encode($data->idcliente); ?>
 	<br />
 
