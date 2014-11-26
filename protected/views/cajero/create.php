@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Cajeros'=>array('index'),
-	'Create',
+	'Nuevo',
 );
 
 $this->menu=array(
@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Cajero</h1>
+<h1>Registrar Nuevo Cajero</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

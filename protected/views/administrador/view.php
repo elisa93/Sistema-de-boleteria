@@ -3,7 +3,7 @@
 /* @var $model Administrador */
 
 $this->breadcrumbs=array(
-	'Administradors'=>array('index'),
+	'Administrador'=>array('index'),
 	$model->idadministrador,
 );
 

@@ -4,15 +4,15 @@
 
 $this->breadcrumbs=array(
 	'Unidad Transportes'=>array('index'),
-	'Create',
+	'Nueva U. de Transporte',
 );
 
 $this->menu=array(
-	array('label'=>'List UnidadTransporte', 'url'=>array('index')),
-	array('label'=>'Manage UnidadTransporte', 'url'=>array('admin')),
+	array('label'=>'Lista de U. de Transporte', 'url'=>array('index')),
+	array('label'=>'Administrar U. de Transporte', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create UnidadTransporte</h1>
+<h1>Registrar Nueva Unidad de Transporte</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

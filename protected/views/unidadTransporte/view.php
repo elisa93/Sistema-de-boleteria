@@ -3,7 +3,7 @@
 /* @var $model UnidadTransporte */
 
 $this->breadcrumbs=array(
-	'Unidad Transportes'=>array('index'),
+	'Unidad Transporte'=>array('index'),
 	$model->idunidad_transaporte,
 );
 
@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View UnidadTransporte #<?php echo $model->idunidad_transaporte; ?></h1>
+<h1>Unidad de Transporte #<?php echo $model->idunidad_transaporte; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

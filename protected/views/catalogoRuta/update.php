@@ -5,7 +5,7 @@
 $this->breadcrumbs=array(
 	'Catalogo Rutas'=>array('index'),
 	$model->idcatalogo_ruta=>array('view','id'=>$model->idcatalogo_ruta),
-	'Update',
+	'Modificar',
 );
 
 $this->menu=array(
@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update CatalogoRuta <?php echo $model->idcatalogo_ruta; ?></h1>
+<h1>Modificar Catalogo Ruta <?php echo $model->idcatalogo_ruta; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

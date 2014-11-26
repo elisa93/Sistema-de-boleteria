@@ -3,9 +3,9 @@
 /* @var $model Administrador */
 
 $this->breadcrumbs=array(
-	'Administradors'=>array('index'),
+	'Administrador'=>array('index'),
 	$model->idadministrador=>array('view','id'=>$model->idadministrador),
-	'Update',
+	'Modificar',
 );
 
 $this->menu=array(
@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Administrador <?php echo $model->idadministrador; ?></h1>
+<h1>Actualizar datos de Administrador <?php echo $model->idadministrador; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

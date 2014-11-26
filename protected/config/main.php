@@ -56,7 +56,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=boleteria_cariamanga',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'ruth',
+			'password' => 'fabricio',
 			'charset' => 'utf8',
 		),
 		

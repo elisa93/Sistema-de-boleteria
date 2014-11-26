@@ -7,12 +7,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Cajero', 'url'=>array('create')),
-	array('label'=>'Manage Cajero', 'url'=>array('admin')),
+	array('label'=>'Crear  Cajero', 'url'=>array('create')),
+	array('label'=>'Administar Cajeros', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Cajeros</h1>
+<h1>Lista de Cajeros</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

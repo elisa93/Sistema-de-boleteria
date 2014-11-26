@@ -29,12 +29,12 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Inicio', 'url'=>array('/site/index')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Inicio', 'url'=>array('/siteAdministrador/index')),
+				array('label'=>'Login', 'url'=>array('/siteAdministrador/login'), 'visible'=>Yii::app()->user->isGuest),
                                 array('label'=>'Administrar Cajeros', 'url'=>array('/Cajero/admin'), 'visible'=>!Yii::app()->user->isGuest),
                                 array('label'=>'Administrar Rutas', 'url'=>array('/CatalogoRuta/admin'), 'visible'=>!Yii::app()->user->isGuest),
                                 array('label'=>'Administrar Unidades de Trans.', 'url'=>array('/UnidadTransporte/admin'), 'visible'=>!Yii::app()->user->isGuest),      	
-                                array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+                                array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/siteAdministrador/logout'), 'visible'=>!Yii::app()->user->isGuest)
                             
 			),
 		)); ?>

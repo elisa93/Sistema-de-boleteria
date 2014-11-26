@@ -16,16 +16,16 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Cajero #<?php echo $model->idcajero; ?></h1>
+<h1> Cajero #<?php echo $model->idcajero; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'idcajero',
+	//	'idcajero',
 		'nombre',
 		'email',
 		'password',
 		'estado',
-		'idadministrador',
+	//	'idadministrador',
 	),
 )); ?>

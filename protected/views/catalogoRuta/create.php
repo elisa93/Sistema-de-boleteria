@@ -4,15 +4,15 @@
 
 $this->breadcrumbs=array(
 	'Catalogo Rutas'=>array('index'),
-	'Create',
+	'Nueva ruta',
 );
 
 $this->menu=array(
-	array('label'=>'List CatalogoRuta', 'url'=>array('index')),
-	array('label'=>'Manage CatalogoRuta', 'url'=>array('admin')),
+	array('label'=>'Lista de Rutas', 'url'=>array('index')),
+	array('label'=>'Administrar Rutas', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create CatalogoRuta</h1>
+<h1>Crear Nueva Ruta</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

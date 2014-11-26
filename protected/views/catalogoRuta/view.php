@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View CatalogoRuta #<?php echo $model->idcatalogo_ruta; ?></h1>
+<h1> Catalogo s #<?php echo $model->idcatalogo_ruta; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
