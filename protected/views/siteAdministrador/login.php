@@ -15,7 +15,7 @@ $this->breadcrumbs=array(
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'login-form',
+	'id'=>'adminlogin-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
@@ -53,7 +53,7 @@ $this->breadcrumbs=array(
 <?php $this->endWidget(); ?>
          <?php $this->widget('zii.widgets.CMenu',array(
       'items'=>array(
-        array('label'=>Yii::t('traductor','Registrarse'), 'url'=>array('/cliente/create')),
+        array('label'=>Yii::t('traductor','Registrarse como admin.'), 'url'=>array('/administrador/create')),
          ),
     )); ?>
 </div>
