@@ -33,7 +33,7 @@ class AdminLoginForm extends CFormModel {
      */
     public function attributeLabels() {
         return array(
-            'rememberMe' => 'Remember me next time',
+            'rememberMe' => 'Recordarme',
         );
     }
 
@@ -45,7 +45,7 @@ class AdminLoginForm extends CFormModel {
         if (!$this->hasErrors()) {
             $this->_identity = new AdminIdentity($this->username, $this->password);
             if (!$this->_identity->authenticate())
-                $this->addError('password', 'Incorrect username or password.');
+                $this->addError('password', 'Usuario o contraseña incorrecta');
         }
     }
 
