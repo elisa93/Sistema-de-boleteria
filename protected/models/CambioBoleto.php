@@ -16,102 +16,97 @@
  * @property Cajero $idcajero0
  * @property Venta $idventa0
  */
-class CambioBoleto extends CActiveRecord
-{
-	/**
-	 * @return string the associated database table name
-	 */
-	public function tableName()
-	{
-		return 'cambio_boleto';
-	}
+class CambioBoleto extends CActiveRecord {
 
-	/**
-	 * @return array validation rules for model attributes.
-	 */
-	public function rules()
-	{
-		// NOTE: you should only define rules for those attributes that
-		// will receive user inputs.
-		return array(
-			array('fecha, hora, total_anterior, total_nuevo, idcajero, idventa', 'required'),
-			array('idcajero, idventa', 'numerical', 'integerOnly'=>true),
-			array('total_anterior, total_nuevo', 'numerical'),
-			array('fecha, hora', 'length', 'max'=>45),
-			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('idcambio_boleto, fecha, hora, total_anterior, total_nuevo, idcajero, idventa', 'safe', 'on'=>'search'),
-		);
-	}
+    /**
+     * @return string the associated database table name
+     */
+    public function tableName() {
+        return 'cambio_boleto';
+    }
 
-	/**
-	 * @return array relational rules.
-	 */
-	public function relations()
-	{
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
-		return array(
-			'idcajero0' => array(self::BELONGS_TO, 'Cajero', 'idcajero'),
-			'idventa0' => array(self::BELONGS_TO, 'Venta', 'idventa'),
-		);
-	}
+    /**
+     * @return array validation rules for model attributes.
+     */
+    public function rules() {
+        // NOTE: you should only define rules for those attributes that
+        // will receive user inputs.
+        return array(
+            array('fecha, hora, total_anterior, total_nuevo, idcajero, idventa', 'required'),
+            array('idcajero, idventa', 'numerical', 'integerOnly' => true),
+            array('total_anterior, total_nuevo', 'numerical'),
+            array('fecha, hora', 'length', 'max' => 45),
+            // The following rule is used by search().
+            // @todo Please remove those attributes that should not be searched.
+            array('idcambio_boleto, fecha, hora, total_anterior, total_nuevo, idcajero, idventa', 'safe', 'on' => 'search'),
+        );
+    }
 
-	/**
-	 * @return array customized attribute labels (name=>label)
-	 */
-	public function attributeLabels()
-	{
-		return array(
-			'idcambio_boleto' => 'Idcambio Boleto',
-			'fecha' => 'Fecha',
-			'hora' => 'Hora',
-			'total_anterior' => 'Total Anterior',
-			'total_nuevo' => 'Total Nuevo',
-			'idcajero' => 'Idcajero',
-			'idventa' => 'Idventa',
-		);
-	}
+    /**
+     * @return array relational rules.
+     */
+    public function relations() {
+        // NOTE: you may need to adjust the relation name and the related
+        // class name for the relations automatically generated below.
+        return array(
+            'idcajero0' => array(self::BELONGS_TO, 'Cajero', 'idcajero'),
+            'idventa0' => array(self::BELONGS_TO, 'Venta', 'idventa'),
+        );
+    }
 
-	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
-	 * Typical usecase:
-	 * - Initialize the model fields with values from filter form.
-	 * - Execute this method to get CActiveDataProvider instance which will filter
-	 * models according to data in model fields.
-	 * - Pass data provider to CGridView, CListView or any similar widget.
-	 *
-	 * @return CActiveDataProvider the data provider that can return the models
-	 * based on the search/filter conditions.
-	 */
-	public function search()
-	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
+    /**
+     * @return array customized attribute labels (name=>label)
+     */
+    public function attributeLabels() {
+        return array(
+            'idcambio_boleto' => 'Idcambio Boleto',
+            'fecha' => 'Fecha',
+            'hora' => 'Hora',
+            'total_anterior' => 'Total Anterior',
+            'total_nuevo' => 'Total Nuevo',
+            'idcajero' => 'Idcajero',
+            'idventa' => 'Idventa',
+        );
+    }
 
-		$criteria=new CDbCriteria;
+    /**
+     * Retrieves a list of models based on the current search/filter conditions.
+     *
+     * Typical usecase:
+     * - Initialize the model fields with values from filter form.
+     * - Execute this method to get CActiveDataProvider instance which will filter
+     * models according to data in model fields.
+     * - Pass data provider to CGridView, CListView or any similar widget.
+     *
+     * @return CActiveDataProvider the data provider that can return the models
+     * based on the search/filter conditions.
+     */
+    public function search() {
+        // @todo Please modify the following code to remove attributes that should not be searched.
 
-		$criteria->compare('idcambio_boleto',$this->idcambio_boleto);
-		$criteria->compare('fecha',$this->fecha,true);
-		$criteria->compare('hora',$this->hora,true);
-		$criteria->compare('total_anterior',$this->total_anterior);
-		$criteria->compare('total_nuevo',$this->total_nuevo);
-		$criteria->compare('idcajero',Yii::app()->session['id']);
-		$criteria->compare('idventa',$this->idventa);
+        $criteria = new CDbCriteria;
 
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
-	}
+        $criteria->compare('idcambio_boleto', $this->idcambio_boleto);
+        $criteria->compare('fecha', $this->fecha, true);
+        $criteria->compare('hora', $this->hora, true);
+        $criteria->compare('total_anterior', $this->total_anterior);
+        $criteria->compare('total_nuevo', $this->total_nuevo);
+        $criteria->compare('idcajero', Yii::app()->session['id']);
+        $criteria->compare('idventa', $this->idventa);
 
-	/**
-	 * Returns the static model of the specified AR class.
-	 * Please note that you should have this exact method in all your CActiveRecord descendants!
-	 * @param string $className active record class name.
-	 * @return CambioBoleto the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
-	}
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+        ));
+    }
+
+    /**
+     * Returns the static model of the specified AR class.
+     * Please note that you should have this exact method in all your CActiveRecord descendants!
+     * @param string $className active record class name.
+     * @return CambioBoleto the static model class
+     */
+    public static function model($className = __CLASS__) {
+        return parent::model($className);
+    }
+
 }

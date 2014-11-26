@@ -1,6 +1,5 @@
 <?php
-
-$this->pageTitle=Yii::app()->name;
+$this->pageTitle = Yii::app()->name;
 ?>
 
 <h1>Bienvenido al sistema de administración de boleteria del la cooperativa de transporte Unión Cariamanga</h1>

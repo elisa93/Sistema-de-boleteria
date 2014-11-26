@@ -2,19 +2,21 @@
 /* @var $this ReservaOficinaController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
-	'Reserva Oficinas',
+$this->breadcrumbs = array(
+    'Reserva Oficinas',
 );
 
-$this->menu=array(
-	array('label'=>'Create ReservaOficina', 'url'=>array('create')),
-	array('label'=>'Manage ReservaOficina', 'url'=>array('admin')),
+$this->menu = array(
+    array('label' => 'Create ReservaOficina', 'url' => array('create')),
+    array('label' => 'Manage ReservaOficina', 'url' => array('admin')),
 );
 ?>
 
 <h1>Reserva Oficinas</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
+<?php
+$this->widget('zii.widgets.CListView', array(
+    'dataProvider' => $dataProvider,
+    'itemView' => '_view',
+));
+?>

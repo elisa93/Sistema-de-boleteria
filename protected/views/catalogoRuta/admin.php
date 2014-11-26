@@ -2,14 +2,14 @@
 /* @var $this CatalogoRutaController */
 /* @var $model CatalogoRuta */
 
-$this->breadcrumbs=array(
-	'Catalogo Rutas'=>array('index'),
-	'Administrar',
+$this->breadcrumbs = array(
+    'Catalogo Rutas' => array('index'),
+    'Administrar',
 );
 
-$this->menu=array(
-	array('label'=>'Lista de Rutas', 'url'=>array('index')),
-	array('label'=>'Crear Nueva Ruta', 'url'=>array('create')),
+$this->menu = array(
+    array('label' => 'Lista de Rutas', 'url' => array('index')),
+    array('label' => 'Crear Nueva Ruta', 'url' => array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -28,25 +28,29 @@ $('.search-form form').submit(function(){
 
 <h1>Administración de Rutas</h1>
 
-<?php echo CHtml::link('Busqueda  avanzada','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Busqueda  avanzada', '#', array('class' => 'search-button')); ?>
 <div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
+    <?php
+    $this->renderPartial('_search', array(
+        'model' => $model,
+    ));
+    ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'catalogo-ruta-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'idcatalogo_ruta',
-		'ciudad_origen',
-		'ciudad_destino',
-		'costo',
-		'idadministrador',
-		array(
-			'class'=>'CButtonColumn',
-		),
-	),
-)); ?>
+<?php
+$this->widget('zii.widgets.grid.CGridView', array(
+    'id' => 'catalogo-ruta-grid',
+    'dataProvider' => $model->search(),
+    'filter' => $model,
+    'columns' => array(
+        'idcatalogo_ruta',
+        'ciudad_origen',
+        'ciudad_destino',
+        'costo',
+        'idadministrador',
+        array(
+            'class' => 'CButtonColumn',
+        ),
+    ),
+));
+?>
