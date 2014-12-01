@@ -30,23 +30,23 @@
                 <?php
                 $this->widget('zii.widgets.CMenu', array(
                     'items' => array(
-                        array('label' => 'Inicio', 'url' => array('/site/index')),
-                        array('label' => 'Acerca de', 'url' => array('/site/page', 'view' => 'about')),
-                        array('label' => 'Sugerencias', 'url' => array('/site/contact')),
-                        array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
+                        array('label' => 'Inicio', 'url' => array('/siteCajero/index')),
+                      //  array('label' => 'Contacto', 'url' => array('/siteCajero/contact')),
+                        array('label' => 'Login', 'url' => array('/siteCajero/login'), 'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Ventas', 'url' => array('/Venta/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Reservas', 'url' => array('/ReservaOficina/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Devoluciones', 'url' => array('/Devolucion/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Cambios', 'url' => array('/CambioBoleto/admin'), 'visible' => !Yii::app()->user->isGuest),
-                        array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
+                        array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/siteCajero/logout'), 'visible' => !Yii::app()->user->isGuest)
                     ),
                 ));
                 ?>
             </div><!-- mainmenu -->
             <?php if (isset($this->breadcrumbs)): ?>
-                <?php
+                 <?php
                 $this->widget('zii.widgets.CBreadcrumbs', array(
                     'links' => $this->breadcrumbs,
+                    'homeLink' => CHtml::link('Home', array('/siteCajero/index')),
                 ));
                 ?><!-- breadcrumbs -->
             <?php endif ?>
