@@ -17,6 +17,7 @@ body
 
 #header
 {
+        background: -moz-linear-gradient(-45deg, rgba(88,179,135,1) 0%, rgba(106,153,60,1) 61%, rgba(117,137,12,1) 100%);
 	margin: 0;
 	padding: 0;
 	border-top: 3px solid #C9E0ED;
@@ -49,7 +50,8 @@ body
 
 #mainmenu
 {
-	background:white url(bg.gif) repeat-x left top;
+	//background:white url(bg.gif) repeat-x left top;
+        background-color: black;
 }
 
 #mainmenu ul
@@ -65,7 +67,8 @@ body
 
 #mainmenu ul li a
 {
-	color:#ffffff;
+	//color:#ffffff;
+        color:#09f;
 	background-color:transparent;
 	font-size:12px;
 	font-weight:bold;

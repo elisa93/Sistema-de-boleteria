@@ -32,7 +32,7 @@ class CatalogoRuta extends CActiveRecord {
         return array(
             array('ciudad_origen, ciudad_destino, costo, idadministrador', 'required'),
             array('idadministrador', 'numerical', 'integerOnly' => true),
-            array('ciudad_origen, catalogo_rutacol, costo', 'length', 'max' => 45),
+            array('ciudad_origen, ciudad_destino, costo', 'length', 'max' => 45),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('idcatalogo_ruta, ciudad_origen, ciudad_destino, costo, idadministrador', 'safe', 'on' => 'search'),
