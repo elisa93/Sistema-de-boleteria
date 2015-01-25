@@ -41,11 +41,11 @@ $this->breadcrumbs = array(
         </p>
     </div>
 
-    <!--	<div class="row rememberMe">
-    <?php echo $form->checkBox($model, 'No cerrar sesion'); ?>
-    <?php echo $form->label($model, 'rememberMe'); ?>
+    	<div class="row rememberMe">
+    <?php echo $form->checkBox($model, 'rememberMe'); ?>
+    <?php echo $form->label($model, 'No cerrar sesion'); ?>
     <?php echo $form->error($model, 'rememberMe'); ?>
-            </div>  -->
+            </div> 
 
     <div class="row buttons">
         <?php echo CHtml::submitButton('Login'); ?>
