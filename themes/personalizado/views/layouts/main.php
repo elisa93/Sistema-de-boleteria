@@ -79,7 +79,7 @@
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs hhyyyyyy -->
+		)); ?><!-- breadcrumbs hhyyyyyymmmm -->
 	<?php endif?>
 
 	<?php echo $content; ?>

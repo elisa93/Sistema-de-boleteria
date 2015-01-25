@@ -17,6 +17,7 @@
 			));
 			$this->endWidget();
 		?>
+                    <!-- breadcrumbs hhyyyyyymmmm -->
 		
 		<?php
 			$this->beginWidget('zii.widgets.CPortlet', array(
