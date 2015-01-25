@@ -28,11 +28,12 @@
 
 <div class="container" id="page">
 	<div id="topnav">
-		<div class="topnav_text"><a href='#'>Home</a> | <a href='#'>My Account</a> | <a href='#'>Settings</a> | <a href='#'>Logout</a> </div>
+		<div class="topnav_text"><a href='#'>My Account</a> | <a href='#'>Settings</a> </div>
 	</div>
 	<div id="header">
-		<div id="logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png"></img><?php //echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
+            
+		<div id="logo"> <h1>Cooperativa Union Cariamanga</h1><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png"></img><?php //echo CHtml::encode(Yii::app()->name); ?></div>-->
+	</div><!-- header
     <!--
 <?php /*$this->widget('application.extensions.mbmenu.MbMenu',array(
             'items'=>array(
@@ -71,12 +72,7 @@
                         array('label' => 'Compras', 'url' => array('/compra/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Reservas', 'url' => array('/Reserva/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest),
-				array('label'=>'Dashboard', 'url'=>array('/site/index')),
-				array('label'=>'Graphs', 'url'=>array('/site/page', 'view'=>'graphs'),'itemOptions'=>array('class'=>'icon_chart')),
-				array('label'=>'Form', 'url'=>array('/site/page', 'view'=>'forms')),
-				array('label'=>'Interface', 'url'=>array('/site/page', 'view'=>'interface')),				
-				array('label'=>'Buttons & Icons', 'url'=>array('/site/page', 'view'=>'buttons_and_icons')),
-				array('label'=>'Error Pages', 'url'=>array('/site/page', 'view'=>'Demo 404 page')),
+			
 			),
 		)); ?>
 	</div> <!--mainmenu -->

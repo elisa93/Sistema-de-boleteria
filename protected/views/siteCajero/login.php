@@ -2,7 +2,10 @@
 /* @var $this SiteController */
 /* @var $model LoginForm */
 /* @var $form CActiveForm  */
-
+$baseUrl = Yii::app()->theme->baseUrl; 
+$cs = Yii::app()->getClientScript();
+$cs->registerCssFile($baseUrl.'/css/jquery.css');
+  
 $this->pageTitle = Yii::app()->name . ' - Login';
 $this->breadcrumbs = array(
     'Login',
@@ -46,10 +49,25 @@ $this->breadcrumbs = array(
     <?php echo $form->label($model, 'rememberMe'); ?>
     <?php echo $form->error($model, 'rememberMe'); ?>
             </div>  -->
-
+   
     <div class="row buttons">
-        <?php echo CHtml::submitButton('Login'); ?>
-    </div>
+        <?php
+    $this->widget('zii.widgets.jui.CJuiButton',array(
+    'buttonType'=>'submit',
+    'name'=>'btnSubmit',
+    'value'=>'1',
+    'caption'=>'Login',
+    'htmlOptions'=>array(
+        'class'=>'ui-button-primary',
+        'class'=>'shadowbutton',
+        'style'=>'height:40px;',
+        'style'=>'width:100px;',
+//        'style'=>'border-radius:7px;'
+        )
+    ));
+    ?>
+    </div
+
 
 
     <?php $this->endWidget(); ?>

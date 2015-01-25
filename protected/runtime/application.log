@@ -2958,3 +2958,157 @@ Stack trace:
 REQUEST_URI=/~ruth/Boleteria_Cariamanga/index.php?ajax=administrador-grid&id=1&r=administrador%2Fdelete
 HTTP_REFERER=http://localhost/~ruth/Boleteria_Cariamanga/index.php?r=Administrador/admin
 ---
+2015/01/24 23:40:59 [error] [exception.CException] exception 'CException' with message 'SiteCajeroController contains improperly nested widget tags in its view "/home/fabricio/public_html/Sistema-de-boleteria/protected/views/siteCajero/index.php". A CPortlet widget does not have an endWidget() call.' in /home/fabricio/public_html/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /home/fabricio/public_html/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/fabricio/...', NULL, true)
+#1 /home/fabricio/public_html/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#2 /home/fabricio/public_html/Sistema-de-boleteria/protected/controllers/SiteCajeroController.php(32): CController->render('index')
+#3 /home/fabricio/public_html/yii/framework/web/actions/CInlineAction.php(49): SiteCajeroController->actionIndex()
+#4 /home/fabricio/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/fabricio/public_html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /home/fabricio/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/fabricio/public_html/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /home/fabricio/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/inde...')
+#9 /home/fabricio/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/fabricio/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~fabricio/Sistema-de-boleteria/index.php?r=siteCajero/index
+---
+2015/01/25 00:18:59 [error] [exception.CException] exception 'CException' with message 'Property "CJuiButton.type" is not defined.' in /home/fabricio/public_html/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/fabricio/public_html/yii/framework/web/CWidgetFactory.php(161): CComponent->__set('type', 'submit')
+#1 /home/fabricio/public_html/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteCajeroController), 'zii.widgets.jui...', Array)
+#2 /home/fabricio/public_html/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.jui...', Array)
+#3 /home/fabricio/public_html/Sistema-de-boleteria/protected/views/siteCajero/login.php(65): CBaseController->widget('zii.widgets.jui...', Array)
+#4 /home/fabricio/public_html/yii/framework/web/CBaseController.php(126): require('/home/fabricio/...')
+#5 /home/fabricio/public_html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/fabricio/...', Array, true)
+#6 /home/fabricio/public_html/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/fabricio/...', Array, true)
+#7 /home/fabricio/public_html/yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#8 /home/fabricio/public_html/Sistema-de-boleteria/protected/controllers/SiteCajeroController.php(71): CController->render('login', Array)
+#9 /home/fabricio/public_html/yii/framework/web/actions/CInlineAction.php(49): SiteCajeroController->actionLogin()
+#10 /home/fabricio/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/fabricio/public_html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/fabricio/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/fabricio/public_html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /home/fabricio/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/logi...')
+#15 /home/fabricio/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fabricio/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~fabricio/Sistema-de-boleteria/index.php?r=siteCajero/login
+HTTP_REFERER=http://localhost/~fabricio/Sistema-de-boleteria/index.php?r=siteCajero/login
+---
+2015/01/25 00:22:38 [error] [exception.CException] exception 'CException' with message 'Property "CJuiButton.type" is not defined.' in /home/fabricio/public_html/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/fabricio/public_html/yii/framework/web/CWidgetFactory.php(161): CComponent->__set('type', 'submit')
+#1 /home/fabricio/public_html/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteCajeroController), 'zii.widgets.jui...', Array)
+#2 /home/fabricio/public_html/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.jui...', Array)
+#3 /home/fabricio/public_html/Sistema-de-boleteria/protected/views/siteCajero/login.php(74): CBaseController->widget('zii.widgets.jui...', Array)
+#4 /home/fabricio/public_html/yii/framework/web/CBaseController.php(126): require('/home/fabricio/...')
+#5 /home/fabricio/public_html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/fabricio/...', Array, true)
+#6 /home/fabricio/public_html/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/fabricio/...', Array, true)
+#7 /home/fabricio/public_html/yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#8 /home/fabricio/public_html/Sistema-de-boleteria/protected/controllers/SiteCajeroController.php(71): CController->render('login', Array)
+#9 /home/fabricio/public_html/yii/framework/web/actions/CInlineAction.php(49): SiteCajeroController->actionLogin()
+#10 /home/fabricio/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/fabricio/public_html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/fabricio/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/fabricio/public_html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /home/fabricio/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/logi...')
+#15 /home/fabricio/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fabricio/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~fabricio/Sistema-de-boleteria/index.php?r=siteCajero/login
+HTTP_REFERER=http://localhost/~fabricio/Sistema-de-boleteria/index.php?r=siteCajero/login
+---
+2015/01/25 00:22:39 [error] [exception.CException] exception 'CException' with message 'Property "CJuiButton.type" is not defined.' in /home/fabricio/public_html/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/fabricio/public_html/yii/framework/web/CWidgetFactory.php(161): CComponent->__set('type', 'submit')
+#1 /home/fabricio/public_html/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteCajeroController), 'zii.widgets.jui...', Array)
+#2 /home/fabricio/public_html/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.jui...', Array)
+#3 /home/fabricio/public_html/Sistema-de-boleteria/protected/views/siteCajero/login.php(74): CBaseController->widget('zii.widgets.jui...', Array)
+#4 /home/fabricio/public_html/yii/framework/web/CBaseController.php(126): require('/home/fabricio/...')
+#5 /home/fabricio/public_html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/fabricio/...', Array, true)
+#6 /home/fabricio/public_html/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/fabricio/...', Array, true)
+#7 /home/fabricio/public_html/yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#8 /home/fabricio/public_html/Sistema-de-boleteria/protected/controllers/SiteCajeroController.php(71): CController->render('login', Array)
+#9 /home/fabricio/public_html/yii/framework/web/actions/CInlineAction.php(49): SiteCajeroController->actionLogin()
+#10 /home/fabricio/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/fabricio/public_html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/fabricio/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/fabricio/public_html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /home/fabricio/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/logi...')
+#15 /home/fabricio/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fabricio/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~fabricio/Sistema-de-boleteria/index.php?r=siteCajero/login
+HTTP_REFERER=http://localhost/~fabricio/Sistema-de-boleteria/index.php?r=siteCajero/login
+---
+2015/01/25 00:22:40 [error] [exception.CException] exception 'CException' with message 'Property "CJuiButton.type" is not defined.' in /home/fabricio/public_html/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/fabricio/public_html/yii/framework/web/CWidgetFactory.php(161): CComponent->__set('type', 'submit')
+#1 /home/fabricio/public_html/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteCajeroController), 'zii.widgets.jui...', Array)
+#2 /home/fabricio/public_html/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.jui...', Array)
+#3 /home/fabricio/public_html/Sistema-de-boleteria/protected/views/siteCajero/login.php(74): CBaseController->widget('zii.widgets.jui...', Array)
+#4 /home/fabricio/public_html/yii/framework/web/CBaseController.php(126): require('/home/fabricio/...')
+#5 /home/fabricio/public_html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/fabricio/...', Array, true)
+#6 /home/fabricio/public_html/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/fabricio/...', Array, true)
+#7 /home/fabricio/public_html/yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#8 /home/fabricio/public_html/Sistema-de-boleteria/protected/controllers/SiteCajeroController.php(71): CController->render('login', Array)
+#9 /home/fabricio/public_html/yii/framework/web/actions/CInlineAction.php(49): SiteCajeroController->actionLogin()
+#10 /home/fabricio/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/fabricio/public_html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/fabricio/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/fabricio/public_html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /home/fabricio/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/logi...')
+#15 /home/fabricio/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fabricio/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~fabricio/Sistema-de-boleteria/index.php?r=siteCajero/login
+HTTP_REFERER=http://localhost/~fabricio/Sistema-de-boleteria/index.php?r=siteCajero/login
+---
+2015/01/25 00:23:50 [error] [exception.CException] exception 'CException' with message 'Property "CJuiButton.class" is not defined.' in /home/fabricio/public_html/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/fabricio/public_html/yii/framework/web/CWidgetFactory.php(161): CComponent->__set('class', 'shadowbutton')
+#1 /home/fabricio/public_html/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteCajeroController), 'zii.widgets.jui...', Array)
+#2 /home/fabricio/public_html/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.jui...', Array)
+#3 /home/fabricio/public_html/Sistema-de-boleteria/protected/views/siteCajero/login.php(60): CBaseController->widget('zii.widgets.jui...', Array)
+#4 /home/fabricio/public_html/yii/framework/web/CBaseController.php(126): require('/home/fabricio/...')
+#5 /home/fabricio/public_html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/fabricio/...', Array, true)
+#6 /home/fabricio/public_html/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/fabricio/...', Array, true)
+#7 /home/fabricio/public_html/yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#8 /home/fabricio/public_html/Sistema-de-boleteria/protected/controllers/SiteCajeroController.php(71): CController->render('login', Array)
+#9 /home/fabricio/public_html/yii/framework/web/actions/CInlineAction.php(49): SiteCajeroController->actionLogin()
+#10 /home/fabricio/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/fabricio/public_html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/fabricio/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/fabricio/public_html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /home/fabricio/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/logi...')
+#15 /home/fabricio/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fabricio/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~fabricio/Sistema-de-boleteria/index.php?r=siteCajero/login
+HTTP_REFERER=http://localhost/~fabricio/Sistema-de-boleteria/index.php?r=siteCajero/login
+---
+2015/01/25 00:23:51 [error] [exception.CException] exception 'CException' with message 'Property "CJuiButton.class" is not defined.' in /home/fabricio/public_html/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/fabricio/public_html/yii/framework/web/CWidgetFactory.php(161): CComponent->__set('class', 'shadowbutton')
+#1 /home/fabricio/public_html/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteCajeroController), 'zii.widgets.jui...', Array)
+#2 /home/fabricio/public_html/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.jui...', Array)
+#3 /home/fabricio/public_html/Sistema-de-boleteria/protected/views/siteCajero/login.php(60): CBaseController->widget('zii.widgets.jui...', Array)
+#4 /home/fabricio/public_html/yii/framework/web/CBaseController.php(126): require('/home/fabricio/...')
+#5 /home/fabricio/public_html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/fabricio/...', Array, true)
+#6 /home/fabricio/public_html/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/fabricio/...', Array, true)
+#7 /home/fabricio/public_html/yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#8 /home/fabricio/public_html/Sistema-de-boleteria/protected/controllers/SiteCajeroController.php(71): CController->render('login', Array)
+#9 /home/fabricio/public_html/yii/framework/web/actions/CInlineAction.php(49): SiteCajeroController->actionLogin()
+#10 /home/fabricio/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/fabricio/public_html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/fabricio/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/fabricio/public_html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /home/fabricio/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/logi...')
+#15 /home/fabricio/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/fabricio/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~fabricio/Sistema-de-boleteria/index.php?r=siteCajero/login
+HTTP_REFERER=http://localhost/~fabricio/Sistema-de-boleteria/index.php?r=siteCajero/login
+---

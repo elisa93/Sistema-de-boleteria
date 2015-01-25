@@ -61,7 +61,7 @@ $this->breadcrumbs=array(
 <li><?php echo CHtml::link('<span class="icon icon-note">Button Text</span>',array('/site/page', 'view'=>'buttons_and_icons'),array('class'=>'green')); ?></li>
 <li><?php echo CHtml::link('<span class="icon icon-new">Button Text</span>',array('/site/page', 'view'=>'buttons_and_icons'),array('class'=>'green')); ?></li>
 <li><?php echo CHtml::link('<span class="icon icon-money_add">Button Text</span>',array('/site/page', 'view'=>'buttons_and_icons'),array('class'=>'green')); ?></li>
-<li><?php echo CHtml::link('<span class="icon icon-magnifier">Button Text</span>',array('/site/page', 'view'=>'buttons_and_icons'),array('class'=>'green')); ?></li>
+<li><?php echo CHtml::link('<span class="icon icon-magnifier">Button GG</span>',array('/site/page', 'view'=>'buttons_and_icons'),array('class'=>'green')); ?></li>
 
 </ul>
 

@@ -4,7 +4,7 @@ $this->breadcrumbs=array(
 	'Calendar',
 );
 ?>
-<h1>Calendar</h1>
+<h1>Nuestra empresa</h1>
 
 <?php
 /*$this->widget('application.extensions.fullcalendar.FullcalendarGraphWidget', 
