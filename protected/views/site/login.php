@@ -42,7 +42,7 @@ $this->breadcrumbs = array(
     </div>
 
     <!--	<div class="row rememberMe">
-    <?php echo $form->checkBox($model, 'rememberMe'); ?>
+    <?php echo $form->checkBox($model, 'No cerrar sesion'); ?>
     <?php echo $form->label($model, 'rememberMe'); ?>
     <?php echo $form->error($model, 'rememberMe'); ?>
             </div>  -->
