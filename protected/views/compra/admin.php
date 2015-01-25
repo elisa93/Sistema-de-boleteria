@@ -7,10 +7,10 @@ $this->breadcrumbs = array(
     'Manage',
 );
 
-$this->menu = array(
-    array('label' => 'Lista Compras', 'url' => array('index')),
-    array('label' => 'Crear Compra', 'url' => array('create')),
-);
+//$this->menu = array(
+//    array('label' => 'Lista Compras', 'url' => array('index')),
+//    array('label' => 'Crear Compra', 'url' => array('create')),
+//);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -48,15 +48,22 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => $model->search(),
     'filter' => $model,
     'columns' => array(
-        'idcompra',
+      
         'fecha',
         'hora',
         'total',
         'estado',
-        'idcliente',
+        
         array(
             'class' => 'CButtonColumn',
         ),
     ),
 ));
 ?>
+<?php
+    $this->widget('zii.widgets.CMenu', array(
+        'items' => array(
+            array('label' => 'Nueva Compra','url' => array('/Compra/create')),
+        ),
+    ));
+    ?>

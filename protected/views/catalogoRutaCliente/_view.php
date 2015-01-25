@@ -14,7 +14,7 @@
     <br />
 
     <b><?php echo CHtml::encode($data->getAttributeLabel('ciudad_destino')); ?>:</b>
-    <?php echo CHtml::encode($data->ciudad_destino); ?>
+    <?php echo CHtml::encode($data->catalogo_rutacol); ?>
     <br />
 
     <b><?php echo CHtml::encode($data->getAttributeLabel('costo')); ?>:</b>

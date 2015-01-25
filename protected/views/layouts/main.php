@@ -68,7 +68,7 @@
                         array('label' => 'Acerca de', 'url' => array('/site/page', 'view' => 'about')),
                         array('label' => 'Sugerencias', 'url' => array('/site/contact')),
                         array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
-                        array('label' => 'Catalogo Rutas', 'url' => array('/CatalogoRuta/admin'), 'visible' => !Yii::app()->user->isGuest),
+                        array('label' => 'Catalogo Rutas', 'url' => array('/CatalogoRutaCliente/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Compras', 'url' => array('/compra/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Reservas', 'url' => array('/Reserva/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest),

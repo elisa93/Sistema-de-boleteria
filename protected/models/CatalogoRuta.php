@@ -91,6 +91,21 @@ class CatalogoRuta extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
+    public function search_cliente() {
+        // @todo Please modify the following code to remove attributes that should not be searched.
+
+        $criteria = new CDbCriteria;
+
+        $criteria->compare('idcatalogo_ruta', $this->idcatalogo_ruta);
+        $criteria->compare('ciudad_origen', $this->ciudad_origen, true);
+        $criteria->compare('ciudad_destino', $this->ciudad_destino, true);
+        $criteria->compare('costo', $this->costo, true);
+        $criteria->compare('idadministrador', $this->idadministrador);
+
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+        ));
+    }
 
     /**
      * Returns the static model of the specified AR class.
