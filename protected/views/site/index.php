@@ -1,24 +1,32 @@
+<center>
 <?php
+         Yii::app()->clientScript->registerCoreScript('jquery'); //if you do not set yet
+ 
+  //you have to put this code in your view file
+  $this->widget('ext.FlexPictureSlider.FlexPictureSlider',
+  array('imageBlockSelector' => '#myslider',));
+ 
+ 
+  //or with full custom parameters
+  $this->widget('ext.FlexPictureSlider.FlexPictureSlider',
+  array(
+    'imageBlockSelector' => '#myslider', //the jquery selector
+    'widthSlider' => '1250', //or you can use jquery '$(window).width()/1.6',
+    'heightSlider' => '350', //or you can use jquery '$(window).height()/1.6',
+    'slideUnitSize' => 'px', //px or %
+    'timeBetweenChangeSlider' => 4000,
+    'timeDelayAnimation' => 1000, //the time before slider starts in miliseconds
+    'sliderStartFrom' => 0, //if sliderSuffle is set false, only for version 1.1
+    'sliderSuffle' => true, //suffle the pictures for random display, only for version 1.1
+ 
+   )); 
+  ?>
+ 
+  <div id="myslider">
+  <?php
+  echo CHtml::image(Yii::app()->request->baseUrl . '/images/01.jpg', 'alt 1');
+  echo CHtml::image(Yii::app()->request->baseUrl . '/images/02.jpg', 'alt 2');
+  echo CHtml::image(Yii::app()->request->baseUrl . '/images/03.jpg', 'alt 3');
 
-/* @var $this SiteController 
-
-$this->pageTitle=Yii::app()->name;
-?>
-
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
-
-<p>Congratulations! You have successfully created your Yii application.</p>
-
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
-
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
- * 
- */
-
+  ?>
+</center> 
