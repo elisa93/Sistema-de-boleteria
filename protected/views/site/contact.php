@@ -9,7 +9,7 @@ $this->breadcrumbs = array(
 );
 ?>
 
-<h1>Contact Us</h1>
+<h1>Sugerencias</h1>
 
 <?php if (Yii::app()->user->hasFlash('contact')): ?>
 
@@ -47,16 +47,16 @@ $this->breadcrumbs = array(
         </div>
 
         <div class="row">
-            <?php echo $form->labelEx($model, 'email'); ?>
+            <?php echo $form->labelEx($model, 'correo'); ?>
             <?php echo $form->textField($model, 'email'); ?>
             <?php echo $form->error($model, 'email'); ?>
         </div>
 
-        <div class="row">
+<!--        <div class="row">
             <?php echo $form->labelEx($model, 'subject'); ?>
             <?php echo $form->textField($model, 'subject', array('size' => 60, 'maxlength' => 128)); ?>
             <?php echo $form->error($model, 'subject'); ?>
-        </div>
+        </div>-->
 
         <div class="row">
             <?php echo $form->labelEx($model, 'Sugerencia'); ?>

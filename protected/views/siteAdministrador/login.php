@@ -9,7 +9,7 @@ $this->breadcrumbs = array(
 );
 ?>
 
-<h1>Login</h1>
+<h1>Iniciar Sesión</h1>
 
  <!-- <p>Please fill out the following form with your login credentials:</p>  -->
 
@@ -43,7 +43,7 @@ $this->breadcrumbs = array(
 
     <!--	<div class="row rememberMe">
     <?php echo $form->checkBox($model, 'rememberMe'); ?>
-    <?php echo $form->label($model, 'rememberMe'); ?>
+    <?php echo $form->label($model, 'No cerrar sesión'); ?>
     <?php echo $form->error($model, 'rememberMe'); ?>
             </div>  -->
 

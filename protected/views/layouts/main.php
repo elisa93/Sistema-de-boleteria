@@ -65,8 +65,8 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
                                    array('label' => 'Inicio', 'url' => array('/site/index')),
-                        array('label' => 'Acerca de', 'url' => array('/site/page', 'view' => 'about')),
-                        array('label' => 'Sugerencias', 'url' => array('/site/contact')),
+                       // array('label' => 'Acerca de', 'url' => array('/site/page', 'view' => 'about')),
+                       // array('label' => 'Sugerencias', 'url' => array('/site/contact')),
                         array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Catalogo Rutas', 'url' => array('/CatalogoRutaCliente/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Compras', 'url' => array('/compra/admin'), 'visible' => !Yii::app()->user->isGuest),
@@ -79,7 +79,7 @@
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs hhyyyyyymmmm -->
+		)); ?>
 	<?php endif?>
 
 	<?php echo $content; ?>
@@ -89,8 +89,8 @@
                 
                 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by webapplicationthemes.com<br/>
-		All Rights Reserved.<br/>
+		Copyright &copy; <?php echo date('Y'); ?> Por DRF<br/>
+		Todos los derechos reservados.<br/>
 		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->
 

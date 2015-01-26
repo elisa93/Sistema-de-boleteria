@@ -13,10 +13,10 @@
     ));
     ?>
 
-    <div class="row">
+<!--    <div class="row">
         <?php echo $form->label($model, 'idcatalogo_ruta'); ?>
         <?php echo $form->textField($model, 'idcatalogo_ruta'); ?>
-    </div>
+    </div>-->
 
     <div class="row">
         <?php echo $form->label($model, 'ciudad_origen'); ?>
@@ -28,18 +28,18 @@
         <?php echo $form->textField($model, 'ciudad_destino', array('size' => 45, 'maxlength' => 45)); ?>
     </div>
 
-    <div class="row">
+<!--    <div class="row">
         <?php echo $form->label($model, 'costo'); ?>
         <?php echo $form->textField($model, 'costo', array('size' => 45, 'maxlength' => 45)); ?>
-    </div>
+    </div>-->
 
-    <div class="row">
+<!--    <div class="row">
         <?php echo $form->label($model, 'idadministrador'); ?>
         <?php echo $form->textField($model, 'idadministrador'); ?>
-    </div>
+    </div>-->
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton('Search'); ?>
+        <?php echo CHtml::submitButton('Buscar'); ?>
     </div>
 
     <?php $this->endWidget(); ?>

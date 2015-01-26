@@ -13,4 +13,4 @@ $cs->registerScriptFile($baseUrl.'/js/pbs.init.js');
 
 <p>Aquí podra registrar nuevos ventas, reservas de viaje y devoluciones de transporte</p>
 
-
+<a href="index.php"></a>

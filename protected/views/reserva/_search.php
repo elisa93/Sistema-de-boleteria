@@ -13,10 +13,10 @@
     ));
     ?>
 
-    <div class="row">
+<!--    <div class="row">
         <?php echo $form->label($model, 'idreserva'); ?>
         <?php echo $form->textField($model, 'idreserva'); ?>
-    </div>
+    </div>-->
 
     <div class="row">
         <?php echo $form->label($model, 'fecha'); ?>
@@ -38,13 +38,13 @@
         <?php echo $form->textField($model, 'estado', array('size' => 45, 'maxlength' => 45)); ?>
     </div>
 
-    <div class="row">
+<!--    <div class="row">
         <?php echo $form->label($model, 'idcliente'); ?>
         <?php echo $form->textField($model, 'idcliente'); ?>
-    </div>
+    </div>-->
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton('Search'); ?>
+        <?php echo CHtml::submitButton('Buscar'); ?>
     </div>
 
     <?php $this->endWidget(); ?>

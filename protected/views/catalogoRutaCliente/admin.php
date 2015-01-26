@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Nuestras rutas disponibles son:</h1>
+<h1>Catalgo de Rutas</h1>
 
 <?php echo CHtml::link('Busqueda  avanzada', '#', array('class' => 'search-button')); ?>
 <div class="search-form" style="display:none">

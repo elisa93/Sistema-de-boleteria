@@ -13,6 +13,6 @@ $this->breadcrumbs = array(
 //);
 //?>
 
-<h1>Create Compra</h1>
+<h1>Nueva Compra</h1>
 
 <?php $this->renderPartial('_form', array('model' => $model)); ?>

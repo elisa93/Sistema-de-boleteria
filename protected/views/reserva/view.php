@@ -16,7 +16,7 @@ $this->menu = array(
 );
 ?>
 
-<h1>View Reserva #<?php echo $model->idreserva; ?></h1>
+<h1>Reserva #<?php echo $model->idreserva; ?></h1>
 
 <?php
 $this->widget('zii.widgets.CDetailView', array(
