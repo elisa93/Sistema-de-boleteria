@@ -1,4 +1,4 @@
-<center>
+ 
 <?php
          Yii::app()->clientScript->registerCoreScript('jquery'); //if you do not set yet
  
@@ -29,4 +29,3 @@
   echo CHtml::image(Yii::app()->request->baseUrl . '/images/03.jpg', 'alt 3');
 
   ?>
-</center> 
