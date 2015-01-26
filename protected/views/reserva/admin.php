@@ -7,10 +7,10 @@ $this->breadcrumbs = array(
     'Manage',
 );
 
-$this->menu = array(
-    array('label' => 'List Reserva', 'url' => array('index')),
-    array('label' => 'Create Reserva', 'url' => array('create')),
-);
+//$this->menu = array(
+//    array('label' => 'List Reserva', 'url' => array('index')),
+//    array('label' => 'Create Reserva', 'url' => array('create')),
+//);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -48,15 +48,22 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => $model->search(),
     'filter' => $model,
     'columns' => array(
-        'idreserva',
+    //    'idreserva',
         'fecha',
         'hora',
         'total',
         'estado',
-        'idcliente',
+     //   'idcliente',
         array(
             'class' => 'CButtonColumn',
         ),
     ),
 ));
 ?>
+<?php
+    $this->widget('zii.widgets.CMenu', array(
+        'items' => array(
+            array('label' => 'Nueva Reserva','url' => array('/Reserva/create')),
+        ),
+    ));
+    ?>
