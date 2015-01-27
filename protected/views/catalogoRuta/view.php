@@ -6,15 +6,15 @@ $this->breadcrumbs = array(
     'Catalogo Rutas' => array('index'),
     $model->idcatalogo_ruta,
 );
-
-$this->menu = array(
-    array('label' => 'List CatalogoRuta', 'url' => array('index')),
-    array('label' => 'Create CatalogoRuta', 'url' => array('create')),
-    array('label' => 'Update CatalogoRuta', 'url' => array('update', 'id' => $model->idcatalogo_ruta)),
-    array('label' => 'Delete CatalogoRuta', 'url' => '#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->idcatalogo_ruta), 'confirm' => 'Are you sure you want to delete this item?')),
-    array('label' => 'Manage CatalogoRuta', 'url' => array('admin')),
-);
-?>
+//
+//$this->menu = array(
+//    array('label' => 'List CatalogoRuta', 'url' => array('index')),
+//    array('label' => 'Create CatalogoRuta', 'url' => array('create')),
+//    array('label' => 'Update CatalogoRuta', 'url' => array('update', 'id' => $model->idcatalogo_ruta)),
+//    array('label' => 'Delete CatalogoRuta', 'url' => '#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->idcatalogo_ruta), 'confirm' => 'Are you sure you want to delete this item?')),
+//    array('label' => 'Manage CatalogoRuta', 'url' => array('admin')),
+//);
+//?>
 
 <h1> Catalogo s #<?php echo $model->idcatalogo_ruta; ?></h1>
 

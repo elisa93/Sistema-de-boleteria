@@ -65,8 +65,8 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
                                    array('label' => 'Inicio', 'url' => array('/site/index')),
-                       // array('label' => 'Acerca de', 'url' => array('/site/page', 'view' => 'about')),
-                       // array('label' => 'Sugerencias', 'url' => array('/site/contact')),
+                        array('label' => 'Acerca de', 'url' => array('/site/page', 'view' => 'about'),'visible' => Yii::app()->user->isGuest),
+                        array('label' => 'Sugerencias', 'url' => array('/site/contact'),'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Catalogo Rutas', 'url' => array('/CatalogoRutaCliente/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Compras', 'url' => array('/compra/admin'), 'visible' => !Yii::app()->user->isGuest),

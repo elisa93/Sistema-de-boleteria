@@ -7,11 +7,11 @@ $this->breadcrumbs = array(
     'Nueva ruta',
 );
 
-$this->menu = array(
-    array('label' => 'Lista de Rutas', 'url' => array('index')),
-    array('label' => 'Administrar Rutas', 'url' => array('admin')),
-);
-?>
+//$this->menu = array(
+//    array('label' => 'Lista de Rutas', 'url' => array('index')),
+//    array('label' => 'Administrar Rutas', 'url' => array('admin')),
+//);
+//?>
 
 <h1>Crear Nueva Ruta</h1>
 

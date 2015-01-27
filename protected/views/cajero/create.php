@@ -7,11 +7,11 @@ $this->breadcrumbs = array(
     'Nuevo',
 );
 
-$this->menu = array(
-    array('label' => 'List Cajero', 'url' => array('index')),
-    array('label' => 'Manage Cajero', 'url' => array('admin')),
-);
-?>
+//$this->menu = array(
+//    array('label' => 'List Cajero', 'url' => array('index')),
+//    array('label' => 'Manage Cajero', 'url' => array('admin')),
+//);
+//?>
 
 <h1>Registrar Nuevo Cajero</h1>
 

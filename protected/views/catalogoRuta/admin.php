@@ -3,8 +3,8 @@
 /* @var $model CatalogoRuta */
 
 $this->breadcrumbs = array(
-    'Catalogo Rutas' => array('index'),
-    'Administrar',
+    'Administración de rutas' => array('admin'),
+//    'Administrar',
 );
 //
 //$this->menu = array(
@@ -43,11 +43,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => $model->search(),
     'filter' => $model,
     'columns' => array(
-        'idcatalogo_ruta',
+       // 'idcatalogo_ruta',
         'ciudad_origen',
         'ciudad_destino',
         'costo',
-        'idadministrador',
+      //  'idadministrador',
         array(
             'class' => 'CButtonColumn',
         ),

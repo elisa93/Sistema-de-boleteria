@@ -13,11 +13,11 @@
     ));
     ?>
 
-    <div class="row">
-        <?php echo $form->label($model, 'idunidad_transaporte'); ?>
-        <?php echo $form->textField($model, 'idunidad_transaporte'); ?>
+  <!--  <div class="row">
+        <?php //echo $form->label($model, 'idunidad_transaporte'); ?>
+        <?php// echo $form->textField($model, 'idunidad_transaporte'); ?>
     </div>
-
+-->
     <div class="row">
         <?php echo $form->label($model, 'placa'); ?>
         <?php echo $form->textField($model, 'placa', array('size' => 45, 'maxlength' => 45)); ?>
@@ -38,18 +38,18 @@
         <?php echo $form->textField($model, 'estado', array('size' => 45, 'maxlength' => 45)); ?>
     </div>
 
-    <div class="row">
-        <?php echo $form->label($model, 'idhorario_viaje'); ?>
-        <?php echo $form->textField($model, 'idhorario_viaje'); ?>
-    </div>
+<!--    <div class="row">
+        <?php // echo $form->label($model, 'idhorario_viaje'); ?>
+        <?php // echo $form->textField($model, 'idhorario_viaje'); ?>
+    </div>-->
 
-    <div class="row">
-        <?php echo $form->label($model, 'idadministrador'); ?>
-        <?php echo $form->textField($model, 'idadministrador'); ?>
-    </div>
+<!--    <div class="row">
+        <?php // echo $form->label($model, 'idadministrador'); ?>
+        <?php // echo $form->textField($model, 'idadministrador'); ?>
+    </div>-->
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton('Search'); ?>
+        <?php echo CHtml::submitButton('Buscar'); ?>
     </div>
 
     <?php $this->endWidget(); ?>

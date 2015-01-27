@@ -7,14 +7,14 @@ $this->breadcrumbs = array(
     $model->idcajero,
 );
 
-$this->menu = array(
-    array('label' => 'List Cajero', 'url' => array('index')),
-    array('label' => 'Create Cajero', 'url' => array('create')),
-    array('label' => 'Update Cajero', 'url' => array('update', 'id' => $model->idcajero)),
-    array('label' => 'Delete Cajero', 'url' => '#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->idcajero), 'confirm' => 'Are you sure you want to delete this item?')),
-    array('label' => 'Manage Cajero', 'url' => array('admin')),
-);
-?>
+//$this->menu = array(
+//    array('label' => 'List Cajero', 'url' => array('index')),
+//    array('label' => 'Create Cajero', 'url' => array('create')),
+//    array('label' => 'Update Cajero', 'url' => array('update', 'id' => $model->idcajero)),
+//    array('label' => 'Delete Cajero', 'url' => '#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->idcajero), 'confirm' => 'Are you sure you want to delete this item?')),
+//    array('label' => 'Manage Cajero', 'url' => array('admin')),
+//);
+//?>
 
 <h1> Cajero #<?php echo $model->idcajero; ?></h1>
 

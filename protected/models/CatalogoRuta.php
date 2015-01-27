@@ -59,7 +59,7 @@ class CatalogoRuta extends CActiveRecord {
             'idcatalogo_ruta' => 'Idcatalogo Ruta',
             'ciudad_origen' => 'Ciudad Origen',
             'ciudad_destino' => 'Ciudad de destino',
-            'costo' => 'Costo',
+            'costo' => 'Costo(Dólares)',
             'idadministrador' => 'Idadministrador',
         );
     }

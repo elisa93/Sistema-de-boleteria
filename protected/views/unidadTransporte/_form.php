@@ -45,20 +45,20 @@
         <?php echo $form->error($model, 'estado'); ?>
     </div>
 
-    <div class="row">
-        <?php echo $form->labelEx($model, 'idhorario_viaje'); ?>
-        <?php echo $form->textField($model, 'idhorario_viaje'); ?>
-        <?php echo $form->error($model, 'idhorario_viaje'); ?>
-    </div>
+<!--    <div class="row">
+        <?php // echo $form->labelEx($model, 'idhorario_viaje'); ?>
+        <?php // echo $form->textField($model, 'idhorario_viaje'); ?>
+        <?php // echo $form->error($model, 'idhorario_viaje'); ?>
+    </div>-->
 
-    <div class="row">
-        <?php echo $form->labelEx($model, 'idadministrador'); ?>
-        <?php echo $form->textField($model, 'idadministrador'); ?>
-        <?php echo $form->error($model, 'idadministrador'); ?>
-    </div>
+<!--    <div class="row">
+        <?php // echo $form->labelEx($model, 'idadministrador'); ?>
+        <?php // echo $form->textField($model, 'idadministrador'); ?>
+        <?php // echo $form->error($model, 'idadministrador'); ?>
+    </div>-->
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Save'); ?>
     </div>
 
     <?php $this->endWidget(); ?>

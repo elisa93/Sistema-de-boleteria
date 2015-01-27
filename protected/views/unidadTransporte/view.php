@@ -7,14 +7,14 @@ $this->breadcrumbs = array(
     $model->idunidad_transaporte,
 );
 
-$this->menu = array(
-    array('label' => 'List UnidadTransporte', 'url' => array('index')),
-    array('label' => 'Create UnidadTransporte', 'url' => array('create')),
-    array('label' => 'Update UnidadTransporte', 'url' => array('update', 'id' => $model->idunidad_transaporte)),
-    array('label' => 'Delete UnidadTransporte', 'url' => '#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->idunidad_transaporte), 'confirm' => 'Are you sure you want to delete this item?')),
-    array('label' => 'Manage UnidadTransporte', 'url' => array('admin')),
-);
-?>
+//$this->menu = array(
+//    array('label' => 'List UnidadTransporte', 'url' => array('index')),
+//    array('label' => 'Create UnidadTransporte', 'url' => array('create')),
+//    array('label' => 'Update UnidadTransporte', 'url' => array('update', 'id' => $model->idunidad_transaporte)),
+//    array('label' => 'Delete UnidadTransporte', 'url' => '#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->idunidad_transaporte), 'confirm' => 'Are you sure you want to delete this item?')),
+//    array('label' => 'Manage UnidadTransporte', 'url' => array('admin')),
+//);
+//?>
 
 <h1>Unidad de Transporte #<?php echo $model->idunidad_transaporte; ?></h1>
 

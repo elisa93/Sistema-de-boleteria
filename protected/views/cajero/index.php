@@ -6,11 +6,11 @@ $this->breadcrumbs = array(
     'Cajeros',
 );
 
-$this->menu = array(
-    array('label' => 'Crear  Cajero', 'url' => array('create')),
-    array('label' => 'Administar Cajeros', 'url' => array('admin')),
-);
-?>
+//$this->menu = array(
+//    array('label' => 'Crear  Cajero', 'url' => array('create')),
+//    array('label' => 'Administar Cajeros', 'url' => array('admin')),
+//);
+//?>
 
 <h1>Lista de Cajeros</h1>
 

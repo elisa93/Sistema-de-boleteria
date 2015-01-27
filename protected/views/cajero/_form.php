@@ -35,7 +35,7 @@
 
     <div class="row">
         <?php echo $form->labelEx($model, 'password'); ?>
-        <?php echo $form->passwordField($model, 'password', array('size' => 60, 'maxlength' => 100)); ?>
+        <?php echo $form->passwordField($model, 'password', array('size' => 45, 'maxlength' => 100)); ?>
         <?php echo $form->error($model, 'password'); ?>
     </div>
 
@@ -45,14 +45,14 @@
         <?php echo $form->error($model, 'estado'); ?>
     </div>
 
-    <div class="row">
-        <?php echo $form->labelEx($model, 'idadministrador'); ?>
-        <?php echo $form->textField($model, 'idadministrador'); ?>
-        <?php echo $form->error($model, 'idadministrador'); ?>
-    </div>
+<!--    <div class="row">
+        <?php // echo $form->labelEx($model, 'idadministrador'); ?>
+        <?php // echo $form->textField($model, 'idadministrador'); ?>
+        <?php // echo $form->error($model, 'idadministrador'); ?>
+    </div>-->
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Save'); ?>
     </div>
 
     <?php $this->endWidget(); ?>

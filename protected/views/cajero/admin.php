@@ -3,14 +3,14 @@
 /* @var $model Cajero */
 
 $this->breadcrumbs = array(
-    'Cajeros' => array('index'),
-    'Administrar',
+    'Administración de cajeros' => array('admin'),
+//    'Administrar',
 );
 
-$this->menu = array(
-    array('label' => 'Lista de Cajeros', 'url' => array('index')),
-    array('label' => 'Registrar Nuevo Cajero', 'url' => array('create')),
-);
+//$this->menu = array(
+//    array('label' => 'Lista de Cajeros', 'url' => array('index')),
+//    array('label' => 'Registrar Nuevo Cajero', 'url' => array('create')),
+//);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -56,3 +56,10 @@ $this->widget('zii.widgets.grid.CGridView', array(
     ),
 ));
 ?>
+<?php
+    $this->widget('zii.widgets.CMenu', array(
+        'items' => array(
+            array('label' => 'Registrar nuevo cajero','url' => array('/Cajero/create')),
+        ),
+    ));
+    ?>

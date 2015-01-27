@@ -13,10 +13,10 @@
     ));
     ?>
 
-    <div class="row">
-        <?php echo $form->label($model, 'idcajero'); ?>
-        <?php echo $form->textField($model, 'idcajero'); ?>
-    </div>
+<!--    <div class="row">
+        <?php // echo $form->label($model, 'idcajero'); ?>
+        <?php // echo $form->textField($model, 'idcajero'); ?>
+    </div>-->
 
     <div class="row">
         <?php echo $form->label($model, 'nombre'); ?>
@@ -32,14 +32,14 @@
         <?php echo $form->label($model, 'estado'); ?>
         <?php echo $form->textField($model, 'estado', array('size' => 45, 'maxlength' => 45)); ?>
     </div>
-
+<!--
     <div class="row">
-        <?php echo $form->label($model, 'idadministrador'); ?>
-        <?php echo $form->textField($model, 'idadministrador'); ?>
-    </div>
+        <?php // echo $form->label($model, 'idadministrador'); ?>
+        <?php // echo $form->textField($model, 'idadministrador'); ?>
+    </div>-->
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton('Search'); ?>
+        <?php echo CHtml::submitButton('Buscar'); ?>
     </div>
 
     <?php $this->endWidget(); ?>

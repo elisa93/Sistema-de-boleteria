@@ -3,14 +3,14 @@
 /* @var $model UnidadTransporte */
 
 $this->breadcrumbs = array(
-    'Unidad Transportes' => array('index'),
-    'Administrar',
+    'Administración de unidades de trasnporte' => array('admin'),
+//    'Administrar',
 );
 
-$this->menu = array(
-    array('label' => 'Lista de U. de Transporte', 'url' => array('index')),
-    array('label' => 'Registrar nueva U. de transporte', 'url' => array('create')),
-);
+//$this->menu = array(
+//    array('label' => 'Lista de U. de Transporte', 'url' => array('index')),
+//    array('label' => 'Registrar nueva U. de transporte', 'url' => array('create')),
+//);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -44,12 +44,12 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => $model->search(),
     'filter' => $model,
     'columns' => array(
-        'idunidad_transaporte',
+      //  'idunidad_transaporte',
         'placa',
         'numero_unidad',
         'capacidad',
         'estado',
-        'idhorario_viaje',
+      //  'idhorario_viaje',
         /*
           'idadministrador',
          */
@@ -59,3 +59,10 @@ $this->widget('zii.widgets.grid.CGridView', array(
     ),
 ));
 ?>
+<?php
+    $this->widget('zii.widgets.CMenu', array(
+        'items' => array(
+            array('label' => 'Registrar nueva unidad de transporte','url' => array('/UnidadTransporte/create')),
+        ),
+    ));
+    ?>
