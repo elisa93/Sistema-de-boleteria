@@ -44,7 +44,8 @@ body
 
 #logo
 {
-	padding: 10px 20px;
+background: url(./images/fondo.jpg);	
+    padding: 10px 20px;
 	font-size: 200%;
 }
 

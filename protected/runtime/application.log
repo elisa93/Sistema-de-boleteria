@@ -3417,3 +3417,13 @@ Stack trace:
 REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/contact
 HTTP_REFERER=http://localhost/~ruth/Sistema-de-boleteria/index.php?r=Venta/admin
 ---
+2015/01/27 17:42:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('contact')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('contact')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/cont...')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/contact
+---

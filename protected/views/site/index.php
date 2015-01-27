@@ -24,7 +24,7 @@
  
   <div id="myslider">
   <?php
-  echo CHtml::image(Yii::app()->request->baseUrl . '/images/01.jpg', 'alt 1');
+  echo CHtml::image(Yii::app()->request->baseUrl . '/images/cariamanga2.png', 'alt 1');
   echo CHtml::image(Yii::app()->request->baseUrl . '/images/02.jpg', 'alt 2');
   echo CHtml::image(Yii::app()->request->baseUrl . '/images/03.jpg', 'alt 3');
 
