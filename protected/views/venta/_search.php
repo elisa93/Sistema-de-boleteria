@@ -12,11 +12,11 @@
         'method' => 'get',
     ));
     ?>
-
+<!--
     <div class="row">
         <?php echo $form->label($model, 'idventa'); ?>
         <?php echo $form->textField($model, 'idventa'); ?>
-    </div>
+    </div>-->
 
     <div class="row">
         <?php echo $form->label($model, 'fecha'); ?>
@@ -33,13 +33,13 @@
         <?php echo $form->textField($model, 'total'); ?>
     </div>
 
-    <div class="row">
+<!--    <div class="row">
         <?php echo $form->label($model, 'idcajero'); ?>
         <?php echo $form->textField($model, 'idcajero'); ?>
-    </div>
+    </div>-->
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton('Search'); ?>
+        <?php echo CHtml::submitButton('Buscar'); ?>
     </div>
 
     <?php $this->endWidget(); ?>

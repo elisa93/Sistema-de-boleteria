@@ -3176,3 +3176,244 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/admin
 ---
+2015/01/27 15:08:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ReservaCajero/create".' in /home/ruth/public_html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ReservaCajero/c...')
+#1 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=ReservaCajero/create
+---
+2015/01/27 15:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('contact')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('contact')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/cont...')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/contact
+HTTP_REFERER=http://localhost/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/index
+---
+2015/01/27 15:10:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('contact')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('contact')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/cont...')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/contact
+HTTP_REFERER=http://localhost/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/login
+---
+2015/01/27 15:11:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('contact')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('contact')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/cont...')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/contact
+---
+2015/01/27 15:15:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('contact')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('contact')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/cont...')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/contact
+HTTP_REFERER=http://localhost/~ruth/Sistema-de-boleteria/index.php?r=Venta/admin
+---
+2015/01/27 15:29:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('contact')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('contact')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/cont...')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/contact
+HTTP_REFERER=http://localhost/~ruth/Sistema-de-boleteria/index.php?r=Venta/admin
+---
+2015/01/27 15:37:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('contact')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('contact')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/cont...')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/contact
+HTTP_REFERER=http://localhost/~ruth/Sistema-de-boleteria/index.php?r=Venta/create
+---
+2015/01/27 15:52:54 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`reserva_oficina`, CONSTRAINT `fk_reserva_oficina_cajero1` FOREIGN KEY (`idcajero`) REFERENCES `cajero` (`idcajero`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `reserva_oficina` (`fecha`, `hora`, `total`, `idcajero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /home/ruth/public_html/Sistema-de-boleteria/protected/controllers/ReservaOficinaController.php (68)
+in /home/ruth/public_html/Sistema-de-boleteria/index.php (13)
+2015/01/27 15:52:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`reserva_oficina`, CONSTRAINT `fk_reserva_oficina_cajero1` FOREIGN KEY (`idcajero`) REFERENCES `cajero` (`idcajero`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `reserva_oficina` (`fecha`, `hora`, `total`, `idcajero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /home/ruth/public_html/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/ruth/public_html/Sistema-de-boleteria/protected/controllers/ReservaOficinaController.php(68): CActiveRecord->save()
+#3 /home/ruth/public_html/yii/framework/web/actions/CInlineAction.php(49): ReservaOficinaController->actionCreate()
+#4 /home/ruth/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ReservaOficina/...')
+#14 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=ReservaOficina/create
+HTTP_REFERER=http://localhost/~ruth/Sistema-de-boleteria/index.php?r=ReservaOficina/create
+---
+2015/01/27 15:53:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`reserva_oficina`, CONSTRAINT `fk_reserva_oficina_cajero1` FOREIGN KEY (`idcajero`) REFERENCES `cajero` (`idcajero`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `reserva_oficina` (`fecha`, `hora`, `total`, `idcajero`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /home/ruth/public_html/Sistema-de-boleteria/protected/controllers/ReservaOficinaController.php (68)
+in /home/ruth/public_html/Sistema-de-boleteria/index.php (13)
+2015/01/27 15:53:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`reserva_oficina`, CONSTRAINT `fk_reserva_oficina_cajero1` FOREIGN KEY (`idcajero`) REFERENCES `cajero` (`idcajero`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `reserva_oficina` (`fecha`, `hora`, `total`, `idcajero`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /home/ruth/public_html/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/ruth/public_html/Sistema-de-boleteria/protected/controllers/ReservaOficinaController.php(68): CActiveRecord->save()
+#3 /home/ruth/public_html/yii/framework/web/actions/CInlineAction.php(49): ReservaOficinaController->actionCreate()
+#4 /home/ruth/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ReservaOficina/...')
+#14 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=ReservaOficina/create
+HTTP_REFERER=http://localhost/~ruth/Sistema-de-boleteria/index.php?r=ReservaOficina/create
+---
+2015/01/27 16:35:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('admin')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/admi...')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/admin
+---
+2015/01/27 17:07:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('contact')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('contact')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/cont...')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/contact
+HTTP_REFERER=http://localhost/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/login
+---
+2015/01/27 17:11:56 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`devolucion`, CONSTRAINT `fk_devolucion_cajero1` FOREIGN KEY (`idcajero`) REFERENCES `cajero` (`idcajero`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `devolucion` (`fecha`, `hora`, `idcajero`, `venta_idventa`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /home/ruth/public_html/Sistema-de-boleteria/protected/controllers/DevolucionController.php (68)
+in /home/ruth/public_html/Sistema-de-boleteria/index.php (13)
+2015/01/27 17:11:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`devolucion`, CONSTRAINT `fk_devolucion_cajero1` FOREIGN KEY (`idcajero`) REFERENCES `cajero` (`idcajero`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `devolucion` (`fecha`, `hora`, `idcajero`, `venta_idventa`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /home/ruth/public_html/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/ruth/public_html/Sistema-de-boleteria/protected/controllers/DevolucionController.php(68): CActiveRecord->save()
+#3 /home/ruth/public_html/yii/framework/web/actions/CInlineAction.php(49): DevolucionController->actionCreate()
+#4 /home/ruth/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Devolucion/crea...')
+#14 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=Devolucion/create
+HTTP_REFERER=http://localhost/~ruth/Sistema-de-boleteria/index.php?r=Devolucion/create
+---
+2015/01/27 17:11:56 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`devolucion`, CONSTRAINT `fk_devolucion_cajero1` FOREIGN KEY (`idcajero`) REFERENCES `cajero` (`idcajero`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `devolucion` (`fecha`, `hora`, `idcajero`, `venta_idventa`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /home/ruth/public_html/Sistema-de-boleteria/protected/controllers/DevolucionController.php (68)
+in /home/ruth/public_html/Sistema-de-boleteria/index.php (13)
+2015/01/27 17:11:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`devolucion`, CONSTRAINT `fk_devolucion_cajero1` FOREIGN KEY (`idcajero`) REFERENCES `cajero` (`idcajero`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `devolucion` (`fecha`, `hora`, `idcajero`, `venta_idventa`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /home/ruth/public_html/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/ruth/public_html/Sistema-de-boleteria/protected/controllers/DevolucionController.php(68): CActiveRecord->save()
+#3 /home/ruth/public_html/yii/framework/web/actions/CInlineAction.php(49): DevolucionController->actionCreate()
+#4 /home/ruth/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Devolucion/crea...')
+#14 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=Devolucion/create
+HTTP_REFERER=http://localhost/~ruth/Sistema-de-boleteria/index.php?r=Devolucion/create
+---
+2015/01/27 17:12:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`devolucion`, CONSTRAINT `fk_devolucion_cajero1` FOREIGN KEY (`idcajero`) REFERENCES `cajero` (`idcajero`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `devolucion` (`fecha`, `hora`, `idcajero`, `venta_idventa`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /home/ruth/public_html/Sistema-de-boleteria/protected/controllers/DevolucionController.php (68)
+in /home/ruth/public_html/Sistema-de-boleteria/index.php (13)
+2015/01/27 17:12:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`boleteria_cariamanga`.`devolucion`, CONSTRAINT `fk_devolucion_cajero1` FOREIGN KEY (`idcajero`) REFERENCES `cajero` (`idcajero`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `devolucion` (`fecha`, `hora`, `idcajero`, `venta_idventa`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /home/ruth/public_html/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/ruth/public_html/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/ruth/public_html/Sistema-de-boleteria/protected/controllers/DevolucionController.php(68): CActiveRecord->save()
+#3 /home/ruth/public_html/yii/framework/web/actions/CInlineAction.php(49): DevolucionController->actionCreate()
+#4 /home/ruth/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/ruth/public_html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ruth/public_html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/ruth/public_html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/ruth/public_html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/ruth/public_html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ruth/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Devolucion/crea...')
+#14 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=Devolucion/create
+HTTP_REFERER=http://localhost/~ruth/Sistema-de-boleteria/index.php?r=Devolucion/create
+---
+2015/01/27 17:35:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('contact')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('contact')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/cont...')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/contact
+HTTP_REFERER=http://localhost/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/login
+---
+2015/01/27 17:41:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in /home/ruth/public_html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ruth/public_html/yii/framework/web/CController.php(270): CController->missingAction('contact')
+#1 /home/ruth/public_html/yii/framework/web/CWebApplication.php(282): CController->run('contact')
+#2 /home/ruth/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('siteCajero/cont...')
+#3 /home/ruth/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/ruth/public_html/Sistema-de-boleteria/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~ruth/Sistema-de-boleteria/index.php?r=siteCajero/contact
+HTTP_REFERER=http://localhost/~ruth/Sistema-de-boleteria/index.php?r=Venta/admin
+---

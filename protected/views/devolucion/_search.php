@@ -13,33 +13,33 @@
     ));
     ?>
 
-    <div class="row">
+<!--    <div class="row">
         <?php echo $form->label($model, 'iddevolucion'); ?>
         <?php echo $form->textField($model, 'iddevolucion'); ?>
-    </div>
+    </div>-->
 
     <div class="row">
         <?php echo $form->label($model, 'fecha'); ?>
         <?php echo $form->textField($model, 'fecha', array('size' => 45, 'maxlength' => 45)); ?>
     </div>
 
-    <div class="row">
+<!--    <div class="row">
         <?php echo $form->label($model, 'hora'); ?>
         <?php echo $form->textField($model, 'hora', array('size' => 45, 'maxlength' => 45)); ?>
-    </div>
+    </div>-->
 
-    <div class="row">
+<!--    <div class="row">
         <?php echo $form->label($model, 'idcajero'); ?>
         <?php echo $form->textField($model, 'idcajero'); ?>
-    </div>
+    </div>-->
 
-    <div class="row">
+<!--    <div class="row">
         <?php echo $form->label($model, 'venta_idventa'); ?>
         <?php echo $form->textField($model, 'venta_idventa'); ?>
-    </div>
+    </div>-->
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton('Search'); ?>
+        <?php echo CHtml::submitButton('Buscar'); ?>
     </div>
 
     <?php $this->endWidget(); ?>

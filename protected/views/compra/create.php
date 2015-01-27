@@ -4,7 +4,7 @@
 
 $this->breadcrumbs = array(
     'Compras' => array('index'),
-    'Create',
+    'Nueva Compra',
 );
 
 //$this->menu = array(

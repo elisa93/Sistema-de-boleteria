@@ -72,10 +72,10 @@
             <div class="clear"></div>
 
             <div id="footer">
-                Copyright &copy; <?php echo date('Y'); ?> by DSW.<br/>
-                All Rights Reserved.<br/>
-
-            </div><!-- footer -->
+		Copyright &copy; <?php echo date('Y'); ?> Por DRF<br/>
+		Todos los derechos reservados.<br/>
+		<?php echo Yii::powered(); ?>
+	</div><!-- footer -->
 
         </div><!-- page -->
 
