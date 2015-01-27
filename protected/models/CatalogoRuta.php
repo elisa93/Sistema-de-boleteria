@@ -30,7 +30,7 @@ class CatalogoRuta extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('ciudad_origen, ciudad_destino, costo, idadministrador', 'required'),
+            array('ciudad_origen, ciudad_destino, costo', 'required'),
             array('idadministrador', 'numerical', 'integerOnly' => true),
             array('ciudad_origen, ciudad_destino, costo', 'length', 'max' => 45),
             // The following rule is used by search().

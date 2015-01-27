@@ -33,7 +33,7 @@ class UnidadTransporte extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('placa, numero_unidad, capacidad, estado, idadministrador', 'required'),
+            array('placa, numero_unidad, capacidad, estado', 'required'),
             array('idhorario_viaje, idadministrador', 'numerical', 'integerOnly' => true),
             array('placa, numero_unidad, capacidad, estado', 'length', 'max' => 45),
             // The following rule is used by search().

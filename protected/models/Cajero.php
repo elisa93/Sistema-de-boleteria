@@ -34,7 +34,7 @@ class Cajero extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nombre, email, password, estado, idadministrador', 'required'),
+            array('nombre, email, password, estado', 'required'),
             array('idadministrador', 'numerical', 'integerOnly' => true),
             array('nombre, email, estado', 'length', 'max' => 45),
             array('password', 'length', 'max' => 100),

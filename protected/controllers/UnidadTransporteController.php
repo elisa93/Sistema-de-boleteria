@@ -65,6 +65,8 @@ class UnidadTransporteController extends Controller {
 
         if (isset($_POST['UnidadTransporte'])) {
             $model->attributes = $_POST['UnidadTransporte'];
+            $model->idadministrador=Yii::app()->session['id'];
+
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->idunidad_transaporte));
         }
