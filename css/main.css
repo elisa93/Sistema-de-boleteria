@@ -5,6 +5,7 @@ body
 	color: #555;
 	font: normal 10pt Arial,Helvetica,sans-serif;
 	background: #EFEFEF;
+        
 }
 
 #page
@@ -44,7 +45,7 @@ body
 
 #logo
 {
-background: url(./images/fondo.jpg);	
+
     padding: 10px 20px;
 	font-size: 200%;
 }
