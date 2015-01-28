@@ -3,14 +3,14 @@
 /* @var $model Devolucion */
 
 $this->breadcrumbs = array(
-    'Devolucions' => array('index'),
-    'Create',
+    'Devoluciones' => array('admin'),
+ //   'Create',
 );
 
-$this->menu = array(
-    array('label' => 'List Devolucion', 'url' => array('index')),
-    array('label' => 'Manage Devolucion', 'url' => array('admin')),
-);
+//$this->menu = array(
+//    array('label' => 'List Devolucion', 'url' => array('index')),
+//    array('label' => 'Manage Devolucion', 'url' => array('admin')),
+//);
 ?>
 
 <h1>Create Devolucion</h1>

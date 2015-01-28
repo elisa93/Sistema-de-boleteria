@@ -44,15 +44,15 @@
         <?php echo $form->textField($model, 'estado', array('size' => 45, 'maxlength' => 45)); ?>
         <?php echo $form->error($model, 'estado'); ?>
     </div>
-
+<!--
     <div class="row">
-        <?php echo $form->labelEx($model, 'idcliente'); ?>
-        <?php echo $form->textField($model, 'idcliente'); ?>
-        <?php echo $form->error($model, 'idcliente'); ?>
-    </div>
+        <?php //echo $form->labelEx($model, 'idcliente'); ?>
+        <?php// echo $form->textField($model, 'idcliente'); ?>
+        <?php //echo $form->error($model, 'idcliente'); ?>
+    </div>-->
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Guardar' : 'Save'); ?>
     </div>
 
     <?php $this->endWidget(); ?>

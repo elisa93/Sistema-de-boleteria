@@ -33,17 +33,17 @@
         <?php echo $form->error($model, 'hora'); ?>
     </div>
 
-    <div class="row">
-        <?php echo $form->labelEx($model, 'idcajero'); ?>
-        <?php echo $form->textField($model, 'idcajero'); ?>
-        <?php echo $form->error($model, 'idcajero'); ?>
-    </div>
+<!--    <div class="row">
+        <?php// echo $form->labelEx($model, 'idcajero'); ?>
+        <?php// echo $form->textField($model, 'idcajero'); ?>
+        <?php// echo $form->error($model, 'idcajero'); ?>
+    </div>-->
 
-    <div class="row">
-        <?php echo $form->labelEx($model, 'venta_idventa'); ?>
-        <?php echo $form->textField($model, 'venta_idventa'); ?>
-        <?php echo $form->error($model, 'venta_idventa'); ?>
-    </div>
+<!--    <div class="row">
+        <?php //echo $form->labelEx($model, 'venta_idventa'); ?>
+        <?php //echo $form->textField($model, 'venta_idventa'); ?>
+        <?php //echo $form->error($model, 'venta_idventa'); ?>
+    </div>-->
 
     <div class="row buttons">
         <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

@@ -14,8 +14,8 @@
     ?>
 
 <!--    <div class="row">
-        <?php echo $form->label($model, 'iddevolucion'); ?>
-        <?php echo $form->textField($model, 'iddevolucion'); ?>
+        <?php// echo $form->label($model, 'iddevolucion'); ?>
+        <?php// echo $form->textField($model, 'iddevolucion'); ?>
     </div>-->
 
     <div class="row">
@@ -29,13 +29,13 @@
     </div>-->
 
 <!--    <div class="row">
-        <?php echo $form->label($model, 'idcajero'); ?>
-        <?php echo $form->textField($model, 'idcajero'); ?>
+        <?php// echo $form->label($model, 'idcajero'); ?>
+        <?php// echo $form->textField($model, 'idcajero'); ?>
     </div>-->
 
 <!--    <div class="row">
-        <?php echo $form->label($model, 'venta_idventa'); ?>
-        <?php echo $form->textField($model, 'venta_idventa'); ?>
+        <?php// echo $form->label($model, 'venta_idventa'); ?>
+        <?php// echo $form->textField($model, 'venta_idventa'); ?>
     </div>-->
 
     <div class="row buttons">

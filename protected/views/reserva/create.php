@@ -3,8 +3,8 @@
 /* @var $model Reserva */
 
 $this->breadcrumbs = array(
-    'Reservas' => array('index'),
-    'Create',
+    'Reservas' => array('admin'),
+  //  'Create',
 );
 
 //$this->menu = array(

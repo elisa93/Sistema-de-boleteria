@@ -14,8 +14,8 @@
     ?>
 
 <!--    <div class="row">
-        <?php echo $form->label($model, 'idreserva'); ?>
-        <?php echo $form->textField($model, 'idreserva'); ?>
+        <?php// echo $form->label($model, 'idreserva'); ?>
+        <?php// echo $form->textField($model, 'idreserva'); ?>
     </div>-->
 
     <div class="row">
@@ -39,8 +39,8 @@
     </div>
 
 <!--    <div class="row">
-        <?php echo $form->label($model, 'idcliente'); ?>
-        <?php echo $form->textField($model, 'idcliente'); ?>
+        <?php// echo $form->label($model, 'idcliente'); ?>
+        <?php// echo $form->textField($model, 'idcliente'); ?>
     </div>-->
 
     <div class="row buttons">

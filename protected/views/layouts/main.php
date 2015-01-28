@@ -32,7 +32,7 @@
 	</div>
 	<div id="header">
             
-		<div id="logo"> <h1>Cooperativa Union Cariamanga</h1><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png"></img><?php //echo CHtml::encode(Yii::app()->name); ?></div>-->
+		<div id="logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png"></img><?php //echo CHtml::encode(Yii::app()->name); ?></div>
 	</div><!-- header
     <!--
 <?php /*$this->widget('application.extensions.mbmenu.MbMenu',array(
