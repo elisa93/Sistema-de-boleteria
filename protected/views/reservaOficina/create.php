@@ -4,7 +4,7 @@
 
 $this->breadcrumbs = array(
     'Reserva' => array('admin'),
- //   'Create',
+    'Nueva Reserva',
 );
 
 //$this->menu = array(

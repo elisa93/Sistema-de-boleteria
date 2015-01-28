@@ -65,6 +65,7 @@ class CambioBoletoController extends Controller {
 
         if (isset($_POST['CambioBoleto'])) {
             $model->attributes = $_POST['CambioBoleto'];
+            $model->idcajero=Yii::app()->session['id'];
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->idcambio_boleto));
         }

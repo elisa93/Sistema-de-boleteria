@@ -88,6 +88,7 @@ class CajeroController extends Controller {
 
         if (isset($_POST['Cajero'])) {
             $model->attributes = $_POST['Cajero'];
+           
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->idcajero));
         }

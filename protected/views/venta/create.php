@@ -4,7 +4,7 @@
 
 $this->breadcrumbs = array(
     'Ventas' => array('admin'),
-   // 'Create',
+    'Nueva Venta',
 );
 
 //$this->menu = array(
