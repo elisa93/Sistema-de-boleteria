@@ -50,6 +50,18 @@ $this->widget('zii.widgets.grid.CGridView', array(
       //  'idadministrador',
         array(
             'class' => 'CButtonColumn',
+//             'template'=>'{view}{update}{delete}',
+//            'buttons'=>array
+//            (
+//                'view' => array
+//                (
+//                //  'url'=>'CController::createUrl("/HorarioViaje/admin", array("idcatalogo_ruta"=>$data->idcatalogo_ruta))'
+//             //                  'url'=>'CController::createUrl("/HorarioViaje/admin", array("idcatalogo_ruta"=>$data->idcatalogo_ruta))'
+//                    //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+//                 //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
+//                ),
+//              
+//            ),
         ),
     ),
 ));

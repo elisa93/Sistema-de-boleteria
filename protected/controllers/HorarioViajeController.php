@@ -6,7 +6,7 @@ class HorarioViajeController extends Controller {
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
      * using two-column layout. See 'protected/views/layouts/column2.php'.
      */
-    public $layout = '//layouts/column2';
+    public $layout = '//layouts/column2_administrador';
 
     /**
      * @return array action filters
@@ -34,8 +34,8 @@ class HorarioViajeController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete'),
-                'users' => array('admin'),
+                'actions' => array('admin', 'delete','admin_horarios'),
+                'users' => array('@'),
             ),
             array('deny', // deny all users
                 'users' => array('*'),
@@ -65,8 +65,9 @@ class HorarioViajeController extends Controller {
 
         if (isset($_POST['HorarioViaje'])) {
             $model->attributes = $_POST['HorarioViaje'];
+             $model->idcatalogo_ruta=Yii::app()->session['idcatalogo_ruta'];
             if ($model->save())
-                $this->redirect(array('view', 'id' => $model->idhorario_viaje));
+               $this->redirect(array('admin', 'id' => Yii::app()->session['idcatalogo_ruta']));
         }
 
         $this->render('create', array(
@@ -122,13 +123,43 @@ class HorarioViajeController extends Controller {
     /**
      * Manages all models.
      */
-    public function actionAdmin() {
+    
+//      public function actionAdmin($id) {
+//      // $model = new HorarioViaje('search');
+//      // $model=$model->search_id($id);
+//        $model = HorarioViaje::model()->find('idcatalogo_ruta='.$id);
+//        //$model->unsetAttributes();  // clear any default values
+//        $cont=count($model);
+//        if($cont!=0)
+//           $this->render('admin', array('model' => $model, ));
+//       else
+//           $this->actionAdmin1 ();
+//
+//    }
+
+    
+    public function actionAdmin($id) {
+        Yii::app()->session['idcatalogo_ruta'] = $id;
+    
+
         $model = new HorarioViaje('search');
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['HorarioViaje']))
             $model->attributes = $_GET['HorarioViaje'];
 
         $this->render('admin', array(
+            'model' => $model,
+        ));
+    }
+     public function actionAdmin_horarios($id) {
+         $this->layout= '//layouts/column2';
+        Yii::app()->session['idcatalogo_ruta'] = $id;
+        $model = new HorarioViaje('search');
+        $model->unsetAttributes();  // clear any default values
+        if (isset($_GET['HorarioViaje']))
+            $model->attributes = $_GET['HorarioViaje'];
+
+        $this->render('admin_horario', array(
             'model' => $model,
         ));
     }

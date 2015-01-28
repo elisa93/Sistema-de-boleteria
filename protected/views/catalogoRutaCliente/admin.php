@@ -46,7 +46,23 @@ $this->widget('zii.widgets.grid.CGridView', array(
         'ciudad_origen',
         'ciudad_destino',
         'costo',
-        
+                array(
+            'class' => 'CButtonColumn',
+            'header'=>'Operations',
+            'template'=>'{ver}',
+            'buttons'=>array
+            (
+                'ver' => array
+                (
+                    'label'=>'ver horarios',
+                 // 'url'=>'CController::createUrl(/HorarioViaje/index)'
+                    'url'=>'CController::createUrl("/HorarioViaje/admin_horarios", array("id"=>$data->idcatalogo_ruta))'
+                    //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+                 //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
+                ),
+              
+            ),
+        ),
     ),
 ));
 ?>

@@ -27,9 +27,9 @@
 <body>
 
 <div class="container" id="page">
-	<div id="topnav">
+<!--	<div id="topnav">
 		<div class="topnav_text"><a href='#'>My Account</a> | <a href='#'>Settings</a> </div>
-	</div>
+	</div>-->
 	<div id="header">
             
 		<div id="logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png"></img><?php //echo CHtml::encode(Yii::app()->name); ?></div>
@@ -91,7 +91,7 @@
 	<div id="footer">
 		Copyright &copy; <?php echo date('Y'); ?> Por DRF<br/>
 		Todos los derechos reservados.<br/>
-		<?php echo Yii::powered(); ?>
+		<?php// echo Yii::powered(); ?>
 	</div><!-- footer -->
 
 </div><!-- page -->

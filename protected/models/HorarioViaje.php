@@ -29,7 +29,7 @@ class HorarioViaje extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('idcatalogo_ruta', 'required'),
+            array('hora_salida', 'required'),
             array('idcatalogo_ruta', 'numerical', 'integerOnly' => true),
             array('hora_salida, hora_llegada', 'length', 'max' => 45),
             // The following rule is used by search().
@@ -82,7 +82,7 @@ class HorarioViaje extends CActiveRecord {
         $criteria->compare('idhorario_viaje', $this->idhorario_viaje);
         $criteria->compare('hora_salida', $this->hora_salida, true);
         $criteria->compare('hora_llegada', $this->hora_llegada, true);
-        $criteria->compare('idcatalogo_ruta', $this->idcatalogo_ruta);
+        $criteria->compare('idcatalogo_ruta', Yii::app()->session['idcatalogo_ruta']);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,

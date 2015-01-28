@@ -33,11 +33,11 @@
         <?php echo $form->error($model, 'hora_llegada'); ?>
     </div>
 
-    <div class="row">
-        <?php echo $form->labelEx($model, 'idcatalogo_ruta'); ?>
-        <?php echo $form->textField($model, 'idcatalogo_ruta'); ?>
-        <?php echo $form->error($model, 'idcatalogo_ruta'); ?>
-    </div>
+<!--    <div class="row">
+        <?php //echo $form->labelEx($model, 'idcatalogo_ruta'); ?>
+        <?php //echo $form->textField($model, 'idcatalogo_ruta'); ?>
+        <?php //echo $form->error($model, 'idcatalogo_ruta'); ?>
+    </div>-->
 
     <div class="row buttons">
         <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

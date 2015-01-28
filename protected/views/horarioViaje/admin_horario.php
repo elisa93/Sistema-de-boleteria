@@ -4,7 +4,7 @@
 
 $this->breadcrumbs = array(
     'Horario Viajes' => array('index'),
-    'Manage',
+    //'Manage',
 );
 
 //$this->menu = array(
@@ -48,20 +48,20 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => $model->search(),
     'filter' => $model,
     'columns' => array(
-        'idhorario_viaje',
+  //      'idhorario_viaje',
         'hora_salida',
         'hora_llegada',
-        'idcatalogo_ruta',
-        array(
-            'class' => 'CButtonColumn',
-        ),
+ //       'idcatalogo_ruta',
+//        array(
+//            'class' => 'CButtonColumn',
+//        ),
     ),
 ));
 ?>
-<?php
-    $this->widget('zii.widgets.CMenu', array(
-        'items' => array(
-            array('label' => 'Nuevo horario','url' => array('/HorarioViaje/create')),
-        ),
-    ));
-    ?>
+//<?php
+//    $this->widget('zii.widgets.CMenu', array(
+//        'items' => array(
+//            array('label' => 'Nuevo horario','url' => array('/HorarioViaje/create')),
+//        ),
+//    ));
+//    ?>
