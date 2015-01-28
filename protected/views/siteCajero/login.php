@@ -7,6 +7,7 @@ $cs = Yii::app()->getClientScript();
 $cs->registerCssFile($baseUrl.'/css/jquery.css');
   
 $this->pageTitle = Yii::app()->name . ' - Login';
+
 $this->breadcrumbs = array(
     'Login',
 );

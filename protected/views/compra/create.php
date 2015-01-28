@@ -2,9 +2,14 @@
 /* @var $this CompraController */
 /* @var $model Compra */
 
+//$this->breadcrumbs = array(
+//    'Nueva Compra' => array('Compra/create'),
+//    
+//);
+
 $this->breadcrumbs = array(
-    'Compras' => array('index'),
-    'Nueva Compra',
+    'Compras' => array('admin'),
+  'Nueva Compra',
 );
 
 //$this->menu = array(

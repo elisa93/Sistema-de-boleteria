@@ -51,7 +51,7 @@
                 $this->widget('zii.widgets.CMenu', array(
                     'items' => array(
                         array('label' => 'Inicio', 'url' => array('/siteCajero/index')),
-                        array('label' => 'Contacto', 'url' => array('/siteCajero/contact')),
+                       // array('label' => 'Contacto', 'url' => array('/siteCajero/contact')),
                         array('label' => 'Login', 'url' => array('/siteCajero/login'), 'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Ventas', 'url' => array('/Venta/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Reservas', 'url' => array('/ReservaOficina/admin'), 'visible' => !Yii::app()->user->isGuest),

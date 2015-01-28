@@ -65,6 +65,7 @@ class ReservaController extends Controller {
 
         if (isset($_POST['Reserva'])) {
             $model->attributes = $_POST['Reserva'];
+            $model->idcliente=Yii::app()->session['id'];
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->idreserva));
         }

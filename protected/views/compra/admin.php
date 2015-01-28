@@ -3,8 +3,7 @@
 /* @var $model Compra */
 
 $this->breadcrumbs = array(
-    'Compras' => array('index'),
-    'Manage',
+    'Compras' => array('Compra/admin'),
 );
 
 //$this->menu = array(
