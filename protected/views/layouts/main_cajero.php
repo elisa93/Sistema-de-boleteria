@@ -80,7 +80,8 @@
 		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->
 
-        </div><!-- page -->
+        </div>
+        <!-- page -->
 
     </body>
 </html>

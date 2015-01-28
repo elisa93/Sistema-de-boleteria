@@ -39,14 +39,14 @@
         <?php echo $form->error($model, 'total'); ?>
     </div>
 
-    <div class="row">
-        <?php echo $form->labelEx($model, 'idcajero'); ?>
-        <?php echo $form->textField($model, 'idcajero'); ?>
-        <?php echo $form->error($model, 'idcajero'); ?>
-    </div>
+<!--    <div class="row">
+        <?php //echo $form->labelEx($model, 'idcajero'); ?>
+        <?php //echo $form->textField($model, 'idcajero'); ?>
+        <?php //echo $form->error($model, 'idcajero'); ?>
+    </div>-->
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Guardar' : 'Save'); ?>
     </div>
 
     <?php $this->endWidget(); ?>

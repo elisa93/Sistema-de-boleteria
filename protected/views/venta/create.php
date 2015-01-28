@@ -7,11 +7,11 @@ $this->breadcrumbs = array(
     'Create',
 );
 
-$this->menu = array(
-    array('label' => 'List Venta', 'url' => array('index')),
-    array('label' => 'Manage Venta', 'url' => array('admin')),
-);
-?>
+//$this->menu = array(
+//    array('label' => 'List Venta', 'url' => array('index')),
+//    array('label' => 'Manage Venta', 'url' => array('admin')),
+//);
+//?>
 
 <h1>Create Venta</h1>
 
