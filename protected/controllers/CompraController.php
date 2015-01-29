@@ -75,7 +75,6 @@ class CompraController extends Controller {
     }
 
     public function actionDisponibles($id) {
-
         $this->layout = '//layouts/column2';
         $trasporte = UnidadTransporte::model()->find('idhorario_viaje=' . $id);
         $boletos_cant= Boleto::model()->findAll('estado="disponible"');
