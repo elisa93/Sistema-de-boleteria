@@ -71,6 +71,7 @@
                         array('label' => 'Catalogo Rutas', 'url' => array('/CatalogoRutaCliente/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Compras', 'url' => array('/compra/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Reservas', 'url' => array('/Reserva/admin'), 'visible' => !Yii::app()->user->isGuest),
+                        array('label' => 'Cuenta', 'url' => array('/cliente/update'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest),
 			
 			),

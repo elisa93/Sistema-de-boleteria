@@ -34,7 +34,7 @@ class ReservaController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete'),
+                'actions' => array('admin', 'delete','reservar','disponibles','crear'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -52,27 +52,102 @@ class ReservaController extends Controller {
             'model' => $this->loadModel($id),
         ));
     }
+public function actionCrear($id) {
+        $this->layout = '//layouts/column2';
+        Yii::app()->session['idcatalogo_ruta'] = $id;
+        $modelhorario = new HorarioViaje('search');
+        $modelhorario->unsetAttributes();
+        $model = new CatalogoRuta('search');
+        $model->unsetAttributes();  // clear any default values
+        if (isset($_GET['Reserva']))
+            $model->attributes = $_GET['Reserva'];
+        $bandera = 1;
+        $this->render('crearreserva', array(
+            'bandera' => $bandera,
+            'model' => $model,
+            'modelhorario' => $modelhorario
+        ));
+    }
 
+    public function actionDisponibles($id) {
+        $this->layout = '//layouts/column2';
+        $trasporte = UnidadTransporte::model()->find('idhorario_viaje=' . $id);
+        $boletos_cant= Boleto::model()->findAll('estado="disponible"');
+        $cantidad_disponible = count($boletos_cant);
+        $boletos = new Boleto('search');
+        $cantidad = count($boletos);
+        Yii::app()->session['idhorario'] = $id;
+        $modelhorario = new HorarioViaje('search');
+        $modelhorario->unsetAttributes();
+
+        // $modelboleto = new Boleto('search');
+        $model = new CatalogoRuta('search');
+        $model->unsetAttributes();  // clear any default values
+
+        if (isset($_GET['Reserva']))
+            $model->attributes = $_GET['Reserva'];
+
+
+        if ($cantidad_disponible != 0) {
+
+            $bandera = 2;
+            $boletos->unsetAttributes();
+
+
+            $this->render('crearreserva', array(
+                'bandera' => $bandera,
+                'model' => $model,
+                'boletos' => $boletos,
+                'modelhorario' => $modelhorario,
+            ));
+        } else {
+            Yii::app()->user->setFlash('error', "Lo sentimos, ya no hay boletos disponibles en este horario");
+
+            $bandera = 1;
+            $this->render('crearreserva', array(
+                'bandera' => $bandera,
+                'model' => $model,
+                'modelhorario' => $modelhorario,
+            ));
+        }
+    }
+
+    public function actionReservar($id) {
+
+        $modelboleto = Boleto::model()->findByPk($id);
+        $modelboleto->estado = 'reservado';
+
+        $model = new Reserva;
+        $ruta = CatalogoRuta::model()->find('idcatalogo_ruta=' . Yii::app()->session['idcatalogo_ruta']);
+
+        // if (isset($_POST['Compra'])) {
+        $model->cantidad = 1;
+        $model->total = $ruta->costo;
+        $model->fecha = date('Y-m-d');
+        $model->hora = date('H:i:s');
+        $model->estado = "reservado";
+        $model->idcliente = Yii::app()->session['id'];
+
+        if ($model->save() && $modelboleto->save())
+            $this->actionAdmin();
+        //   $this->redirect(array('view', 'id' => $model->idcompra));
+        // }
+    }
     /**
      * Creates a new model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate() {
-        $model = new Reserva;
+                $this->layout = '//layouts/column2';
 
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
-
-        if (isset($_POST['Reserva'])) {
-            $model->attributes = $_POST['Reserva'];
-            $model->idcliente=Yii::app()->session['id'];
-            $model->estado='Activo';
-            if ($model->save())
-                $this->redirect(array('admin', 'id' => $model->idreserva));
-        }
-
-        $this->render('create', array(
+         $model = new CatalogoRuta('search');
+        $model->unsetAttributes();  // clear any default values
+         if (isset($_GET['Reserva']))
+            $model->attributes = $_GET['Reserva'];
+        $bandera = 0;
+        $this->render('crearreserva', array(
             'model' => $model,
+            'bandera' => $bandera,
         ));
     }
 
