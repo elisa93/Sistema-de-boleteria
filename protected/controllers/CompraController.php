@@ -79,10 +79,8 @@ class CompraController extends Controller {
         $trasporte = UnidadTransporte::model()->find('idhorario_viaje=' . $id);
         $boletos_cant= Boleto::model()->findAll('estado="disponible"');
         $cantidad_disponible = count($boletos_cant);
-        echo $cantidad_disponible;
         $boletos = new Boleto('search');
         $cantidad = count($boletos);
-        echo $cantidad;
         Yii::app()->session['idhorario'] = $id;
         $modelhorario = new HorarioViaje('search');
         $modelhorario->unsetAttributes();
