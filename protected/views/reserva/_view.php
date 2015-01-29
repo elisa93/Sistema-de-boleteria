@@ -16,7 +16,9 @@
     <b><?php echo CHtml::encode($data->getAttributeLabel('hora')); ?>:</b>
     <?php echo CHtml::encode($data->hora); ?>
     <br />
-
+     <b><?php echo CHtml::encode($data->getAttributeLabel('cantidad')); ?>:</b>
+    <?php echo CHtml::encode($data->hora); ?>
+    <br />
     <b><?php echo CHtml::encode($data->getAttributeLabel('total')); ?>:</b>
     <?php echo CHtml::encode($data->total); ?>
     <br />

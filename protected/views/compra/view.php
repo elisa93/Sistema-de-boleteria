@@ -25,6 +25,7 @@ $this->widget('zii.widgets.CDetailView', array(
         'idcompra',
         'fecha',
         'hora',
+        'cantidad',
         'total',
         'estado',
         'idcliente',

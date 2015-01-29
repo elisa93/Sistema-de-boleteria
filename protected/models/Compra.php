@@ -32,9 +32,9 @@ class Compra extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('fecha, hora, total, estado, idcliente', 'required'),
+            array('fecha, hora, total,cantidad, estado, idcliente', 'required'),
             array('idcliente', 'numerical', 'integerOnly' => true),
-            array('fecha, hora, total, estado', 'length', 'max' => 45),
+            array('fecha, hora,cantidad,total, estado', 'length', 'max' => 45),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('idcompra, fecha, hora, total, estado, idcliente', 'safe', 'on' => 'search'),
@@ -62,6 +62,7 @@ class Compra extends CActiveRecord {
             'idcompra' => 'Idcompra',
             'fecha' => 'Fecha',
             'hora' => 'Hora',
+            'cantidad'=>'Cantidad',
             'total' => 'Total',
             'estado' => 'Estado',
             'idcliente' => 'Idcliente',
@@ -88,6 +89,7 @@ class Compra extends CActiveRecord {
         $criteria->compare('idcompra', $this->idcompra);
         $criteria->compare('fecha', $this->fecha, true);
         $criteria->compare('hora', $this->hora, true);
+        $criteria->compare('cantidad', $this->cantidad, true);
         $criteria->compare('total', $this->total, true);
         $criteria->compare('estado', $this->estado, true);
         $criteria->compare('idcliente', Yii::app()->session['id']);

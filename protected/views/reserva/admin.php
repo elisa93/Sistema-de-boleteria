@@ -48,6 +48,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
     //    'idreserva',
         'fecha',
         'hora',
+        'cantidad',
         'total',
         'estado',
      //   'idcliente',

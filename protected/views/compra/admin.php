@@ -50,6 +50,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
       
         'fecha',
         'hora',
+        'cantidad',
         'total',
         'estado',
         
