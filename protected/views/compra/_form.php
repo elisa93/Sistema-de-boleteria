@@ -1,157 +1,65 @@
 <?php
 /* @var $this CompraController */
 /* @var $model Compra */
-
-$this->breadcrumbs = array(
-    'Compras' => array('Compra/admin'),
-);
-
-//$this->menu = array(
-//    array('label' => 'Lista Compras', 'url' => array('index')),
-//    array('label' => 'Crear Compra', 'url' => array('create')),
-//);
-
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#compra-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
+/* @var $form CActiveForm */
 ?>
 
+<div class="form">
 
-<?php
-$this->widget('zii.widgets.grid.CGridView', array(
-    'id' => 'catalogo-ruta-grid',
-    'dataProvider' => $model->search_cliente(),
-    'filter' => $model,
-    'columns' => array(  
-        'ciudad_origen',
-        'ciudad_destino',
-        'costo',
-                array(
-            'class' => 'CButtonColumn',
-            'header'=>'Operations',
-            'template'=>'{ver}',
-            'buttons'=>array
-            (
-                'ver' => array
-                (
-                    'label'=>'ver horarios',
-                 // 'url'=>'CController::createUrl(/HorarioViaje/index)'
-                    'url'=>'CController::createUrl("/compra/crear", array("id"=>$data->idcatalogo_ruta))'
-                    //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
-                 //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
-                ),
-              
-            ),
-        ),
-    ),
-));
-?>
+    <?php
+    $form = $this->beginWidget('CActiveForm', array(
+        'id' => 'compra-form',
+        // Please note: When you enable ajax validation, make sure the corresponding
+        // controller action is handling ajax validation correctly.
+        // There is a call to performAjaxValidation() commented in generated controller code.
+        // See class documentation of CActiveForm for details on this.
+        'enableAjaxValidation' => false,
+    ));
+    ?>
 
-<?php
-if($bandera==1){
-    echo "<h1>Lista de Horario</h1>";
-$this->widget('zii.widgets.grid.CGridView', array(
-    'id' => 'horario-viaje-grid',
-    'dataProvider' => $modelhorario->search(),
-    'filter' => $modelhorario,
-    'columns' => array(
-  //      'idhorario_viaje',
-        'hora_salida',
-        'hora_llegada',
- //       'idcatalogo_ruta',
-        array(
-            'class' => 'CButtonColumn',
-            'header'=>'Operations',
-            'template'=>'{ver}',
-            'buttons'=>array
-            (
-                'ver' => array
-                (
-                    'label'=>'ver disponibles',
-                 // 'url'=>'CController::createUrl(/HorarioViaje/index)'
-                    'url'=>'CController::createUrl("/compra/disponibles", array("id"=>$data->idhorario_viaje))'
-                    //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
-                 //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
-                ),
-              
-            ),
-        ),
-    ),
-));
-}
-if($bandera==2){
-    echo "<h1>Lista de Horario</h1>";
-$this->widget('zii.widgets.grid.CGridView', array(
-    'id' => 'horario-viaje-grid',
-    'dataProvider' => $modelhorario->search(),
-    'filter' => $modelhorario,
-    'columns' => array(
-  //      'idhorario_viaje',
-        'hora_salida',
-        'hora_llegada',
- //       'idcatalogo_ruta',
-        array(
-            'class' => 'CButtonColumn',
-            'header'=>'Operations',
-            'template'=>'{ver}',
-            'buttons'=>array
-            (
-                'ver' => array
-                (
-                    'label'=>'ver disponibles',
-                 // 'url'=>'CController::createUrl(/HorarioViaje/index)'
-                    'url'=>'CController::createUrl("/compra/disponibles", array("id"=>$data->idhorario_viaje))'
-                    //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
-                 //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
-                ),
-              
-            ),
-        ),
-    ),
-));
-     $this->widget('zii.widgets.grid.CGridView', array(
-    'id' => 'boleto-grid',
-    'dataProvider' => $boletos->search(),
-    'filter' => $boletos,
-    'columns' => array(
-        'idboleto',
-        'numero_boleto',
-        'tipo',
-        'estado',
-        'transaporte',
-        'idventa',
-        /*
-          'idreserva_oficina',
-          'idcompra',
-          'idreserva',
-         */
-        array(
-            'class' => 'CButtonColumn',
-            'header'=>'Operations',
-            'template'=>'{ver}',
-            'buttons'=>array
-            (
-                'ver' => array
-                (
-                    'label'=>'Comprar',
-                 // 'url'=>'CController::createUrl(/HorarioViaje/index)'
-                    'url'=>'CController::createUrl("/compra/comprar", array("id"=>$data->idboleto))'
-                    //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
-                 //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
-                ),
-              
-            ),
-        ),
-    ),
-));
-}
-?>
+    <p class="note">Los campos marcados con un  <span class="required">*</span> son obligatorios.</p>
+
+    <?php echo $form->errorSummary($model); ?>
+
+    <div class="row">
+        <?php echo $form->labelEx($model, 'fecha'); ?>
+        <?php echo $form->textField($model, 'fecha', array('size' => 45, 'maxlength' => 45)); ?>
+        <?php echo $form->error($model, 'fecha'); ?>
+    </div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model, 'hora'); ?>
+        <?php echo $form->textField($model, 'hora', array('size' => 45, 'maxlength' => 45)); ?>
+        <?php echo $form->error($model, 'hora'); ?>
+    </div>
+    <div class="row">
+        <?php echo $form->labelEx($model, 'cantidad'); ?>
+        <?php echo $form->textField($model, 'cantidad', array('size' => 45, 'maxlength' => 45)); ?>
+        <?php echo $form->error($model, 'cantidad'); ?>
+    </div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model, 'total'); ?>
+        <?php echo $form->textField($model, 'total', array('size' => 45, 'maxlength' => 45)); ?>
+        <?php echo $form->error($model, 'total'); ?>
+    </div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model, 'estado'); ?>
+        <?php echo $form->textField($model, 'estado', array('size' => 45, 'maxlength' => 45)); ?>
+        <?php echo $form->error($model, 'estado'); ?>
+    </div>
+
+<!--    <div class="row">
+        <?php// echo $form->labelEx($model, 'idcliente'); ?>
+        <?php //echo $form->textField($model, 'idcliente'); ?>
+        <?php //echo $form->error($model, 'idcliente'); ?>
+    </div>-->
+
+    <div class="row buttons">
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
+    </div>
+
+    <?php $this->endWidget(); ?>
+
+</div><!-- form -->

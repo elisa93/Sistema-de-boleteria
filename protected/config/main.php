@@ -8,7 +8,8 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Sistema boletería Cooperativa de transportes "Unión Cariamanga"',
-        'theme'=>'personalizado',
+         'theme'=>'personalizado',
+         'language'=>'es',
 	// preloading 'log' component
 	'preload'=>array('log'),
 

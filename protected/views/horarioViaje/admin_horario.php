@@ -58,7 +58,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
     ),
 ));
 ?>
-//<?php
+<?php
 //    $this->widget('zii.widgets.CMenu', array(
 //        'items' => array(
 //            array('label' => 'Nuevo horario','url' => array('/HorarioViaje/create')),

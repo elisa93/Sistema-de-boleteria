@@ -67,7 +67,7 @@ class CompraController extends Controller {
         if (isset($_GET['Compra']))
             $model->attributes = $_GET['Compra'];
         $bandera=1;
-         $this->render('create', array(
+         $this->render('crearcompra', array(
             'bandera'=>$bandera,
             'model' => $model,
             'modelhorario'=>$modelhorario
@@ -75,28 +75,43 @@ class CompraController extends Controller {
       
     }
     public function actionDisponibles($id){
+
      $this->layout= '//layouts/column2';
      $trasporte=  UnidadTransporte::model()->find('idhorario_viaje='.$id);
      $boletos= Boleto::model()->find('estado=0');
-    
-   
+     $cantidad=count($boletos);
         Yii::app()->session['idhorario'] = $id;
         $modelhorario = new HorarioViaje('search');
         $modelhorario->unsetAttributes();  
+        
        // $modelboleto = new Boleto('search');
-        $boletos->unsetAttributes();  
+        //$boletos->unsetAttributes();  
         $model = new CatalogoRuta('search');
         $model->unsetAttributes();  // clear any default values
+            echo $cantidad;
+
         if (isset($_GET['Compra']))
             $model->attributes = $_GET['Compra'];
+       if($cantidad!=0){
         $bandera=2;
-         $this->render('create', array(
+        $this->render('crearcompra', array(
             'bandera'=>$bandera,
             'model' => $model,
             'boletos'=>$boletos,
             'modelhorario'=>$modelhorario,
 
-        ));
+       ));}else{
+                   Yii::app()->user->setFlash('error', "Lo sentimos, ya no hay boletos disponibles en este horario");
+
+            $bandera=1;
+        $this->render('crearcompra', array(
+            'bandera'=>$bandera,
+            'model' => $model,
+            'modelhorario'=>$modelhorario,
+
+       ));
+       }
+       
     }
     public function actionComprar($id) {
         
@@ -111,7 +126,6 @@ class CompraController extends Controller {
             $model->hora=date('H:i:s');
             $model->estado="pendiente";
             $model->idcliente=Yii::app()->session['id'];
-                        echo "insertado";
 
             if ($model->save())
                 $this->actionAdmin();
@@ -128,7 +142,7 @@ class CompraController extends Controller {
         if (isset($_GET['Compra']))
             $model->attributes = $_GET['Compra'];
          $bandera=0;
-         $this->render('create', array(
+         $this->render('crearcompra', array(
             'model' => $model,
             'bandera'=>$bandera,
 
@@ -180,6 +194,12 @@ class CompraController extends Controller {
      * @param integer $id the ID of the model to be deleted
      */
     public function actionDelete($id) {
+        $model = Compra::model()->findByPk($id);
+        $boleto=  Boleto::model()->find('idcompra='.$model->idcompra);
+        $cantidad=count($boleto);
+        if($cantidad!=0){
+        $boleto->delete();
+        }
         $this->loadModel($id)->delete();
 
         // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
