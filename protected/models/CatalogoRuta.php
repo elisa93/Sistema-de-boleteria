@@ -85,13 +85,13 @@ class CatalogoRuta extends CActiveRecord {
         $criteria->compare('ciudad_origen', $this->ciudad_origen, true);
         $criteria->compare('ciudad_destino', $this->ciudad_destino, true);
         $criteria->compare('costo', $this->costo, true);
-        $criteria->compare('idadministrador',$this->idadministrador); 
+        $criteria->compare('idadministrador', Yii::app()->session['id']);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
     }
-    public function searchAdmin() {
+    public function search_cliente() {
         // @todo Please modify the following code to remove attributes that should not be searched.
 
         $criteria = new CDbCriteria;
@@ -100,7 +100,7 @@ class CatalogoRuta extends CActiveRecord {
         $criteria->compare('ciudad_origen', $this->ciudad_origen, true);
         $criteria->compare('ciudad_destino', $this->ciudad_destino, true);
         $criteria->compare('costo', $this->costo, true);
-        $criteria->compare('idadministrador', Yii::app()->session['id']);
+        $criteria->compare('idadministrador', $this->idadministrador);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,

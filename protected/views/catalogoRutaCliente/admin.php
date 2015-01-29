@@ -11,7 +11,7 @@ $this->breadcrumbs = array(
 //    array('label' => 'Lista de Rutas', 'url' => array('index')),
 //    array('label' => 'Crear Nueva Ruta', 'url' => array('create')),
 //);
-//http://stackoverflow.com/questions/14994890/ajax-search-and-cgridview
+
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -40,7 +40,7 @@ $('.search-form form').submit(function(){
 <?php
 $this->widget('zii.widgets.grid.CGridView', array(
     'id' => 'catalogo-ruta-grid',
-    'dataProvider' => $model->searchAdmin(),
+    'dataProvider' => $model->search_cliente(),
     'filter' => $model,
     'columns' => array(  
         'ciudad_origen',
