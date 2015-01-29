@@ -64,12 +64,12 @@ class CatalogoRutaController extends Controller {
 
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
-
+        echo Yii::app()->session['id'];
         if (isset($_POST['CatalogoRuta'])) {
             $model->attributes = $_POST['CatalogoRuta'];
             $model->idadministrador=Yii::app()->session['id'];
-            if ($model->save())
-                $this->redirect(array('view', 'id' => $model->idcatalogo_ruta));
+//            if ($model->save())
+//                $this->redirect(array('view', 'id' => $model->idcatalogo_ruta));
         }
 
         $this->render('create', array(

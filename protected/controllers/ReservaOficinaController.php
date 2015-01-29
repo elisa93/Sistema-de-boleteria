@@ -65,8 +65,9 @@ class ReservaOficinaController extends Controller {
 
         if (isset($_POST['ReservaOficina'])) {
             $model->attributes = $_POST['ReservaOficina'];
+             $model->idcajero=Yii::app()->session['id'];
             if ($model->save())
-                $this->redirect(array('view', 'id' => $model->idreserva_oficina));
+                $this->redirect(array('admin', 'id' => $model->idreserva_oficina));
         }
 
         $this->render('create', array(

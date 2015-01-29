@@ -3,8 +3,8 @@
 /* @var $model HorarioViaje */
 
 $this->breadcrumbs = array(
-    'Horario Viajes' => array('index'),
-    'Create',
+    'Horario Viajes' => array('horarioViaje/create'),
+  //  'Create',
 );
 
 $this->menu = array(

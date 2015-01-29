@@ -3,6 +3,7 @@
 /* @var $model ReservaOficina */
 
 $this->breadcrumbs = array(
+   // 'Reservas' => array('admin'),
     'Reservas' => array('admin'),
   //  'Manage',
 );

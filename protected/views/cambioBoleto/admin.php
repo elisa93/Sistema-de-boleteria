@@ -3,7 +3,8 @@
 /* @var $model CambioBoleto */
 
 $this->breadcrumbs = array(
-    'Cambio Boletos' => array('admin'),
+    'Cambio Boletos',
+   // 'Cambio Boletos' => array('admin'),
   //  'Manage',
 );
 

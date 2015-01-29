@@ -67,7 +67,7 @@ class VentaController extends Controller {
             $model->attributes = $_POST['Venta'];
             $model->idcajero=Yii::app()->session['id'];
             if ($model->save())
-                $this->redirect(array('view', 'id' => $model->idventa));
+                $this->redirect(array('admin', 'id' => $model->idventa));
         }
 
         $this->render('create', array(

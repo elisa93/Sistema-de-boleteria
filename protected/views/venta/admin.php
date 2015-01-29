@@ -3,7 +3,8 @@
 /* @var $model Venta */
 
 $this->breadcrumbs = array(
-    'Ventas' => array('admin'),
+  //  'Ventas' => array('admin'),
+    'Ventas',
    // 'Manage',
 );
 

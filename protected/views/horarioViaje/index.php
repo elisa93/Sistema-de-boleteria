@@ -2,9 +2,9 @@
 /* @var $this HorarioViajeController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs = array(
-    'Horario Viajes',
-);
+//$this->breadcrumbs = array(
+//    'Horario Viajes'=> array('horarioViaje/create'),
+//);
 
 $this->menu = array(
     array('label' => 'Create HorarioViaje', 'url' => array('create')),

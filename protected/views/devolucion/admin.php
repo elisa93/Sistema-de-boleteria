@@ -3,7 +3,8 @@
 /* @var $model Devolucion */
 
 $this->breadcrumbs = array(
-    'Devoluciones' => array('admin'),
+    //'Devoluciones' => array('admin'),
+    'Devoluciones',
    // 'Manage',
 );
 //

@@ -81,9 +81,9 @@
          <?php $list = CHtml::listData(CatalogoRuta::model()->findAll(array('order' => 'ciudad_destino')), 'ciudad_destino', 'ciudad_destino');
         echo $form->dropDownList($model, 'idcliente', $list);
         ?>
-        <?php echo $form->labelEx($model, 'idcliente'); ?>
-        <?php echo $form->textField($model, 'idcliente'); ?>
-        <?php echo $form->error($model, 'idcliente'); ?>
+        <?php // echo $form->labelEx($model, 'idcliente'); ?>
+        <?php// echo $form->textField($model, 'idcliente'); ?>
+        <?php //echo $form->error($model, 'idcliente'); ?>
     </div>
 
     <div class="row buttons">
