@@ -53,7 +53,7 @@ class ReservaController extends Controller {
         ));
     }
 public function actionCrear($id) {
-        $this->layout = '//layouts/column2';
+        $this->layout = '//layouts/column1';
         Yii::app()->session['idcatalogo_ruta'] = $id;
         $modelhorario = new HorarioViaje('search');
         $modelhorario->unsetAttributes();
@@ -70,7 +70,7 @@ public function actionCrear($id) {
     }
 
     public function actionDisponibles($id) {
-        $this->layout = '//layouts/column2';
+        $this->layout = '//layouts/column1';
         $trasporte = UnidadTransporte::model()->find('idhorario_viaje=' . $id);
         $boletos_cant= Boleto::model()->findAll('estado="disponible"');
         $cantidad_disponible = count($boletos_cant);
@@ -138,7 +138,7 @@ public function actionCrear($id) {
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate() {
-                $this->layout = '//layouts/column2';
+                $this->layout = '//layouts/column1';
 
          $model = new CatalogoRuta('search');
         $model->unsetAttributes();  // clear any default values

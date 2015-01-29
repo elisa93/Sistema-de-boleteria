@@ -55,8 +55,8 @@
                         array('label' => 'Login', 'url' => array('/siteCajero/login'), 'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Ventas', 'url' => array('/Venta/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Reservas', 'url' => array('/ReservaOficina/admin'), 'visible' => !Yii::app()->user->isGuest),
-                        array('label' => 'Devoluciones', 'url' => array('/Devolucion/admin'), 'visible' => !Yii::app()->user->isGuest),
-                        array('label' => 'Cambios', 'url' => array('/CambioBoleto/admin'), 'visible' => !Yii::app()->user->isGuest),
+                      //  array('label' => 'Devoluciones', 'url' => array('/Devolucion/admin'), 'visible' => !Yii::app()->user->isGuest),
+                      // array('label' => 'Cambios', 'url' => array('/CambioBoleto/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/siteCajero/logout'), 'visible' => !Yii::app()->user->isGuest)
                     ),
                 ));
