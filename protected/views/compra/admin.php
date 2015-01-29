@@ -3,7 +3,7 @@
 /* @var $model Compra */
 
 $this->breadcrumbs = array(
-    'Compras' => array('Compra/admin'),
+    'Compras' ,
 );
 
 //$this->menu = array(

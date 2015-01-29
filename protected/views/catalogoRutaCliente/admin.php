@@ -3,7 +3,7 @@
 /* @var $model CatalogoRuta */
 
 $this->breadcrumbs = array(
-    'Catalogo Rutas' => array('CatalogoRutaCliente/admin'),
+    'Catalogo Rutas' ,
    // 'Administrar',
 );
 
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Catalgo de Rutas</h1>
+<h1>Catalogo de Rutas</h1>
 
 <?php echo CHtml::link('Busqueda  avanzada', '#', array('class' => 'search-button')); ?>
 <div class="search-form" style="display:none">

@@ -31,7 +31,7 @@ class Reserva extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('fecha, hora, total, estado, idcliente', 'required'),
+            array('fecha, hora, total, idcliente', 'required'),
             array('idcliente', 'numerical', 'integerOnly' => true),
             array('fecha, hora, total, estado', 'length', 'max' => 45),
             // The following rule is used by search().
