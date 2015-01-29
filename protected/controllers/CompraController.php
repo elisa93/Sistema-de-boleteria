@@ -85,7 +85,6 @@ class CompraController extends Controller {
         $modelhorario->unsetAttributes();  
         
        // $modelboleto = new Boleto('search');
-        //$boletos->unsetAttributes();  
         $model = new CatalogoRuta('search');
         $model->unsetAttributes();  // clear any default values
             echo $cantidad;
@@ -94,6 +93,8 @@ class CompraController extends Controller {
             $model->attributes = $_GET['Compra'];
        if($cantidad!=0){
         $bandera=2;
+                $boletos->unsetAttributes();  
+
         $this->render('crearcompra', array(
             'bandera'=>$bandera,
             'model' => $model,
