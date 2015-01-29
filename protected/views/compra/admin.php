@@ -60,6 +60,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
     ),
 ));
 ?>
+
 <?php
     $this->widget('zii.widgets.CMenu', array(
         'items' => array(

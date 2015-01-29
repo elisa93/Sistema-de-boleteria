@@ -20,4 +20,11 @@ $this->breadcrumbs = array(
 
 <h1>Nueva Compra</h1>
 
-<?php $this->renderPartial('_form', array('model' => $model)); ?>
+<?php 
+
+if($bandera!=0)
+$this->renderPartial('_form', array('model' => $model,'modelhorario'=>$modelhorario,'bandera'=>$bandera));
+if($bandera==0)
+$this->renderPartial('_form', array('model' => $model,'bandera'=>$bandera));
+?>
+

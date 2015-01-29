@@ -34,7 +34,7 @@ class CompraController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete'),
+                'actions' => array('admin', 'delete','crear'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -57,24 +57,57 @@ class CompraController extends Controller {
      * Creates a new model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
-    public function actionCreate() {
-        $model = new Compra;
-
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
-
-        if (isset($_POST['Compra'])) {
-            $model->attributes = $_POST['Compra'];
-            $model->idcliente=Yii::app()->session['id'];
-            if ($model->save())
-                $this->redirect(array('view', 'id' => $model->idcompra));
-        }
-
-        $this->render('create', array(
+    public function actionCrear($id){
+     $this->layout= '//layouts/column2';
+         Yii::app()->session['idcatalogo_ruta'] = $id;
+        $modelhorario = new HorarioViaje('search');
+        $modelhorario->unsetAttributes();  
+        $model = new CatalogoRuta('search');
+        $model->unsetAttributes();  // clear any default values
+        if (isset($_GET['Compra']))
+            $model->attributes = $_GET['Compra'];
+        $bandera=1;
+         $this->render('create', array(
+            'bandera'=>$bandera,
             'model' => $model,
+            'modelhorario'=>$modelhorario
         ));
+      
     }
+    public function actionCreate() {
+                 $this->layout= '//layouts/column2';
 
+        $model = new CatalogoRuta('search');
+        $model->unsetAttributes();  // clear any default values
+        if (isset($_GET['Compra']))
+            $model->attributes = $_GET['Compra'];
+         $bandera=0;
+         $this->render('create', array(
+            'model' => $model,
+            'bandera'=>$bandera,
+
+        ));
+        
+        
+//        $model = new Compra;
+//
+//        // Uncomment the following line if AJAX validation is needed
+//        // $this->performAjaxValidation($model);
+//
+//        if (isset($_POST['Compra'])) {
+//            $model->attributes = $_POST['Compra'];
+//            $model->idcliente=Yii::app()->session['id'];
+//            if ($model->save())
+//                $this->redirect(array('view', 'id' => $model->idcompra));
+//        }
+//
+//        $this->render('create', array(
+//            'model' => $model,
+//        ));
+    }
+      public function  actionCompra(){
+         $model = new Compra;
+     }
     /**
      * Updates a particular model.
      * If update is successful, the browser will be redirected to the 'view' page.
@@ -133,6 +166,7 @@ class CompraController extends Controller {
             'model' => $model,
         ));
     }
+  
 
     /**
      * Returns the data model based on the primary key given in the GET variable.

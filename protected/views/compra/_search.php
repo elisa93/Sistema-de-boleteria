@@ -22,6 +22,10 @@
         <?php echo $form->label($model, 'fecha'); ?>
         <?php echo $form->textField($model, 'fecha', array('size' => 45, 'maxlength' => 45)); ?>
     </div>
+     <div class="row">
+        <?php echo $form->label($model, 'cantidad'); ?>
+        <?php echo $form->textField($model, 'cantidad', array('size' => 45, 'maxlength' => 45)); ?>
+    </div>
 
     <div class="row">
         <?php echo $form->label($model, 'hora'); ?>
