@@ -98,7 +98,26 @@ class Boleto extends CActiveRecord {
         $criteria->compare('idboleto', $this->idboleto);
         $criteria->compare('numero_boleto', $this->numero_boleto, true);
         $criteria->compare('tipo', $this->tipo, true);
-        $criteria->compare('estado', $this->estado, true);
+        $criteria->compare('estado','disponible', true);
+        $criteria->compare('transaporte', $this->transaporte);
+        $criteria->compare('idventa', $this->idventa);
+        $criteria->compare('idreserva_oficina', $this->idreserva_oficina);
+        $criteria->compare('idcompra', $this->idcompra);
+        $criteria->compare('idreserva', $this->idreserva);
+
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+        ));
+    }
+     public function searchDisponibles() {
+        // @todo Please modify the following code to remove attributes that should not be searched.
+
+        $criteria = new CDbCriteria;
+
+        $criteria->compare('idboleto', $this->idboleto);
+        $criteria->compare('numero_boleto', $this->numero_boleto, true);
+        $criteria->compare('tipo', $this->tipo, true);
+        $criteria->compare('estado','disponible', true);
         $criteria->compare('transaporte', $this->transaporte);
         $criteria->compare('idventa', $this->idventa);
         $criteria->compare('idreserva_oficina', $this->idreserva_oficina);

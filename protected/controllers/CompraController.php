@@ -34,7 +34,7 @@ class CompraController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete','crear','disponibles','comprar'),
+                'actions' => array('admin', 'delete', 'crear', 'disponibles', 'comprar'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -57,99 +57,105 @@ class CompraController extends Controller {
      * Creates a new model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
-    public function actionCrear($id){
-     $this->layout= '//layouts/column2';
-         Yii::app()->session['idcatalogo_ruta'] = $id;
+    public function actionCrear($id) {
+        $this->layout = '//layouts/column2';
+        Yii::app()->session['idcatalogo_ruta'] = $id;
         $modelhorario = new HorarioViaje('search');
-        $modelhorario->unsetAttributes();  
+        $modelhorario->unsetAttributes();
         $model = new CatalogoRuta('search');
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['Compra']))
             $model->attributes = $_GET['Compra'];
-        $bandera=1;
-         $this->render('crearcompra', array(
-            'bandera'=>$bandera,
+        $bandera = 1;
+        $this->render('crearcompra', array(
+            'bandera' => $bandera,
             'model' => $model,
-            'modelhorario'=>$modelhorario
+            'modelhorario' => $modelhorario
         ));
-      
     }
-    public function actionDisponibles($id){
 
-     $this->layout= '//layouts/column2';
-     $trasporte=  UnidadTransporte::model()->find('idhorario_viaje='.$id);
-     $boletos= Boleto::model()->find('estado=0');
-     $cantidad=count($boletos);
+    public function actionDisponibles($id) {
+
+        $this->layout = '//layouts/column2';
+        $trasporte = UnidadTransporte::model()->find('idhorario_viaje=' . $id);
+        $boletos_cant= Boleto::model()->findAll('estado="disponible"');
+        $cantidad_disponible = count($boletos_cant);
+        echo $cantidad_disponible;
+        $boletos = new Boleto('search');
+        $cantidad = count($boletos);
+        echo $cantidad;
         Yii::app()->session['idhorario'] = $id;
         $modelhorario = new HorarioViaje('search');
-        $modelhorario->unsetAttributes();  
-        
-       // $modelboleto = new Boleto('search');
+        $modelhorario->unsetAttributes();
+
+        // $modelboleto = new Boleto('search');
         $model = new CatalogoRuta('search');
         $model->unsetAttributes();  // clear any default values
-            echo $cantidad;
 
         if (isset($_GET['Compra']))
             $model->attributes = $_GET['Compra'];
-       if($cantidad!=0){
-        $bandera=2;
-                $boletos->unsetAttributes();  
 
-        $this->render('crearcompra', array(
-            'bandera'=>$bandera,
-            'model' => $model,
-            'boletos'=>$boletos,
-            'modelhorario'=>$modelhorario,
 
-       ));}else{
-                   Yii::app()->user->setFlash('error', "Lo sentimos, ya no hay boletos disponibles en este horario");
+        if ($cantidad_disponible != 0) {
 
-            $bandera=1;
-        $this->render('crearcompra', array(
-            'bandera'=>$bandera,
-            'model' => $model,
-            'modelhorario'=>$modelhorario,
+            $bandera = 2;
+            $boletos->unsetAttributes();
 
-       ));
-       }
-       
+
+            $this->render('crearcompra', array(
+                'bandera' => $bandera,
+                'model' => $model,
+                'boletos' => $boletos,
+                'modelhorario' => $modelhorario,
+            ));
+        } else {
+            Yii::app()->user->setFlash('error', "Lo sentimos, ya no hay boletos disponibles en este horario");
+
+            $bandera = 1;
+            $this->render('crearcompra', array(
+                'bandera' => $bandera,
+                'model' => $model,
+                'modelhorario' => $modelhorario,
+            ));
+        }
     }
+
     public function actionComprar($id) {
-        
-        
+
+        $modelboleto = Boleto::model()->findByPk($id);
+        $modelboleto->estado = 'ocupado';
+
         $model = new Compra;
-        $ruta= CatalogoRuta::model()->find('idcatalogo_ruta='.Yii::app()->session['idcatalogo_ruta']);
+        $ruta = CatalogoRuta::model()->find('idcatalogo_ruta=' . Yii::app()->session['idcatalogo_ruta']);
 
-       // if (isset($_POST['Compra'])) {
-            $model->cantidad=1;
-            $model->total=$ruta->costo;
-            $model->fecha= date('Y-m-d');
-            $model->hora=date('H:i:s');
-            $model->estado="pendiente";
-            $model->idcliente=Yii::app()->session['id'];
+        // if (isset($_POST['Compra'])) {
+        $model->cantidad = 1;
+        $model->total = $ruta->costo;
+        $model->fecha = date('Y-m-d');
+        $model->hora = date('H:i:s');
+        $model->estado = "pendiente";
+        $model->idcliente = Yii::app()->session['id'];
 
-            if ($model->save())
-                $this->actionAdmin();
-             //   $this->redirect(array('view', 'id' => $model->idcompra));
-       // }
-        
+        if ($model->save() && $modelboleto->save())
+            $this->actionAdmin();
+        //   $this->redirect(array('view', 'id' => $model->idcompra));
+        // }
     }
-    
+
     public function actionCreate() {
-                 $this->layout= '//layouts/column2';
+        $this->layout = '//layouts/column2';
 
         $model = new CatalogoRuta('search');
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['Compra']))
             $model->attributes = $_GET['Compra'];
-         $bandera=0;
-         $this->render('crearcompra', array(
+        $bandera = 0;
+        $this->render('crearcompra', array(
             'model' => $model,
-            'bandera'=>$bandera,
-
+            'bandera' => $bandera,
         ));
-        
-        
+
+
 //        $model = new Compra;
 //
 //        // Uncomment the following line if AJAX validation is needed
@@ -166,7 +172,7 @@ class CompraController extends Controller {
 //            'model' => $model,
 //        ));
     }
- 
+
     /**
      * Updates a particular model.
      * If update is successful, the browser will be redirected to the 'view' page.
@@ -196,10 +202,10 @@ class CompraController extends Controller {
      */
     public function actionDelete($id) {
         $model = Compra::model()->findByPk($id);
-        $boleto=  Boleto::model()->find('idcompra='.$model->idcompra);
-        $cantidad=count($boleto);
-        if($cantidad!=0){
-        $boleto->delete();
+        $boleto = Boleto::model()->find('idcompra=' . $model->idcompra);
+        $cantidad = count($boleto);
+        if ($cantidad != 0) {
+            $boleto->delete();
         }
         $this->loadModel($id)->delete();
 
@@ -227,11 +233,10 @@ class CompraController extends Controller {
         if (isset($_GET['Compra']))
             $model->attributes = $_GET['Compra'];
 
-         $this->render('admin', array(
+        $this->render('admin', array(
             'model' => $model,
         ));
     }
-  
 
     /**
      * Returns the data model based on the primary key given in the GET variable.
