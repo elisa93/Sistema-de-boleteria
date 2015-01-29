@@ -3,8 +3,8 @@
 /* @var $model CatalogoRuta */
 
 $this->breadcrumbs = array(
-    'Catalogo Rutas' => array('index'),
-    $model->idcatalogo_ruta => array('view', 'id' => $model->idcatalogo_ruta),
+    'Catalogo Rutas' => array('admin'),
+ //   $model->idcatalogo_ruta => array('view', 'id' => $model->idcatalogo_ruta),
     'Modificar',
 );
 

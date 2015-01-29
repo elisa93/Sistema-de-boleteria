@@ -22,9 +22,11 @@ $this->breadcrumbs = array(
 
 <?php 
 
-if($bandera!=0)
+if($bandera==1)
 $this->renderPartial('_form', array('model' => $model,'modelhorario'=>$modelhorario,'bandera'=>$bandera));
 if($bandera==0)
 $this->renderPartial('_form', array('model' => $model,'bandera'=>$bandera));
+if($bandera==2)
+$this->renderPartial('_form', array('model' => $model,'boletos'=>$boletos,'bandera'=>$bandera,'modelhorario'=>$modelhorario));
 ?>
 

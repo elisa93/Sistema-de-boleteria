@@ -78,7 +78,7 @@
         <div id="footer">
 		Copyright &copy; <?php echo date('Y'); ?> Por DRF<br/>
 		Todos los derechos reservados.<br/>
-		<?php echo Yii::powered(); ?>
+		<?php// echo Yii::powered(); ?>
 	</div><!-- footer -->
 
         </div>

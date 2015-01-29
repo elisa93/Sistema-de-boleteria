@@ -3,8 +3,8 @@
 /* @var $model Cajero */
 
 $this->breadcrumbs = array(
-    'Cajeros' => array('index'),
-    $model->idcajero => array('view', 'id' => $model->idcajero),
+    'Cajeros' => array('admin'),
+ //   $model->idcajero => array('view', 'id' => $model->idcajero),
     'Modificar',
 );
 
@@ -16,6 +16,6 @@ $this->breadcrumbs = array(
 //);
 //?>
 
-<h1>Modificar Cajero <?php echo $model->idcajero; ?></h1>
+<h1>Modificar Cajero <?php// echo $model->idcajero; ?></h1>
 
 <?php $this->renderPartial('_form', array('model' => $model)); ?>

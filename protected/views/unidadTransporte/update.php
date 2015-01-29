@@ -3,8 +3,8 @@
 /* @var $model UnidadTransporte */
 
 $this->breadcrumbs = array(
-    'Unidad Transportes' => array('index'),
-    $model->idunidad_transaporte => array('view', 'id' => $model->idunidad_transaporte),
+    'Unidad Transportes' => array('admin'),
+  //  $model->idunidad_transaporte => array('view', 'id' => $model->idunidad_transaporte),
     'Modificar',
 );
 
@@ -16,6 +16,6 @@ $this->breadcrumbs = array(
 //);
 //?>
 
-<h1>Modificar Unidad de Transporte <?php echo $model->idunidad_transaporte; ?></h1>
+<h1>Modificar Unidad de Transporte <?php //echo $model->idunidad_transaporte; ?></h1>
 
 <?php $this->renderPartial('_form', array('model' => $model)); ?>

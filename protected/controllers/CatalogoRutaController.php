@@ -68,8 +68,9 @@ class CatalogoRutaController extends Controller {
         if (isset($_POST['CatalogoRuta'])) {
             $model->attributes = $_POST['CatalogoRuta'];
             $model->idadministrador=Yii::app()->session['id'];
-//            if ($model->save())
-//                $this->redirect(array('view', 'id' => $model->idcatalogo_ruta));
+            if ($model->save())
+                $this->actionAdmin ();
+             //  $this->redirect(array('view', 'id' => $model->idcatalogo_ruta));
         }
 
         $this->render('create', array(
@@ -91,7 +92,8 @@ class CatalogoRutaController extends Controller {
         if (isset($_POST['CatalogoRuta'])) {
             $model->attributes = $_POST['CatalogoRuta'];
             if ($model->save())
-                $this->redirect(array('view', 'id' => $model->idcatalogo_ruta));
+                $this->actionAdmin ();
+             //   $this->redirect(array('view', 'id' => $model->idcatalogo_ruta));
         }
 
         $this->render('update', array(

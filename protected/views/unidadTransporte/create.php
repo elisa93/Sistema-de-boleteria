@@ -3,7 +3,7 @@
 /* @var $model UnidadTransporte */
 
 $this->breadcrumbs = array(
-    'Unidad Transportes' => array('index'),
+    'Unidad Transportes' => array('admin'),
     'Nueva U. de Transporte',
 );
 

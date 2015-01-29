@@ -34,7 +34,7 @@ class CompraController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete','crear'),
+                'actions' => array('admin', 'delete','crear','disponibles','comprar'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -74,6 +74,52 @@ class CompraController extends Controller {
         ));
       
     }
+    public function actionDisponibles($id){
+     $this->layout= '//layouts/column2';
+     $trasporte=  UnidadTransporte::model()->find('idhorario_viaje='.$id);
+     $boletos= Boleto::model()->find('estado=0');
+    
+   
+        Yii::app()->session['idhorario'] = $id;
+        $modelhorario = new HorarioViaje('search');
+        $modelhorario->unsetAttributes();  
+       // $modelboleto = new Boleto('search');
+        $boletos->unsetAttributes();  
+        $model = new CatalogoRuta('search');
+        $model->unsetAttributes();  // clear any default values
+        if (isset($_GET['Compra']))
+            $model->attributes = $_GET['Compra'];
+        $bandera=2;
+         $this->render('create', array(
+            'bandera'=>$bandera,
+            'model' => $model,
+            'boletos'=>$boletos,
+            'modelhorario'=>$modelhorario,
+
+        ));
+    }
+    public function actionComprar($id) {
+        
+        
+        $model = new Compra;
+        $ruta= CatalogoRuta::model()->find('idcatalogo_ruta='.Yii::app()->session['idcatalogo_ruta']);
+
+       // if (isset($_POST['Compra'])) {
+            $model->cantidad=1;
+            $model->total=$ruta->costo;
+            $model->fecha= date('Y-m-d');
+            $model->hora=date('H:i:s');
+            $model->estado="pendiente";
+            $model->idcliente=Yii::app()->session['id'];
+                        echo "insertado";
+
+            if ($model->save())
+                $this->actionAdmin();
+             //   $this->redirect(array('view', 'id' => $model->idcompra));
+       // }
+        
+    }
+    
     public function actionCreate() {
                  $this->layout= '//layouts/column2';
 
@@ -105,9 +151,7 @@ class CompraController extends Controller {
 //            'model' => $model,
 //        ));
     }
-      public function  actionCompra(){
-         $model = new Compra;
-     }
+ 
     /**
      * Updates a particular model.
      * If update is successful, the browser will be redirected to the 'view' page.

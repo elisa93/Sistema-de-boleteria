@@ -3,9 +3,9 @@
 /* @var $model Venta */
 
 $this->breadcrumbs = array(
-    'Ventas' => array('index'),
-    $model->idventa => array('view', 'id' => $model->idventa),
-    'Update',
+    'Ventas' => array('admin'),
+   // $model->idventa => array('view', 'id' => $model->idventa),
+    'Modificar',
 );
 //
 //$this->menu = array(
@@ -16,6 +16,6 @@ $this->breadcrumbs = array(
 //);
 ?>
 
-<h1>Modificar Venta <?php echo $model->idventa; ?></h1>
+<h1>Modificar Venta <?php //echo $model->idventa; ?></h1>
 
 <?php $this->renderPartial('_form', array('model' => $model)); ?>

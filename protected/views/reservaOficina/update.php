@@ -3,9 +3,9 @@
 /* @var $model ReservaOficina */
 
 $this->breadcrumbs = array(
-    'Reserva Oficinas' => array('index'),
-    $model->idreserva_oficina => array('view', 'id' => $model->idreserva_oficina),
-    'Update',
+    'Reserva Oficinas' => array('admin'),
+   // $model->idreserva_oficina => array('view', 'id' => $model->idreserva_oficina),
+    'Modificar',
 );
 
 //$this->menu = array(
@@ -16,6 +16,6 @@ $this->breadcrumbs = array(
 //);
 ?>
 
-<h1>Modificar Reserva <?php echo $model->idreserva_oficina; ?></h1>
+<h1>Modificar Reserva <?php //echo $model->idreserva_oficina; ?></h1>
 
 <?php $this->renderPartial('_form', array('model' => $model)); ?>

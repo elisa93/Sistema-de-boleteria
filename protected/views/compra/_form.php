@@ -68,9 +68,89 @@ $this->widget('zii.widgets.grid.CGridView', array(
         'hora_salida',
         'hora_llegada',
  //       'idcatalogo_ruta',
-//        array(
-//            'class' => 'CButtonColumn',
-//        ),
+        array(
+            'class' => 'CButtonColumn',
+            'header'=>'Operations',
+            'template'=>'{ver}',
+            'buttons'=>array
+            (
+                'ver' => array
+                (
+                    'label'=>'ver disponibles',
+                 // 'url'=>'CController::createUrl(/HorarioViaje/index)'
+                    'url'=>'CController::createUrl("/compra/disponibles", array("id"=>$data->idhorario_viaje))'
+                    //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+                 //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
+                ),
+              
+            ),
+        ),
+    ),
+));
+}
+if($bandera==2){
+    echo "<h1>Lista de Horario</h1>";
+$this->widget('zii.widgets.grid.CGridView', array(
+    'id' => 'horario-viaje-grid',
+    'dataProvider' => $modelhorario->search(),
+    'filter' => $modelhorario,
+    'columns' => array(
+  //      'idhorario_viaje',
+        'hora_salida',
+        'hora_llegada',
+ //       'idcatalogo_ruta',
+        array(
+            'class' => 'CButtonColumn',
+            'header'=>'Operations',
+            'template'=>'{ver}',
+            'buttons'=>array
+            (
+                'ver' => array
+                (
+                    'label'=>'ver disponibles',
+                 // 'url'=>'CController::createUrl(/HorarioViaje/index)'
+                    'url'=>'CController::createUrl("/compra/disponibles", array("id"=>$data->idhorario_viaje))'
+                    //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+                 //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
+                ),
+              
+            ),
+        ),
+    ),
+));
+     $this->widget('zii.widgets.grid.CGridView', array(
+    'id' => 'boleto-grid',
+    'dataProvider' => $boletos->search(),
+    'filter' => $boletos,
+    'columns' => array(
+        'idboleto',
+        'numero_boleto',
+        'tipo',
+        'estado',
+        'transaporte',
+        'idventa',
+        /*
+          'idreserva_oficina',
+          'idcompra',
+          'idreserva',
+         */
+        array(
+            'class' => 'CButtonColumn',
+            'header'=>'Operations',
+            'template'=>'{ver}',
+            'buttons'=>array
+            (
+                'ver' => array
+                (
+                    'label'=>'Comprar',
+                 // 'url'=>'CController::createUrl(/HorarioViaje/index)'
+                    'url'=>'CController::createUrl("/compra/comprar", array("id"=>$data->idboleto))'
+                    //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+                 //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
+                ),
+              
+            ),
+        ),
     ),
 ));
 }

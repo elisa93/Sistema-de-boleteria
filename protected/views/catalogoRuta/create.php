@@ -3,7 +3,7 @@
 /* @var $model CatalogoRuta */
 
 $this->breadcrumbs = array(
-    'Catalogo Rutas' => array('index'),
+    'Catalogo Rutas' => array('admin'),
     'Nueva ruta',
 );
 

@@ -3,8 +3,8 @@
 /* @var $model Cajero */
 
 $this->breadcrumbs = array(
-    'Cajeros' => array('index'),
-    $model->idcajero,
+    'Cajeros' => array('admin'),
+    'Ver',
 );
 
 //$this->menu = array(
@@ -16,7 +16,7 @@ $this->breadcrumbs = array(
 //);
 //?>
 
-<h1> Cajero #<?php echo $model->idcajero; ?></h1>
+<h1> Cajero: <?php //echo $model->idcajero; ?></h1>
 
 <?php
 $this->widget('zii.widgets.CDetailView', array(

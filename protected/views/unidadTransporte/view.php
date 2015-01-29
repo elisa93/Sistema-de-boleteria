@@ -3,8 +3,8 @@
 /* @var $model UnidadTransporte */
 
 $this->breadcrumbs = array(
-    'Unidad Transporte' => array('index'),
-    $model->idunidad_transaporte,
+    'Unidad Transporte' => array('admin'),
+   // $model->idunidad_transaporte,
 );
 
 //$this->menu = array(
@@ -16,19 +16,19 @@ $this->breadcrumbs = array(
 //);
 //?>
 
-<h1>Unidad de Transporte #<?php echo $model->idunidad_transaporte; ?></h1>
+<h1>Unidad de Transporte <?php //echo $model->idunidad_transaporte; ?></h1>
 
 <?php
 $this->widget('zii.widgets.CDetailView', array(
     'data' => $model,
     'attributes' => array(
-        'idunidad_transaporte',
+    //    'idunidad_transaporte',
         'placa',
         'numero_unidad',
         'capacidad',
         'estado',
-        'idhorario_viaje',
-        'idadministrador',
+      //  'idhorario_viaje',
+      //  'idadministrador',
     ),
 ));
 ?>
