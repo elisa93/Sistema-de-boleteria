@@ -3,7 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs = array(
-    'Cambio Boletos'=>('CambioBoleto/admin'),'Nuevo Cambio'
+    'Cambio Boletos',
 );
 
 $this->menu = array(

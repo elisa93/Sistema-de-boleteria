@@ -33,6 +33,12 @@
         <?php echo $form->textField($model, 'hora', array('size' => 45, 'maxlength' => 45)); ?>
         <?php echo $form->error($model, 'hora'); ?>
     </div>
+    
+    <div class="row">
+        <?php echo $form->labelEx($model, 'cantidad'); ?>
+        <?php echo $form->textField($model, 'cantidad', array('size' => 45, 'maxlength' => 45)); ?>
+        <?php echo $form->error($model, 'cantidad'); ?>
+    </div>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'total'); ?>

@@ -3,7 +3,7 @@
 /* @var $model CambioBoleto */
 
 $this->breadcrumbs = array(
-    'Cambio Boletos' => array('admin'),
+    'Cambio Boletos' => array('admin'), 'Nuevo Cambio'
  //   'Create',
 );
 

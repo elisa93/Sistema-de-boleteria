@@ -49,7 +49,9 @@ $this->widget('zii.widgets.grid.CGridView', array(
      //   'idventa',
         'fecha',
         'hora',
+        'cantidad',
         'total',
+        
        // 'idcajero',
         array(
             'class' => 'CButtonColumn',
