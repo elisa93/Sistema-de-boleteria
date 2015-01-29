@@ -116,7 +116,7 @@ class CatalogoRutaClienteController extends Controller {
      * Manages all models.
      */
     public function actionAdmin() {
-        $model = new CatalogoRuta('search_cliente');
+        $model = new CatalogoRuta('search');
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['CatalogoRutaCliente']))
             $model->attributes = $_GET['CatalogoRutaCliente'];
