@@ -34,7 +34,7 @@ class Cliente extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('email, cedula, nombre, telefono, direccion, password, estado', 'required'),
+            array('email, cedula, nombre, telefono, direccion, password','required'),
             array('email, cedula, nombre, telefono, direccion, estado', 'length', 'max' => 45),
             array('password', 'length', 'max' => 100),
             // The following rule is used by search().

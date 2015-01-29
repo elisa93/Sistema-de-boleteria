@@ -65,8 +65,9 @@ class ClienteController extends Controller {
 
         if (isset($_POST['Cliente'])) {
             $model->attributes = $_POST['Cliente'];
+            $model->estado = 'Activo';
             if ($model->save())
-                $this->redirect(array('view', 'id' => $model->idusuario));
+                $this->redirect(array('admin', 'id' => $model->idusuario));
         }
 
         $this->render('create', array(

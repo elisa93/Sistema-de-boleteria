@@ -3,8 +3,8 @@
 /* @var $model Cliente */
 
 $this->breadcrumbs = array(
-    'Clientes' => array('index'),
-    'Create',
+    'Login' => array('admin'),
+    'Registrarse',
 );
 
 $this->menu = array(
@@ -13,6 +13,6 @@ $this->menu = array(
 );
 ?>
 
-<h1>Create Cliente</h1>
+<h1>Registrarse </h1>
 
 <?php $this->renderPartial('_form', array('model' => $model)); ?>
