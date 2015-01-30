@@ -102,6 +102,16 @@ class Cajero extends CActiveRecord {
         ));
     }
     
+      /**
+     * Returns the static model of the specified AR class.
+     * Please note that you should have this exact method in all your CActiveRecord descendants!
+     * @param string $className active record class name.
+     * @return Cajero the static model class
+     */
+    public static function model($className = __CLASS__) {
+        return parent::model($className);
+    }
+    
     public function beforeUpdate() {
         if ($this->isNewRecord) {
             $this->password = hash_hmac('sha256', $this->password, Yii::app()->params['encryptionKey']);
@@ -115,15 +125,4 @@ class Cajero extends CActiveRecord {
 
         return parent::beforeSave();
     }
-
-    /**
-     * Returns the static model of the specified AR class.
-     * Please note that you should have this exact method in all your CActiveRecord descendants!
-     * @param string $className active record class name.
-     * @return Cajero the static model class
-     */
-    public static function model($className = __CLASS__) {
-        return parent::model($className);
-    }
-
 }

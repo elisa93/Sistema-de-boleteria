@@ -106,5 +106,19 @@ class Administrador extends CActiveRecord {
     public static function model($className = __CLASS__) {
         return parent::model($className);
     }
+    public function beforeUpdate() {
+        if ($this->isNewRecord) {
+            $this->clave = hash_hmac('sha256', $this->clave, Yii::app()->params['encryptionKey']);
+        }
+        return parent::beforeSave();
+    }
+
+    public function beforeSave() {
+
+        $this->clave = hash_hmac('sha256', $this->clave, Yii::app()->params['encryptionKey']);
+
+        return parent::beforeSave();
+    }
+
 
 }

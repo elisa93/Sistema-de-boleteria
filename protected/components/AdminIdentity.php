@@ -34,7 +34,7 @@ class AdminIdentity extends CUserIdentity
                    $user= Administrador::model()->findByAttributes(array(
 			'email'=>$this->username
 			));
-		//$this->password = hash_hmac('sha256', $this->password,	Yii::app()->params['encryptionKey']);
+		$this->password = hash_hmac('sha256', $this->password,	Yii::app()->params['encryptionKey']);
 
 		if($user===null)
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
