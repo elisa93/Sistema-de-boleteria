@@ -101,6 +101,20 @@ class Cajero extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
+    
+    public function beforeUpdate() {
+        if ($this->isNewRecord) {
+            $this->password = hash_hmac('sha256', $this->password, Yii::app()->params['encryptionKey']);
+        }
+        return parent::beforeSave();
+    }
+
+    public function beforeSave() {
+
+        $this->password = hash_hmac('sha256', $this->password, Yii::app()->params['encryptionKey']);
+
+        return parent::beforeSave();
+    }
 
     /**
      * Returns the static model of the specified AR class.

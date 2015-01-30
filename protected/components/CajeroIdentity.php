@@ -36,7 +36,9 @@ class CajeroIdentity extends CUserIdentity
 			));
 		//$this->password = hash_hmac('sha256', $this->password,	Yii::app()->params['encryptionKey']);
 
-		if($user===null)
+		$this->password = hash_hmac('sha256', $this->password,	Yii::app()->params['encryptionKey']);
+
+                   if($user===null)
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
 		elseif($user->password!== $this->password)
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
