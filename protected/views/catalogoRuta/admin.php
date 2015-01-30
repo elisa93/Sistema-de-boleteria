@@ -50,18 +50,20 @@ $this->widget('zii.widgets.grid.CGridView', array(
       //  'idadministrador',
         array(
             'class' => 'CButtonColumn',
-//             'template'=>'{view}{update}{delete}',
-//            'buttons'=>array
-//            (
-//                'view' => array
-//                (
-//                //  'url'=>'CController::createUrl("/HorarioViaje/admin", array("idcatalogo_ruta"=>$data->idcatalogo_ruta))'
-//             //                  'url'=>'CController::createUrl("/HorarioViaje/admin", array("idcatalogo_ruta"=>$data->idcatalogo_ruta))'
-//                    //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
-//                 //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
-//                ),
-//              
-//            ),
+            'header'=>'Operationes',
+            'template'=>'{ver}{update}{delete}',
+            'buttons'=>array
+            (
+                'ver' => array
+                (
+                    'label'=>'Horario ',
+                 // 'url'=>'CController::createUrl(/HorarioViaje/index)'
+                    'url'=>'CController::createUrl("/catalogoRuta/view", array("id"=>$data->idcatalogo_ruta))'
+                    //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+                 //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
+                ),
+              
+            ),
         ),
     ),
 ));

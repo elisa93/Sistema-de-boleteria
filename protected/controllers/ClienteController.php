@@ -51,9 +51,11 @@ class ClienteController extends Controller {
      * Displays a particular model.
      * @param integer $id the ID of the model to be displayed
      */
-    public function actionView($id) {
+    public function actionView() {
+        $model = $this->loadModel(Yii::app()->session['id']);
+
         $this->render('view', array(
-            'model' => $this->loadModel($id),
+            'model' => $this->loadModel(Yii::app()->session['id']),
         ));
     }
 
@@ -84,8 +86,8 @@ class ClienteController extends Controller {
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id the ID of the model to be updated
      */
-    public function actionUpdate($id) {
-        $model = $this->loadModel($id);
+    public function actionUpdate() {
+        $model = $this->loadModel(Yii::app()->session['id']);
 
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
@@ -93,6 +95,7 @@ class ClienteController extends Controller {
         if (isset($_POST['Cliente'])) {
             $model->attributes = $_POST['Cliente'];
             if ($model->save())
+             //   $this->actionView ();
                 $this->redirect(array('view', 'id' => $model->idusuario));
         }
 

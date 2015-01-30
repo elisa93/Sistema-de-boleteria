@@ -3,8 +3,8 @@
 /* @var $model Cliente */
 
 $this->breadcrumbs = array(
-    'Clientes' => array('index'),
-    $model->idusuario,
+    'Cliente',
+   // $model->idusuario,
 );
 
 $this->menu = array(
@@ -16,20 +16,28 @@ $this->menu = array(
 );
 ?>
 
-<h1>View Cliente #<?php echo $model->idusuario; ?></h1>
+<h1>Datos de cuenta: <?php //echo $model->idusuario; ?></h1>
 
 <?php
 $this->widget('zii.widgets.CDetailView', array(
     'data' => $model,
     'attributes' => array(
-        'idusuario',
+       // 'idusuario',
         'email',
         'cedula',
         'nombre',
         'telefono',
         'direccion',
-        'password',
-        'estado',
+        //'password',
+       // 'estado',
     ),
 ));
+
 ?>
+ <?php
+    $this->widget('zii.widgets.CMenu', array(
+        'items' => array(
+            array('label' => Yii::t('traductor', 'Modificar Cuenta'), 'url' => array('/cliente/update')),
+        ),
+    ));
+    ?>

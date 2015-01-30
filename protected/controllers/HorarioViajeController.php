@@ -6,7 +6,7 @@ class HorarioViajeController extends Controller {
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
      * using two-column layout. See 'protected/views/layouts/column2.php'.
      */
-    public $layout = '//layouts/column2_administrador';
+    public $layout = '//layouts/column1_administrador';
 
     /**
      * @return array action filters
@@ -139,9 +139,8 @@ class HorarioViajeController extends Controller {
 
     
     public function actionAdmin($id) {
+       // $this->layout= '//layouts/column2_administrador';
         Yii::app()->session['idcatalogo_ruta'] = $id;
-    
-
         $model = new HorarioViaje('search');
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['HorarioViaje']))
@@ -152,7 +151,7 @@ class HorarioViajeController extends Controller {
         ));
     }
      public function actionAdmin_horarios($id) {
-         $this->layout= '//layouts/column2';
+         $this->layout= '//layouts/column1';
         Yii::app()->session['idcatalogo_ruta'] = $id;
         $model = new HorarioViaje('search');
         $model->unsetAttributes();  // clear any default values

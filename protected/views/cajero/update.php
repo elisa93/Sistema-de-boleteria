@@ -16,6 +16,6 @@ $this->breadcrumbs = array(
 //);
 //?>
 
-<h1>Modificar Cajero <?php// echo $model->idcajero; ?></h1>
+<h1>Modificar Cajero <?php //echo $model->idcajero; ?></h1>
 
 <?php $this->renderPartial('_form', array('model' => $model)); ?>

@@ -6,7 +6,7 @@ class CatalogoRutaController extends Controller {
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
      * using two-column layout. See 'protected/views/layouts/column2.php'.
      */
-    public $layout = '//layouts/column2_administrador';
+    public $layout = '//layouts/column1_administrador';
 
     /**
      * @return array action filters
@@ -69,8 +69,8 @@ class CatalogoRutaController extends Controller {
             $model->attributes = $_POST['CatalogoRuta'];
             $model->idadministrador=Yii::app()->session['id'];
             if ($model->save())
-                $this->actionAdmin ();
-             //  $this->redirect(array('view', 'id' => $model->idcatalogo_ruta));
+             //   $this->actionAdmin ();
+        $this->redirect(array('CatalogoRuta/admin','id'=>Yii::app()->session['id']));
         }
 
         $this->render('create', array(

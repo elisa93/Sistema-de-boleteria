@@ -53,7 +53,7 @@
 
     <div class="row">
         <?php echo $form->labelEx($model, 'password'); ?>
-        <?php echo $form->passwordField($model, 'password', array('size' => 60, 'maxlength' => 100)); ?>
+        <?php echo $form->passwordField($model, 'password', array('size' => 45, 'maxlength' => 45)); ?>
         <?php echo $form->error($model, 'password'); ?>
     </div>
 
@@ -64,7 +64,7 @@
     </div>-->
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Save'); ?>
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
     </div>
 
     <?php $this->endWidget(); ?>

@@ -47,12 +47,13 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => $model->search(),
     'filter' => $model,
     'columns' => array(
-        'idhorario_viaje',
+        //'idhorario_viaje',
         'hora_salida',
         'hora_llegada',
-        'idcatalogo_ruta',
+       // 'idcatalogo_ruta',
         array(
             'class' => 'CButtonColumn',
+            
         ),
     ),
 ));

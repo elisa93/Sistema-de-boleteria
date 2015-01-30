@@ -3,7 +3,7 @@
 /* @var $model Compra */
 
 $this->breadcrumbs = array(
-    'Reserva' => array('Reserva/admin'),'Nueva Reserva'
+    'Reserva' => array('ReservaOficina/admin'),'Nueva Reserva'
 );
 
 //$this->menu = array(
@@ -17,7 +17,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#reserva-grid').yiiGridView('update', {
+	$('#reserva-oficina-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -27,7 +27,6 @@ $('.search-form form').submit(function(){
 
 
 <?php
-
 //Yii::app()->user->setFlash('success', "Data1 saved!");
 //Yii::app()->user->setFlash('notice', "Data3 ignored.");
 //Yii::app()->user->setFlash('success',"El proceso fue realizado correctamente.");
@@ -52,7 +51,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
                 (
                     'label'=>'ver horarios',
                  // 'url'=>'CController::createUrl(/HorarioViaje/index)'
-                    'url'=>'CController::createUrl("/reserva/crear", array("id"=>$data->idcatalogo_ruta))'
+                    'url'=>'CController::createUrl("/reservaOficina/crear", array("id"=>$data->idcatalogo_ruta))'
                     //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
                  //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
                 ),
@@ -66,6 +65,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 <?php
 if($bandera==1){
     echo "<h1>Lista de Horario</h1>";
+    
 $this->widget('zii.widgets.grid.CGridView', array(
     'id' => 'horario-viaje-grid',
     'dataProvider' => $modelhorario->search(),
@@ -85,7 +85,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
                 (
                     'label'=>'ver disponibles',
                  // 'url'=>'CController::createUrl(/HorarioViaje/index)'
-                    'url'=>'CController::createUrl("/reserva/disponibles", array("id"=>$data->idhorario_viaje))'
+                    'url'=>'CController::createUrl("/reservaOficina/disponibles", array("id"=>$data->idhorario_viaje))'
                     //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
                  //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
                 ),
@@ -95,8 +95,10 @@ $this->widget('zii.widgets.grid.CGridView', array(
     ),
 ));
 }
+
 if($bandera==2){
     echo "<h1>Lista de Horario</h1>";
+    
 $this->widget('zii.widgets.grid.CGridView', array(
     'id' => 'horario-viaje-grid',
     'dataProvider' => $modelhorario->search(),
@@ -116,7 +118,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
                 (
                     'label'=>'ver disponibles',
                  // 'url'=>'CController::createUrl(/HorarioViaje/index)'
-                    'url'=>'CController::createUrl("/reserva/disponibles", array("id"=>$data->idhorario_viaje))'
+                    'url'=>'CController::createUrl("/reservaOficina/disponibles", array("id"=>$data->idhorario_viaje))'
                     //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
                  //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
                 ),
@@ -125,6 +127,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         ),
     ),
 ));
+
 
      $this->widget('zii.widgets.grid.CGridView', array(
     'id' => 'boleto-grid',
@@ -152,7 +155,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
                 (
                     'label'=>'Reservar',
                  // 'url'=>'CController::createUrl(/HorarioViaje/index)'
-                    'url'=>'CController::createUrl("/reserva/reservar", array("id"=>$data->idboleto))'
+                    'url'=>'CController::createUrl("/reservaOficina/reservar", array("id"=>$data->idboleto))'
                     //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
                  //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
                 ),

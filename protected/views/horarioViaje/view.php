@@ -3,8 +3,8 @@
 /* @var $model HorarioViaje */
 
 $this->breadcrumbs = array(
-    'Horario Viajes' => array('index'),
-    $model->idhorario_viaje,
+    'Horario Viaje',
+  //  $model->idhorario_viaje,
 );
 
 $this->menu = array(
@@ -16,16 +16,16 @@ $this->menu = array(
 );
 ?>
 
-<h1>View HorarioViaje #<?php echo $model->idhorario_viaje; ?></h1>
+<h1>Ver Horario <?php //echo $model->idhorario_viaje; ?></h1>
 
 <?php
 $this->widget('zii.widgets.CDetailView', array(
     'data' => $model,
     'attributes' => array(
-        'idhorario_viaje',
+       // 'idhorario_viaje',
         'hora_salida',
         'hora_llegada',
-        'idcatalogo_ruta',
+      //  'idcatalogo_ruta',
     ),
 ));
 ?>

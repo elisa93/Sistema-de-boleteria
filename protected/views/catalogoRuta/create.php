@@ -13,6 +13,6 @@ $this->breadcrumbs = array(
 //);
 //?>
 
-<h1>Crear Nueva Ruta</h1>
+<h1>Nueva Ruta</h1>
 
 <?php $this->renderPartial('_form', array('model' => $model)); ?>

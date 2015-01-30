@@ -72,6 +72,7 @@ public function actionCrear($id) {
     public function actionDisponibles($id) {
         $this->layout = '//layouts/column1';
         $trasporte = UnidadTransporte::model()->find('idhorario_viaje=' . $id);
+        echo $trasporte->idtransaporte;
         $boletos_cant= Boleto::model()->findAll('estado="disponible"');
         $cantidad_disponible = count($boletos_cant);
         $boletos = new Boleto('search');
