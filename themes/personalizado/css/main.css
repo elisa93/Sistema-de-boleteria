@@ -7,6 +7,22 @@ body
 	background: #EFEFEF;
 }
 
+#login{
+	width: 30%;
+	padding: 20px;
+	height: 20%;
+	margin-left: 35%;
+	margin-top: -19%;
+	border-radius: 12px;
+	background-image:url(../images/c.jpg);
+}
+
+#lo{
+	margin-top: 1%;
+	margin-left: 13%;
+	background-image:url(../images/sesion.png);
+	background-repeat: no-repeat;
+}
 #page
 {
 	margin-bottom: 5px;

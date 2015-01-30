@@ -13,7 +13,7 @@ $this->breadcrumbs = array(
 );
 ?>
 
-<h1>Iniciar Sesion</h1>
+
 
  <!-- <p>Please fill out the following form with your login credentials:</p>  -->
 
@@ -28,8 +28,11 @@ $this->breadcrumbs = array(
     ));
     ?>
 
-        <!--<p class="note">Fields with <span class="required">*</span> are required.</p> -->
-
+    <center><h1>Iniciar Sesion</h1></center>    <!--<p class="note">Fields with <span class="required">*</span> are required.</p> -->
+    
+    <div class="login2">
+        
+        
     <div class="row">
         <?php echo $form->labelEx($model, 'Usuario'); ?>
         <?php echo $form->textField($model, 'username'); ?>
@@ -72,4 +75,5 @@ $this->breadcrumbs = array(
 
 
     <?php $this->endWidget(); ?>
+</div>
 </div>

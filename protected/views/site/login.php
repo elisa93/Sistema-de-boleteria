@@ -9,9 +9,13 @@ $this->breadcrumbs = array(
 );
 ?>
 
-<h1>Iniciar Sesión</h1>
+
+
+<center><h1>Iniciar Sesión</h1></center>
 
  <!-- <p>Please fill out the following form with your login credentials:</p>  -->
+
+
 
 <div class="form">
     <?php
@@ -26,6 +30,9 @@ $this->breadcrumbs = array(
 
         <!--<p class="note">Fields with <span class="required">*</span> are required.</p> -->
 
+   <div class="login1">
+          <!--<div class="imagen"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/login01.png"></img>-->
+ 
     <div class="row">
         <?php echo $form->labelEx($model, 'Usuario'); ?>
         <?php echo $form->textField($model, 'username'); ?>
@@ -51,7 +58,6 @@ $this->breadcrumbs = array(
         <?php echo CHtml::submitButton('Login'); ?>
     </div>
 
-
     <?php $this->endWidget(); ?>
     <?php
     $this->widget('zii.widgets.CMenu', array(
@@ -61,3 +67,5 @@ $this->breadcrumbs = array(
     ));
     ?>
 </div>
+  </div>
+
