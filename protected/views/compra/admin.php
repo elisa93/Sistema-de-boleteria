@@ -32,7 +32,14 @@ You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&g
 or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
 </p> -->
 
-<?php echo CHtml::link('Buscador Compras', '#', array('class' => 'search-button')); ?>
+<?php 
+//Yii::app()->user->setFlash('success', "Data1 saved!");
+//Yii::app()->user->setFlash('notice', "Data3 ignored.");
+//Yii::app()->user->setFlash('success',"El proceso fue realizado correctamente.");
+foreach(Yii::app()->user->getFlashes() as $key => $message) {
+        echo '<div class="flash-' . $key . '">' . $message . "</div>\n";
+    }
+echo CHtml::link('Buscador Compras', '#', array('class' => 'search-button')); ?>
 <div class="search-form" style="display:none">
     <?php
     $this->renderPartial('_search', array(

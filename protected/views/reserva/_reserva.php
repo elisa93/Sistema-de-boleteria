@@ -131,12 +131,12 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => $boletos->search(),
     'filter' => $boletos,
     'columns' => array(
-        'idboleto',
+       // 'idboleto',
         'numero_boleto',
         'tipo',
         'estado',
-        'transaporte',
-        'idventa',
+      //  'transaporte',
+     //   'idventa',
         /*
           'idreserva_oficina',
           'idcompra',

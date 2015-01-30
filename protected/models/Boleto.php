@@ -37,7 +37,7 @@ class Boleto extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('numero_boleto, tipo, estado, transaporte, idventa, idreserva_oficina, idcompra, idreserva', 'required'),
+            //array('numero_boleto, tipo, estado, transaporte, idventa, idreserva_oficina, idcompra, idreserva', 'required'),
             array('transaporte, idventa, idreserva_oficina, idcompra, idreserva', 'numerical', 'integerOnly' => true),
             array('numero_boleto, tipo, estado', 'length', 'max' => 45),
             // The following rule is used by search().
@@ -99,7 +99,7 @@ class Boleto extends CActiveRecord {
         $criteria->compare('numero_boleto', $this->numero_boleto, true);
         $criteria->compare('tipo', $this->tipo, true);
         $criteria->compare('estado','disponible', true);
-        $criteria->compare('transaporte', $this->transaporte);
+        $criteria->compare('transaporte', Yii::app()->session['idtransporte']);
         $criteria->compare('idventa', $this->idventa);
         $criteria->compare('idreserva_oficina', $this->idreserva_oficina);
         $criteria->compare('idcompra', $this->idcompra);

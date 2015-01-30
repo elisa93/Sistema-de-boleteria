@@ -31,7 +31,14 @@ $('.search-form form').submit(function(){
 
 
 
-<?php echo CHtml::link('Busqueda Avanzada', '#', array('class' => 'search-button')); ?>
+<?php 
+//Yii::app()->user->setFlash('success', "Data1 saved!");
+//Yii::app()->user->setFlash('notice', "Data3 ignored.");
+//Yii::app()->user->setFlash('success',"El proceso fue realizado correctamente.");
+foreach(Yii::app()->user->getFlashes() as $key => $message) {
+        echo '<div class="flash-' . $key . '">' . $message . "</div>\n";
+    }
+echo CHtml::link('Busqueda Avanzada', '#', array('class' => 'search-button')); ?>
 <div class="search-form" style="display:none">
     <?php
     $this->renderPartial('_search', array(
