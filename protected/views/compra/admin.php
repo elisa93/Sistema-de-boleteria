@@ -57,7 +57,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
       
         'fecha',
         'hora',
-        'cantidad',
+       // 'cantidad',
         'total',
         'estado',
         

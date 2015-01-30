@@ -75,11 +75,24 @@ public function actionCrear($id) {
         ));
     }
 
-    public function actionDisponibles($id) {
+   public function actionDisponibles($id) {
         $this->layout = '//layouts/column1_cajero';
-        $trasporte = UnidadTransporte::model()->find('idhorario_viaje=' . $id);
-        $boletos_cant= Boleto::model()->findAll('estado="disponible"');
+        $trasporte = UnidadTransporte::model()->findAll('idhorario_viaje=' . $id);
+        $cantidad_buses = count($trasporte);
+        if($cantidad_buses!=0){
+                 Yii::app()->session['idtransporte'] =$trasporte[0]['idunidad_transaporte'];
+        }else{
+                 Yii::app()->session['idtransporte'] =-1;
+
+        }
+
+    
+     //     $cantidadu = count($trasporte);
+
+       // $boletos_cant= Boleto::model()->findAll('estado="disponible"');
+        $boletos_cant= Boleto::model()->findByAttributes(array('estado'=>'disponible','transaporte'=> Yii::app()->session['idtransporte']));
         $cantidad_disponible = count($boletos_cant);
+        echo $cantidad_disponible;
         $boletos = new Boleto('search');
         $cantidad = count($boletos);
         Yii::app()->session['idhorario'] = $id;
@@ -118,6 +131,7 @@ public function actionCrear($id) {
         }
     }
 
+
     public function actionReservar($id) {
 
         $modelboleto = Boleto::model()->findByPk($id);
@@ -133,6 +147,7 @@ public function actionCrear($id) {
         $model->hora = date('H:i:s');
         $model->estado = "reservado";
         $model->idcliente = Yii::app()->session['id'];
+        Yii::app()->user->setFlash('success',"Reserva Exitosa..!! debe hacer efectiva la compra en un plazo maximo de un dia antes del viaje");
 
         if ($model->save() && $modelboleto->save())
             $this->actionAdmin();

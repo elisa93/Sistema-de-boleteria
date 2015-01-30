@@ -145,8 +145,8 @@ class CompraController extends Controller {
         $model->hora = date('H:i:s');
         $model->estado = "pendiente";
         $model->idcliente = Yii::app()->session['id'];
-//Yii::app()->user->setFlash('notice', "Data3 ignored.");
-Yii::app()->user->setFlash('success',"El proceso fue realizado correctamente,Ud debe acercarce a ventanilla a realizar el pago del boleto.");
+        //Yii::app()->user->setFlash('notice', "Data3 ignored.");
+        Yii::app()->user->setFlash('success',"El proceso fue realizado correctamente,Ud debe acercarce a ventanilla a realizar el pago del boleto.");
         if ($model->save() && $modelboleto->save())
             $this->actionAdmin();
         //   $this->redirect(array('view', 'id' => $model->idcompra));
