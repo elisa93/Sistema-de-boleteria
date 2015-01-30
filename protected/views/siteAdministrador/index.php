@@ -11,7 +11,7 @@
   $this->widget('ext.FlexPictureSlider.FlexPictureSlider',
   array(
     'imageBlockSelector' => '#myslider', //the jquery selector
-    'widthSlider' => '1250', //or you can use jquery '$(window).width()/1.6',
+    'widthSlider' => '1282', //or you can use jquery '$(window).width()/1.6',
     'heightSlider' => '350', //or you can use jquery '$(window).height()/1.6',
     'slideUnitSize' => 'px', //px or %
     'timeBetweenChangeSlider' => 4000,
@@ -24,7 +24,7 @@
  
   <div id="myslider">
   <?php
-  echo CHtml::image(Yii::app()->request->baseUrl . '/images/cariamanga2.png', 'alt 1');
+  echo CHtml::image(Yii::app()->request->baseUrl . '/images/01.jpg', 'alt 1');
   echo CHtml::image(Yii::app()->request->baseUrl . '/images/02.jpg', 'alt 2');
   echo CHtml::image(Yii::app()->request->baseUrl . '/images/03.jpg', 'alt 3');
 

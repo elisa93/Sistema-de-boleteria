@@ -6,7 +6,7 @@ class AdministradorController extends Controller {
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
      * using two-column layout. See 'protected/views/layouts/column2.php'.
      */
-    public $layout = '//layouts/column2_administrador';
+    public $layout = '//layouts/column1_administrador';
 
     /**
      * @return array action filters

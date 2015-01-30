@@ -5,7 +5,7 @@ class SiteCajeroController extends Controller {
     /**
      * Declares class-based actions.
      */
-    public $layout = '//layouts/column2_cajero';
+    public $layout = '//layouts/column1_cajero';
 
     public function actions() {
         return array(

@@ -5,7 +5,7 @@ class SiteAdministradorController extends Controller {
     /**
      * Declares class-based actions.
      */
-    public $layout = '//layouts/column2_administrador';
+    public $layout = '//layouts/column1_administrador';
 
     public function actions() {
         return array(
