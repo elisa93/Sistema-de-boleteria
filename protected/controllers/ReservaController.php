@@ -143,8 +143,10 @@ public function actionCrear($id) {
         $model->idcliente = Yii::app()->session['id'];
          Yii::app()->user->setFlash('success',"Reserva Exitosa..!! debe hacer efectiva la compra en un plazo maximo de un dia antes del viaje");
 
-        if ($model->save() && $modelboleto->save())
-            $this->actionAdmin();
+        if ($model->save() && $modelboleto->save()){
+                        $this->mailsend(Yii::app()->user->name,Yii::app()->params['adminEmail'],'Compra boleto','La reserva de su boleto se ha realizado correctamente.');
+                        $this->actionAdmin();
+        }
         //   $this->redirect(array('view', 'id' => $model->idcompra));
         // }
     }

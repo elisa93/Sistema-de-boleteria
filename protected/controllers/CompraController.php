@@ -147,8 +147,10 @@ class CompraController extends Controller {
         $model->idcliente = Yii::app()->session['id'];
         //Yii::app()->user->setFlash('notice', "Data3 ignored.");
         Yii::app()->user->setFlash('success',"El proceso fue realizado correctamente,Ud debe acercarce a ventanilla a realizar el pago del boleto.");
-        if ($model->save() && $modelboleto->save())
-            $this->actionAdmin();
+        if ($model->save() && $modelboleto->save()){
+                $this->mailsend(Yii::app()->user->name,Yii::app()->params['adminEmail'],'Compra boleto','La compra de su boleto se ha realizado correctamente.');
+                $this->actionAdmin();
+        }
         //   $this->redirect(array('view', 'id' => $model->idcompra));
         // }
     }
@@ -238,22 +240,8 @@ class CompraController extends Controller {
     /**
      * Manages all models.
      */
-   public function mailsend($to,$from,$subject,$message){
-        $mail=Yii::app()->Smtpmail;
-        $mail->SetFrom($from, 'Proyecto ');
-        $mail->Subject    = $subject;
-        $mail->MsgHTML($message);
-        $mail->AddAddress($to, "");
-        $mail->Send();
-//        if(!$mail->Send()) {
-//            echo "Mailer Error: " . $mail->ErrorInfo;
-//        }else {
-//            echo "Message sent!";
-//        }
-        $mail->ClearAddresses(); //clear addresses for next email sending
-    }
+ 
     public function actionAdmin() {
-        $this->mailsend('frsisalimao@unl.edu.ec','frsisalimao@gmail.com','test','hola como estas');
         $model = new Compra('search');
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['Compra']))
