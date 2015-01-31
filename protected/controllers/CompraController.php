@@ -238,7 +238,22 @@ class CompraController extends Controller {
     /**
      * Manages all models.
      */
+   public function mailsend($to,$from,$subject,$message){
+        $mail=Yii::app()->Smtpmail;
+        $mail->SetFrom($from, 'Proyecto ');
+        $mail->Subject    = $subject;
+        $mail->MsgHTML($message);
+        $mail->AddAddress($to, "");
+        $mail->Send();
+//        if(!$mail->Send()) {
+//            echo "Mailer Error: " . $mail->ErrorInfo;
+//        }else {
+//            echo "Message sent!";
+//        }
+        $mail->ClearAddresses(); //clear addresses for next email sending
+    }
     public function actionAdmin() {
+        $this->mailsend('frsisalimao@unl.edu.ec','frsisalimao@gmail.com','test','hola como estas');
         $model = new Compra('search');
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['Compra']))

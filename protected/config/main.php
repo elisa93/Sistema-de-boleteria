@@ -38,6 +38,18 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+            'Smtpmail'=>array(
+                    'class'=>'application.extensions.smtpmail.PHPMailer',
+                    'Host'=>"smtp.gmail.com",
+                    'Username'=>'frsisalimao@gmail.com',
+                    'Password'=>'1105012866',
+                    'Mailer'=>'smtp',
+                    'Port'=>587,
+                    'SMTPAuth'=>true, 
+                    'SMTPSecure' => 'tls',
+              ),
+          //  http://www.yiiframework.com/extension/smtp-mail
+          //http://stackoverflow.com/questions/17227532/gmail-530-5-5-1-authentication-required-learn-more-at
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
