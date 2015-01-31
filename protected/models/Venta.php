@@ -32,7 +32,7 @@ class Venta extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('fecha, hora,cantidad, total, idcajero', 'required'),
+     //       array('fecha, hora,cantidad, total, idcajero', 'required'),
             array('idcajero', 'numerical', 'integerOnly' => true),
             array('total', 'numerical'),
             array('fecha, hora', 'length', 'max' => 45),

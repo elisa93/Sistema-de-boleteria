@@ -34,7 +34,7 @@ class ReservaOficinaController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete','crear','vender','disponibles'),
+                'actions' => array('admin', 'delete','crear','reservar','disponibles'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -137,7 +137,7 @@ public function actionCrear($id) {
         $modelboleto = Boleto::model()->findByPk($id);
         $modelboleto->estado = 'reservado';
 
-        $model = new Reserva;
+        $model = new ReservaOficina;
         $ruta = CatalogoRuta::model()->find('idcatalogo_ruta=' . Yii::app()->session['idcatalogo_ruta']);
 
         // if (isset($_POST['Compra'])) {
@@ -145,8 +145,8 @@ public function actionCrear($id) {
         $model->total = $ruta->costo;
         $model->fecha = date('Y-m-d');
         $model->hora = date('H:i:s');
-        $model->estado = "reservado";
-        $model->idcliente = Yii::app()->session['id'];
+      //  $model->estado = "reservado";
+        $model->idcajero = Yii::app()->session['id'];
         Yii::app()->user->setFlash('success',"Reserva Exitosa..!! debe hacer efectiva la compra en un plazo maximo de un dia antes del viaje");
 
         if ($model->save() && $modelboleto->save())

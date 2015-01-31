@@ -135,7 +135,7 @@ class VentaController extends Controller {
         $modelboleto = Boleto::model()->findByPk($id);
         $modelboleto->estado = 'ocupado';
 
-        $model = new Compra;
+        $model = new Venta;
         $ruta = CatalogoRuta::model()->find('idcatalogo_ruta=' . Yii::app()->session['idcatalogo_ruta']);
 
         // if (isset($_POST['Compra'])) {
@@ -143,8 +143,8 @@ class VentaController extends Controller {
         $model->total = $ruta->costo;
         $model->fecha = date('Y-m-d');
         $model->hora = date('H:i:s');
-        $model->estado = "pendiente";
-        $model->idcliente = Yii::app()->session['id'];
+        //$model->estado = "pendiente";
+        $model->idcajero = Yii::app()->session['id'];
         Yii::app()->user->setFlash('success',"El proceso fue realizado correctamente.");
 
         if ($model->save() && $modelboleto->save())
