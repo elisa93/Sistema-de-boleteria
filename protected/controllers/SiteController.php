@@ -45,6 +45,9 @@ class SiteController extends Controller {
     /**
      * Displays the contact page
      */
+    public function actionSucursal() {
+                $this->render('sucursal');
+    }
     public function actionContact() {
         $model = new ContactForm;
         if (isset($_POST['ContactForm'])) {
