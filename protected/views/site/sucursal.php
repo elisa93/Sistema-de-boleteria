@@ -29,22 +29,22 @@ $gMap = new EGMap();
  
 $gMap->setWidth(1100);
 // it can also be called $gMap->height = 400;
-$gMap->setHeight(600);
-$gMap->zoom = 8; 
+$gMap->setHeight(500);
+$gMap->zoom = 16; 
  
 // set center to inca
-$gMap->setCenter(39.719588117933185, 2.9087440013885635);
+$gMap->setCenter(-3.996765,  -79.206255);
  
 // my house when i was a kid
-$home = new EGMapCoord(39.720991014764536, 2.911801719665541);
+$home = new EGMapCoord(-3.996765,  -79.206255);
  
 // my ex-school
-$school = new EGMapCoord(39.719456079114956, 2.8979293346405166);
+$school = new EGMapCoord(-3.977618,-79.204887);
  
 // some stops on the way
-$santo_domingo = new EGMapCoord(39.72118906848983, 2.907628202438368);
-$plaza_toros  = new EGMapCoord(39.71945607911511, 2.9049245357513565);
-$paso_del_tren = new EGMapCoord( 39.718762871171776, 2.903637075424208 );
+$santo_domingo = new EGMapCoord(-3.996765,  -79.206255);
+$plaza_toros  = new EGMapCoord(-3.977618,-79.204887);
+$paso_del_tren = new EGMapCoord(-3.977618,-79.204887);
  
 // Waypoint samples
 $waypoints = array(
@@ -70,7 +70,7 @@ $gMap->addDirection($direction);
  
 $gMap->renderMap();
 ?>
-<div id="direction_pane"></div>
+<!--<div id="direction_pane"></div>-->
 </center>
 
 <?php endif; ?>

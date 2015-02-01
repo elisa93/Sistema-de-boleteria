@@ -34,7 +34,7 @@ class CompraController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete', 'crear', 'disponibles', 'comprar'),
+                'actions' => array('admin', 'delete', 'crear', 'disponibles', 'comprar','pdf'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -240,8 +240,15 @@ class CompraController extends Controller {
     /**
      * Manages all models.
      */
+    public function actionPdf($id)
+    {
+        $this->render('pdf',array(
+            'model'=>$this->loadModel($id),
+        ));
+    }
  
     public function actionAdmin() {
+        
         $model = new Compra('search');
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['Compra']))
