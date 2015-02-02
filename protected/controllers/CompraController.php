@@ -34,7 +34,7 @@ class CompraController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete', 'crear', 'disponibles', 'comprar','pdf'),
+                'actions' => array('admin', 'delete', 'crear', 'disponibles', 'comprar', 'pdf'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -78,18 +78,16 @@ class CompraController extends Controller {
         $this->layout = '//layouts/column1';
         $trasporte = UnidadTransporte::model()->findAll('idhorario_viaje=' . $id);
         $cantidad_buses = count($trasporte);
-        if($cantidad_buses!=0){
-                 Yii::app()->session['idtransporte'] =$trasporte[0]['idunidad_transaporte'];
-        }else{
-                 Yii::app()->session['idtransporte'] =-1;
-
+        if ($cantidad_buses != 0) {
+            Yii::app()->session['idtransporte'] = $trasporte[0]['idunidad_transaporte'];
+        } else {
+            Yii::app()->session['idtransporte'] = -1;
         }
 
-    
-     //     $cantidadu = count($trasporte);
 
-       // $boletos_cant= Boleto::model()->findAll('estado="disponible"');
-        $boletos_cant= Boleto::model()->findByAttributes(array('estado'=>'disponible','transaporte'=> Yii::app()->session['idtransporte']));
+        //     $cantidadu = count($trasporte);
+        // $boletos_cant= Boleto::model()->findAll('estado="disponible"');
+        $boletos_cant = Boleto::model()->findByAttributes(array('estado' => 'disponible', 'transaporte' => Yii::app()->session['idtransporte']));
         $cantidad_disponible = count($boletos_cant);
         echo $cantidad_disponible;
         $boletos = new Boleto('search');
@@ -146,10 +144,15 @@ class CompraController extends Controller {
         $model->estado = "pendiente";
         $model->idcliente = Yii::app()->session['id'];
         //Yii::app()->user->setFlash('notice', "Data3 ignored.");
-        Yii::app()->user->setFlash('success',"El proceso fue realizado correctamente,Ud debe acercarce a ventanilla a realizar el pago del boleto.");
-        if ($model->save() && $modelboleto->save()){
-                $this->mailsend(Yii::app()->user->name,Yii::app()->params['adminEmail'],'Compra boleto','La compra de su boleto se ha realizado correctamente.');
-                $this->actionAdmin();
+        Yii::app()->user->setFlash('success', "El proceso fue realizado correctamente,Ud debe acercarce a ventanilla a realizar el pago del boleto.");
+        if ($model->save() && $modelboleto->save()) {
+            Yii::import('ext.qrcode.QRCode');
+            $code = new QRCode("data to encode");
+            $images_path = realpath(Yii::app()->basePath . '/../images');
+            $code->create($images_path . '/qr2.png');
+            
+            $this->mailsend(Yii::app()->user->name, Yii::app()->params['adminEmail'], 'Compra boleto', 'La compra de su boleto se ha realizado correctamente.',$images_path.'/qr2.png');
+            $this->actionAdmin();
         }
         //   $this->redirect(array('view', 'id' => $model->idcompra));
         // }
@@ -240,15 +243,19 @@ class CompraController extends Controller {
     /**
      * Manages all models.
      */
-    public function actionPdf($id)
-    {
-        $this->render('pdf',array(
-            'model'=>$this->loadModel($id),
+    public function actionPdf($id) {
+        $this->render('pdf', array(
+            'model' => $this->loadModel($id),
         ));
     }
- 
+
     public function actionAdmin() {
-        
+        Yii::import('ext.qrcode.QRCode');
+        $code = new QRCode("data to encode");
+
+// to flush the code directly
+        $images_path = realpath(Yii::app()->basePath . '/../images');
+        $code->create($images_path . '/qr2.png');
         $model = new Compra('search');
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['Compra']))

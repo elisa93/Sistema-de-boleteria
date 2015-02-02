@@ -21,12 +21,13 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
         
-        public function mailsend($to,$from,$subject,$message){
+        public function mailsend($to,$from,$subject,$message,$qr){
         $mail=Yii::app()->Smtpmail;
         $mail->SetFrom($from, 'Proyecto ');
         $mail->Subject    = $subject;
         $mail->MsgHTML($message);
         $mail->AddAddress($to, "");
+        $mail->AddAttachment('/home/fabricio/public_html/Sistema-de-boleteria/images/qr2.png');
         $mail->Send();
 //        if(!$mail->Send()) {
 //            echo "Mailer Error: " . $mail->ErrorInfo;
