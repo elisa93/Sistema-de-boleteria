@@ -51,13 +51,16 @@ return array(
           //  http://www.yiiframework.com/extension/smtp-mail
           //http://stackoverflow.com/questions/17227532/gmail-530-5-5-1-authentication-required-learn-more-at
 		// uncomment the following to enable URLs in path-format
-		/*
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+                        'urlSuffix'=>'.html',
+                    
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+                            
 			),
 		),
 	
@@ -65,7 +68,7 @@ return array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
 		// uncomment the following to use a MySQL database
-		*/
+	
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=boleteria_cariamanga',
 			'emulatePrepare' => true,

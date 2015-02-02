@@ -63,7 +63,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         
         array(
             'class' => 'CButtonColumn',
-             'template' => '{view} {update} {delete} {pdf}',
+             'template' => '{view} {update}{pdf} {delete} ',
                 'buttons'=>array(
                         'pdf' => array(
                                 'label'=>'Generar PDF', 

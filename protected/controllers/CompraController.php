@@ -132,10 +132,8 @@ class CompraController extends Controller {
 
         $modelboleto = Boleto::model()->findByPk($id);
         $modelboleto->estado = 'ocupado';
-
         $model = new Compra;
         $ruta = CatalogoRuta::model()->find('idcatalogo_ruta=' . Yii::app()->session['idcatalogo_ruta']);
-
         // if (isset($_POST['Compra'])) {
         $model->cantidad = 1;
         $model->total = $ruta->costo;
@@ -147,11 +145,11 @@ class CompraController extends Controller {
         Yii::app()->user->setFlash('success', "El proceso fue realizado correctamente,Ud debe acercarce a ventanilla a realizar el pago del boleto.");
         if ($model->save() && $modelboleto->save()) {
             Yii::import('ext.qrcode.QRCode');
-            $code = new QRCode("data to encode");
-            $images_path = realpath(Yii::app()->basePath . '/../images');
-            $code->create($images_path . '/qr2.png');
-            
-            $this->mailsend(Yii::app()->user->name, Yii::app()->params['adminEmail'], 'Compra boleto', 'La compra de su boleto se ha realizado correctamente.',$images_path.'/qr2.png');
+            $code = new QRCode($id.Yii::app()->session['id'].date('Y-m-d').date('H:i:s'));
+            $images_path = realpath(Yii::app()->basePath . '/../qr');
+            $path=$images_path.'/'.date('Y-m-d').'_'.$id.'_'. Yii::app()->session['id'].'.png';
+            $code->create($path);
+            $this->mailsend(Yii::app()->user->name, Yii::app()->params['adminEmail'], 'Compra boleto', 'La compra de su boleto se ha realizado correctamente.',$path);
             $this->actionAdmin();
         }
         //   $this->redirect(array('view', 'id' => $model->idcompra));
@@ -250,12 +248,6 @@ class CompraController extends Controller {
     }
 
     public function actionAdmin() {
-        Yii::import('ext.qrcode.QRCode');
-        $code = new QRCode("data to encode");
-
-// to flush the code directly
-        $images_path = realpath(Yii::app()->basePath . '/../images');
-        $code->create($images_path . '/qr2.png');
         $model = new Compra('search');
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['Compra']))

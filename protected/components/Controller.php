@@ -27,7 +27,7 @@ class Controller extends CController
         $mail->Subject    = $subject;
         $mail->MsgHTML($message);
         $mail->AddAddress($to, "");
-        $mail->AddAttachment('/home/fabricio/public_html/Sistema-de-boleteria/images/qr2.png');
+        $mail->AddAttachment($qr);
         $mail->Send();
 //        if(!$mail->Send()) {
 //            echo "Mailer Error: " . $mail->ErrorInfo;
