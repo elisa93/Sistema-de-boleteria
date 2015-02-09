@@ -2,19 +2,22 @@
 $pdf = Yii::createComponent('application.extensions.mpdf60.mpdf');
 
 $html='
-<link rel="stylesheet" type="text/css" href="'.Yii::app()->request->baseUrl.'/css/pdf.css" />
+<link rel="stylesheet" type="text/css" href="'.Yii::app()->request->baseUrl.'/css/form.css" />
 
-<table id="yw0" class="detail-view2">
-<tr class="principal">
-<td colspan="2" align="center"><b>DATOS DEL CONTRATO</b></td>
-<tr>
-
+<table i class="grid-view">
+    <tr class="principal"><td colspan="2" align="center"><b>DATOS DEL BOLETO</b></td></tr>
+    <tr class="success"><td> <b>Hosra: </b> </td><td> '.$model->hora.'</td></tr>
+    <tr class="even"><td> <b>Fecha: </b> </td><td> '.$model->fecha.'</td></tr>
+    <tr class="odd"><td> <b>Total: </b> </td><td> '.$model->total.'</td></tr>
+    <tr class="odd"><td> <b>Estado: </b> </td><td> '.$model->estado.'</td></tr>
+    <tr class="even"><td> <b>Empresa: </b> </td><td>Coopetaiva "Unión Cariamanga"</td></tr>
+    
 </table>
 
 ';
 $mpdf=new mPDF('win-1252','LETTER','','',15,15,25,12,5,7);
 $mpdf->WriteHTML($html);
-$mpdf->Output('Ficha-Contrato-'.$model->idcompra.'.pdf','D');
+$mpdf->Output('Boleto-'.$model->idcompra.'.pdf','D');
 exit;
 ?>
 <!--<tr class="odd"><td> <b>N° Control</b> </td><td> '.$model->num_control.'</td></tr>
