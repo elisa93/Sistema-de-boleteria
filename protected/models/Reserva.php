@@ -37,6 +37,7 @@ class Reserva extends CActiveRecord {
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('idreserva, fecha, hora, total, estado, idcliente', 'safe', 'on' => 'search'),
+            array('idreserva, fecha, hora, total, estado, idcliente', 'safe', 'on' => 'searchAll'),
         );
     }
 
@@ -88,12 +89,17 @@ class Reserva extends CActiveRecord {
         $criteria->compare('hora', $this->hora, true);
         $criteria->compare('total', $this->total, true);
         $criteria->compare('estado', $this->estado, true);
-        $criteria->compare('idcliente', Yii::app()->session['id']);
+        if(Yii::app()->session['cajero']>=0)
+             $criteria->compare('idcliente', Yii::app()->session['cajero']);
+        else 
+             $criteria->compare('idcliente', Yii::app()->session['id']);
 
+ 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
     }
+    
 
     /**
      * Returns the static model of the specified AR class.

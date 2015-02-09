@@ -3,8 +3,8 @@
 /* @var $model Cliente */
 
 $this->breadcrumbs = array(
-    'Clientes' => array('index'),
-    'Manage',
+ //   'Clientes' => array('index'),
+    'Clientes',
 );
 
 $this->menu = array(
@@ -26,14 +26,14 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Clientes</h1>
+<h1>Clientes</h1>
 
-<p>
+<!--<p>
     You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
     or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+</p>-->
 
-<?php echo CHtml::link('Advanced Search', '#', array('class' => 'search-button')); ?>
+<?php echo CHtml::link('Busqueda Avanzada', '#', array('class' => 'search-button')); ?>
 <div class="search-form" style="display:none">
     <?php
     $this->renderPartial('_search', array(
@@ -48,7 +48,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => $model->search(),
     'filter' => $model,
     'columns' => array(
-        'idusuario',
+      //  'idusuario',
         'email',
         'cedula',
         'nombre',
@@ -60,6 +60,28 @@ $this->widget('zii.widgets.grid.CGridView', array(
          */
         array(
             'class' => 'CButtonColumn',
+             'header'=>'Operations',
+            'template'=>'{compras} {reservas}',
+            'buttons'=>array
+            (
+                'compras' => array
+                (
+                    'label'=>'Compras',
+                 // 'url'=>'CController::createUrl(/HorarioViaje/index)'
+                    'url'=>'CController::createUrl("/Compra/adminCajero", array("id"=>$data->idusuario))'
+                    //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+                 //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
+                ),
+                'reservas' => array
+                (
+                    'label'=>'Reservas',
+                 // 'url'=>'CController::createUrl(/HorarioViaje/index)'
+                    'url'=>'CController::createUrl("/Reserva/adminCajero", array("id"=>$data->idusuario))'
+                    //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+                 //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
+                ),
+              
+            ),
         ),
     ),
 ));

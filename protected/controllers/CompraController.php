@@ -34,7 +34,7 @@ class CompraController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete', 'crear', 'disponibles', 'comprar', 'pdf'),
+                'actions' => array('admin','adminCajero', 'delete', 'crear', 'disponibles', 'comprar', 'pdf'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -248,6 +248,8 @@ class CompraController extends Controller {
     }
 
     public function actionAdmin() {
+       Yii::app()->session['cajero']=-1;
+
         $model = new Compra('search');
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['Compra']))
@@ -257,6 +259,20 @@ class CompraController extends Controller {
             'model' => $model,
         ));
     }
+     public function actionAdminCajero($id) {
+                 $this->layout = '//layouts/column1_cajero';
+
+        Yii::app()->session['cajero']=$id;
+        $model = new Compra('search');
+        $model->unsetAttributes();  // clear any default values
+        if (isset($_GET['Compra']))
+            $model->attributes = $_GET['Compra'];
+
+        $this->render('adminAll', array(
+            'model' => $model,
+        ));
+    }
+
 
     /**
      * Returns the data model based on the primary key given in the GET variable.

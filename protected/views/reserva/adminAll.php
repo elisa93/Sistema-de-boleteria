@@ -1,16 +1,15 @@
 <?php
-/* @var $this ReservaOficinaController */
-/* @var $model ReservaOficina */
+/* @var $this ReservaController */
+/* @var $model Reserva */
 
 $this->breadcrumbs = array(
-   // 'Reservas' => array('admin'),
     'Reservas' => array('admin'),
   //  'Manage',
 );
 
 //$this->menu = array(
-//    array('label' => 'List ReservaOficina', 'url' => array('index')),
-//    array('label' => 'Create ReservaOficina', 'url' => array('create')),
+//    array('label' => 'List Reserva', 'url' => array('index')),
+//    array('label' => 'Create Reserva', 'url' => array('create')),
 //);
 
 Yii::app()->clientScript->registerScript('search', "
@@ -19,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#reserva-oficina-grid').yiiGridView('update', {
+	$('#reserva-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -49,28 +48,20 @@ echo CHtml::link('Busqueda Avanzada', '#', array('class' => 'search-button')); ?
 
 <?php
 $this->widget('zii.widgets.grid.CGridView', array(
-    'id' => 'reserva-oficina-grid',
+    'id' => 'reserva-grid',
     'dataProvider' => $model->search(),
     'filter' => $model,
     'columns' => array(
-       // 'idreserva_oficina',
+    //    'idreserva',
         'fecha',
         'hora',
-     //   'cantidad',
+    //    'cantidad',
         'total',
-     
-       // 'idcajero',
+        'estado',
+     //   'idcliente',
         array(
             'class' => 'CButtonColumn',
         ),
     ),
 ));
 ?>
-
-<?php
-    $this->widget('zii.widgets.CMenu', array(
-        'items' => array(
-            array('label' => 'Nueva Reserva','url' => array('/ReservaOficina/create')),
-        ),
-    ));
-    ?>

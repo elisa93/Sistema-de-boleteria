@@ -92,7 +92,10 @@ class Compra extends CActiveRecord {
         $criteria->compare('cantidad', $this->cantidad, true);
         $criteria->compare('total', $this->total, true);
         $criteria->compare('estado', $this->estado, true);
-        $criteria->compare('idcliente', Yii::app()->session['id']);
+        if(Yii::app()->session['cajero']>=0)
+             $criteria->compare('idcliente', Yii::app()->session['cajero']);
+        else
+              $criteria->compare('idcliente', Yii::app()->session['id']);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,

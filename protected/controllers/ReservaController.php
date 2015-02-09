@@ -34,7 +34,7 @@ class ReservaController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete','reservar','disponibles','crear'),
+                'actions' => array('admin','adminCajero', 'delete','reservar','disponibles','crear'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -217,6 +217,7 @@ public function actionCrear($id) {
      * Manages all models.
      */
     public function actionAdmin() {
+        Yii::app()->session['cajero']=-1;
 
         $model = new Reserva('search');
         $model->unsetAttributes();  // clear any default values
@@ -224,6 +225,18 @@ public function actionCrear($id) {
             $model->attributes = $_GET['Reserva'];
 
         $this->render('admin', array(
+            'model' => $model,
+        ));
+    }
+    public function actionAdminCajero($id) {
+        $this->layout = '//layouts/column1_cajero';
+        Yii::app()->session['cajero']=$id;
+        $model = new Reserva('search');
+        $model->unsetAttributes();  // clear any default values
+        if (isset($_GET['Reserva']))
+            $model->attributes = $_GET['Reserva'];
+
+        $this->render('adminAll', array(
             'model' => $model,
         ));
     }

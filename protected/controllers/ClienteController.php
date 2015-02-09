@@ -34,8 +34,12 @@ class ClienteController extends Controller {
                 'users' => array('*'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete'),
+                'actions' => array( 'delete'),
                 'users' => array('admin'),
+            ),
+             array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array('admin'),
+                'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array('update', 'delete'),
@@ -131,6 +135,8 @@ class ClienteController extends Controller {
      * Manages all models.
      */
     public function actionAdmin() {
+                $this->layout = '//layouts/column1_cajero';
+
         $model = new Cliente('search');
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['Cliente']))
