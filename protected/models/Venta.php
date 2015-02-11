@@ -38,7 +38,7 @@ class Venta extends CActiveRecord {
             array('fecha, hora', 'length', 'max' => 45),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('idventa, fecha, hora,cantidad, total, idcajero', 'safe', 'on' => 'search'),
+            array('idventa, nombre,cedula,fecha, hora,cantidad, total,estado, idcajero', 'safe', 'on' => 'search'),
         );
     }
 
@@ -66,7 +66,10 @@ class Venta extends CActiveRecord {
             'hora' => 'Hora',
             'cantidad'=>'Cantidad',
             'total' => 'Total',
+            'estado' => 'Estado',
             'idcajero' => 'Idcajero',
+            'nombre' => 'Nombre',
+            'cedula' => 'Cedula',
         );
     }
 
@@ -92,6 +95,11 @@ class Venta extends CActiveRecord {
         $criteria->compare('hora', $this->hora, true);
         $criteria->compare('cantidad', $this->cantidad, true);
         $criteria->compare('total', $this->total);
+         $criteria->compare('estado','activos');
+                 $criteria->compare('nombre', $this->nombre, true);
+
+                         $criteria->compare('cedula', $this->cedula, true);
+
         $criteria->compare('idcajero', Yii::app()->session['id']);
 
         return new CActiveDataProvider($this, array(

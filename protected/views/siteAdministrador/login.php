@@ -54,10 +54,10 @@ $this->breadcrumbs = array(
 
     <?php $this->endWidget(); ?>
     <?php
-//    $this->widget('zii.widgets.CMenu', array(
-//        'items' => array(
-//            array('label' => Yii::t('traductor', 'Registrarse como admin.'), 'url' => array('/administrador/create')),
-//        ),
-//    ));
+    $this->widget('zii.widgets.CMenu', array(
+        'items' => array(
+            array('label' => Yii::t('traductor', 'Registrarse como admin.'), 'url' => array('/administrador/create')),
+        ),
+    ));
     ?>
 </div>

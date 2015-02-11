@@ -143,6 +143,7 @@ class VentaController extends Controller {
         $model->total = $ruta->costo;
         $model->fecha = date('Y-m-d');
         $model->hora = date('H:i:s');
+        $model->estado='vendido';
         //$model->estado = "pendiente";
         $model->idcajero = Yii::app()->session['id'];
         Yii::app()->user->setFlash('success',"El proceso fue realizado correctamente.");
@@ -211,11 +212,27 @@ class VentaController extends Controller {
      * @param integer $id the ID of the model to be deleted
      */
     public function actionDelete($id) {
-        $this->loadModel($id)->delete();
+          $model = $this->loadModel($id);
 
-        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-        if (!isset($_GET['ajax']))
-            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
+
+       // if (isset($_POST['Venta'])) {
+        //    $model->attributes = $_POST['Venta'];
+            $model->estado='desactivo';
+            $model->save();
+         //   if ($model->save())
+                $this->redirect(array('view', 'id' => $model->idventa));
+       // }
+
+       // $this->render('update', array(
+       //     'model' => $model,
+       // ));
+//        $this->loadModel($id)->delete();
+//
+//        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+//        if (!isset($_GET['ajax']))
+//            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
     }
 
     /**

@@ -54,6 +54,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'filter' => $model,
     'columns' => array(
      //   'idventa',
+        'nombre',
+        'cedula',
         'fecha',
         'hora',
         'cantidad',
@@ -62,6 +64,18 @@ $this->widget('zii.widgets.grid.CGridView', array(
        // 'idcajero',
         array(
             'class' => 'CButtonColumn',
+             'template' => '{view} {update} {pdf} {delete} ',
+                'buttons'=>array(
+                        'delete'=>array(
+                             'url'=>'CController::createUrl("/Venta/delete", array("id"=>$data->idventa))'
+                        ),
+                        'pdf' => array(
+                                'label'=>'Generar PDF', 
+                                'url'=>"CHtml::normalizeUrl(array('pdf', 'id'=>\$data->idventa))",
+                                'imageUrl'=>Yii::app()->request->baseUrl.'/images/pdf_icon.png', 
+                                'options' => array('class'=>'pdf'),
+                        ),
+                ),
         ),
     ),
 ));

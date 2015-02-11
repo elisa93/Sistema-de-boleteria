@@ -37,7 +37,7 @@ class Compra extends CActiveRecord {
             array('fecha, hora,cantidad,total, estado', 'length', 'max' => 45),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('idcompra, fecha, hora, total, estado, idcliente', 'safe', 'on' => 'search'),
+            array('idcompra, estado_pago, fecha, hora, total, estado, idcliente', 'safe', 'on' => 'search'),
         );
     }
 
@@ -65,6 +65,7 @@ class Compra extends CActiveRecord {
             'cantidad'=>'Cantidad',
             'total' => 'Total',
             'estado' => 'Estado',
+            'estado_pago' => 'Estado pago',
             'idcliente' => 'Idcliente',
         );
     }
@@ -91,7 +92,8 @@ class Compra extends CActiveRecord {
         $criteria->compare('hora', $this->hora, true);
         $criteria->compare('cantidad', $this->cantidad, true);
         $criteria->compare('total', $this->total, true);
-        $criteria->compare('estado', $this->estado, true);
+        $criteria->compare('estado','activo');
+        $criteria->compare('estado_pago', $this->estado_pago, true);
         if(Yii::app()->session['cajero']>=0)
              $criteria->compare('idcliente', Yii::app()->session['cajero']);
         else

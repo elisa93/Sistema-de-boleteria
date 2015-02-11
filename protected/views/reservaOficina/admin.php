@@ -54,6 +54,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'filter' => $model,
     'columns' => array(
        // 'idreserva_oficina',
+        'nombre',
+        'cedula',
         'fecha',
         'hora',
      //   'cantidad',

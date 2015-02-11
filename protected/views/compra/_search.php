@@ -38,8 +38,8 @@
     </div>
 
     <div class="row">
-        <?php echo $form->label($model, 'estado'); ?>
-        <?php echo $form->textField($model, 'estado', array('size' => 45, 'maxlength' => 45)); ?>
+        <?php echo $form->label($model, 'estado_pago'); ?>
+        <?php echo $form->textField($model, 'estado_pago', array('size' => 45, 'maxlength' => 45)); ?>
     </div>
 
 <!--    <div class="row">

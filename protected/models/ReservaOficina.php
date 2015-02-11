@@ -30,12 +30,12 @@ class ReservaOficina extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('fecha, hora, total', 'required'),
+            array('fecha,nombre,cedula, hora, total', 'required'),
             array('idcajero', 'numerical', 'integerOnly' => true),
             array('fecha, hora, total', 'length', 'max' => 45),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('idreserva_oficina, fecha, hora, total, idcajero', 'safe', 'on' => 'search'),
+            array('idreserva_oficina,nombre,cedula fecha, hora, total, idcajero', 'safe', 'on' => 'search'),
         );
     }
 
@@ -61,6 +61,8 @@ class ReservaOficina extends CActiveRecord {
             'hora' => 'Hora',
             'total' => 'Total',
             'idcajero' => 'Idcajero',
+            'nombre' => 'Nombre',
+            'cedula' => 'Cedula',
         );
     }
 
@@ -85,6 +87,8 @@ class ReservaOficina extends CActiveRecord {
         $criteria->compare('fecha', $this->fecha, true);
         $criteria->compare('hora', $this->hora, true);
         $criteria->compare('total', $this->total, true);
+        $criteria->compare('nombre', $this->total, true);
+        $criteria->compare('cedula', $this->total, true);
         $criteria->compare('idcajero', Yii::app()->session['id']);
 
         return new CActiveDataProvider($this, array(

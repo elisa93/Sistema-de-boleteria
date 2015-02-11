@@ -59,12 +59,20 @@ $this->widget('zii.widgets.grid.CGridView', array(
         'hora',
        // 'cantidad',
         'total',
-        'estado',
+        'estado_pago',
         
         array(
             'class' => 'CButtonColumn',
              'template' => '{view} {update}{pdf} {delete} ',
                 'buttons'=>array(
+                    'delete' => array
+                (
+                   // 'label'=>'Horario ',
+                 // 'url'=>'CController::createUrl(/HorarioViaje/index)'
+                    'url'=>'CController::createUrl("/Compra/delete", array("id"=>$data->idcompra))'
+                    //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+                 //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
+                ),
                         'pdf' => array(
                                 'label'=>'Generar PDF', 
                                 'url'=>"CHtml::normalizeUrl(array('pdf', 'id'=>\$data->idcompra))",

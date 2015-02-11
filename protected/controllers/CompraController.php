@@ -139,7 +139,8 @@ class CompraController extends Controller {
         $model->total = $ruta->costo;
         $model->fecha = date('Y-m-d');
         $model->hora = date('H:i:s');
-        $model->estado = "pendiente";
+        $model->estado_pago = "pendiente";
+        $model->estado= "activo";
         $model->idcliente = Yii::app()->session['id'];
         //Yii::app()->user->setFlash('notice', "Data3 ignored.");
         Yii::app()->user->setFlash('success', "El proceso fue realizado correctamente,Ud debe acercarce a ventanilla a realizar el pago del boleto.");
@@ -215,17 +216,34 @@ class CompraController extends Controller {
      * @param integer $id the ID of the model to be deleted
      */
     public function actionDelete($id) {
-        $model = Compra::model()->findByPk($id);
-        $boleto = Boleto::model()->find('idcompra=' . $model->idcompra);
-        $cantidad = count($boleto);
-        if ($cantidad != 0) {
-            $boleto->delete();
-        }
-        $this->loadModel($id)->delete();
+        
+        $model = $this->loadModel($id);
 
-        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-        if (!isset($_GET['ajax']))
-            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
+
+        //if (isset($_POST['Compra'])) {
+        //    $model->attributes = $_POST['Compra'];
+        $model->estado='desactivo';
+        $model->save();
+         //  if ($model->save())
+                $this->redirect(array('view', 'id' => $model->idcompra));
+       //}
+
+//        $this->render('update', array(
+//            'model' => $model,
+//        ));
+//        $model = Compra::model()->findByPk($id);
+//        $boleto = Boleto::model()->find('idcompra=' . $model->idcompra);
+//        $cantidad = count($boleto);
+//        if ($cantidad != 0) {
+//            $boleto->delete();
+//        }
+//        $this->loadModel($id)->delete();
+//
+//        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+//        if (!isset($_GET['ajax']))
+//            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
     }
 
     /**

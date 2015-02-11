@@ -9,7 +9,7 @@ $html='
     <tr class="success"><td> <b>Hosra: </b> </td><td> '.$model->hora.'</td></tr>
     <tr class="even"><td> <b>Fecha: </b> </td><td> '.$model->fecha.'</td></tr>
     <tr class="odd"><td> <b>Total: </b> </td><td> '.$model->total.'</td></tr>
-    <tr class="odd"><td> <b>Estado: </b> </td><td> '.$model->estado.'</td></tr>
+    <tr class="odd"><td> <b>Estado: </b> </td><td> '.$model->estado_pago.'</td></tr>
     <tr class="even"><td> <b>Empresa: </b> </td><td>Coopetaiva "Unión Cariamanga"</td></tr>
     
 </table>

@@ -42,7 +42,7 @@
         <div class="container" id="page">
 
             <div id="header">
-                		<div id="logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png"></img><?php //echo CHtml::encode(Yii::app()->name); ?></div>
+                		<div id="logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logotipo.png"></img><?php //echo CHtml::encode(Yii::app()->name); ?></div>
 
             </div><!-- header -->
 
@@ -51,6 +51,7 @@
                 $this->widget('zii.widgets.CMenu', array(
                     'items' => array(
                         array('label' => 'Inicio', 'url' => array('/siteCajero/index')),
+                        array('label' => 'Sucursales', 'url' => array('/siteCajero/sucursal')),
                        // array('label' => 'Contacto', 'url' => array('/siteCajero/contact')),
                         array('label' => 'Login', 'url' => array('/siteCajero/login'), 'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Ventas', 'url' => array('/Venta/admin'), 'visible' => !Yii::app()->user->isGuest),

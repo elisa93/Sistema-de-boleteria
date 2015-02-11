@@ -17,6 +17,14 @@
         <?php// echo $form->label($model, 'idreserva_oficina'); ?>
         <?php// echo $form->textField($model, 'idreserva_oficina'); ?>
     </div>-->
+<div class="row">
+        <?php echo $form->label($model, 'nombre'); ?>
+        <?php echo $form->textField($model, 'nombre', array('size' => 45, 'maxlength' => 45)); ?>
+    </div>
+<div class="row">
+        <?php echo $form->label($model, 'cedula'); ?>
+        <?php echo $form->textField($model, 'cedula', array('size' => 45, 'maxlength' => 45)); ?>
+    </div>
 
     <div class="row">
         <?php echo $form->label($model, 'fecha'); ?>

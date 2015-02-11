@@ -23,8 +23,8 @@
     <?php echo CHtml::encode($data->total); ?>
     <br />
 
-    <b><?php echo CHtml::encode($data->getAttributeLabel('estado')); ?>:</b>
-    <?php echo CHtml::encode($data->estado); ?>
+    <b><?php echo CHtml::encode($data->getAttributeLabel('estado_pago')); ?>:</b>
+    <?php echo CHtml::encode($data->estado_pago); ?>
     <br />
 
     <b><?php echo CHtml::encode($data->getAttributeLabel('idcliente')); ?>:</b>

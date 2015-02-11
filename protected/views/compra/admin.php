@@ -59,11 +59,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
         'hora',
        // 'cantidad',
         'total',
-        'estado',
+        'estado_pago',
         
         array(
             'class' => 'CButtonColumn',
-             'template' => '{view} {update}{pdf} {delete} ',
+             'template' => '{view} {update} {pdf} {delete} ',
                 'buttons'=>array(
                         'pdf' => array(
                                 'label'=>'Generar PDF', 
