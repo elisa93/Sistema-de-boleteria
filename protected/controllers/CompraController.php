@@ -34,7 +34,7 @@ class CompraController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin','adminCajero', 'delete', 'crear', 'disponibles', 'comprar', 'pdf'),
+                'actions' => array('admin','pagar','adminCajero', 'delete', 'crear', 'disponibles', 'comprar', 'pdf'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -209,7 +209,34 @@ class CompraController extends Controller {
             'model' => $model,
         ));
     }
+public function actionPagar($id) {
+        $model = $this->loadModel($id);
+        $model->estado_pago='pagado';
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
 
+//        if (isset($_POST['Compra'])) {
+//            $model->attributes = $_POST['Compra'];
+//            if ($model->save())
+        $model->save();
+         $this->layout = '//layouts/column1_cajero';
+
+      //  Yii::app()->session['cajero']=$id;
+        $model = new Compra('search');
+        $model->unsetAttributes();  // clear any default values
+        if (isset($_GET['Compra']))
+            $model->attributes = $_GET['Compra'];
+
+        $this->render('adminAll', array(
+            'model' => $model,
+        ));
+          //      $this->redirect(array('view', 'id' => $model->idcompra));
+      //  }
+
+//        $this->render('update', array(
+//            'model' => $model,
+//        ));
+    }
     /**
      * Deletes a particular model.
      * If deletion is successful, the browser will be redirected to the 'admin' page.

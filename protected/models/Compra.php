@@ -103,7 +103,49 @@ class Compra extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
+    public function search_pendiente() {
+        // @todo Please modify the following code to remove attributes that should not be searched.
 
+        $criteria = new CDbCriteria;
+
+        $criteria->compare('idcompra', $this->idcompra);
+        $criteria->compare('fecha', $this->fecha, true);
+        $criteria->compare('hora', $this->hora, true);
+        $criteria->compare('cantidad', $this->cantidad, true);
+        $criteria->compare('total', $this->total, true);
+        $criteria->compare('estado','activo');
+        $criteria->compare('estado_pago','pendiente');
+        if(Yii::app()->session['cajero']>=0)
+             $criteria->compare('idcliente', Yii::app()->session['cajero']);
+        else
+              $criteria->compare('idcliente', Yii::app()->session['id']);
+
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+        ));
+    }
+
+    public function search_pagado() {
+        // @todo Please modify the following code to remove attributes that should not be searched.
+
+        $criteria = new CDbCriteria;
+
+        $criteria->compare('idcompra', $this->idcompra);
+        $criteria->compare('fecha', $this->fecha, true);
+        $criteria->compare('hora', $this->hora, true);
+        $criteria->compare('cantidad', $this->cantidad, true);
+        $criteria->compare('total', $this->total, true);
+        $criteria->compare('estado','activo');
+        $criteria->compare('estado_pago','pagado');
+        if(Yii::app()->session['cajero']>=0)
+             $criteria->compare('idcliente', Yii::app()->session['cajero']);
+        else
+              $criteria->compare('idcliente', Yii::app()->session['id']);
+
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+        ));
+    }
     /**
      * Returns the static model of the specified AR class.
      * Please note that you should have this exact method in all your CActiveRecord descendants!
