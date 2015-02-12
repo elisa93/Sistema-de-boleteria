@@ -63,13 +63,15 @@ $this->widget('zii.widgets.grid.CGridView', array(
         
         array(
             'class' => 'CButtonColumn',
-             'template' => '{view} {update} {pdf} {delete} ',
+             'template' => '{view}  {pdf}  ',
                 'buttons'=>array(
                         'pdf' => array(
                                 'label'=>'Generar PDF', 
                                 'url'=>"CHtml::normalizeUrl(array('pdf', 'id'=>\$data->idcompra))",
                                 'imageUrl'=>Yii::app()->request->baseUrl.'/images/pdf_icon.png', 
-                                'options' => array('class'=>'pdf'),
+                                
+                            //'options' => array('class'=>'pdf'),
+                             'options'=>array("target"=>"_blank"),
                         ),
                 ),
         ),

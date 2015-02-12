@@ -34,7 +34,7 @@ class UnidadTransporteController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete'),
+                'actions' => array('admin','generarBoletos', 'delete'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -52,7 +52,26 @@ class UnidadTransporteController extends Controller {
             'model' => $this->loadModel($id),
         ));
     }
+      public function actionGenerarBoletos($id) {
+            $modelu = UnidadTransporte::model()->findByPk($id);
+         $cont=0;
+        $model = new UnidadTransporte('search');
+        for ($i = 0; $i < $modelu->capacidad; $i++) {
+         $modelb = new Boleto;
+         $modelb->numero_boleto=$i+1;
+         $modelb->tipo='normal';
+         $modelb->estado='disponible';
+         $modelb->transaporte=$id;
+        $modelb->save();
+        }
+        $model->unsetAttributes();  // clear any default values
+        if (isset($_GET['UnidadTransporte']))
+            $model->attributes = $_GET['UnidadTransporte'];
 
+        $this->render('admin', array(
+            'model' => $model,
+        ));
+    }
     /**
      * Creates a new model.
      * If creation is successful, the browser will be redirected to the 'view' page.

@@ -63,7 +63,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
         
         array(
             'class' => 'CButtonColumn',
-             'template' => '{view} {update}{pdf} {delete} ',
+            'template' => ($data->estado_pago == "pendiente")?'{borrar}':'{ok}',
+           //  'template' => ($model->estado_pago=='pendiente')?"{view} {update}{pdf} {delete} {pagar} ":"{view} {update} {pdf} {delete} ", 
                 'buttons'=>array(
                     'delete' => array
                 (
@@ -77,6 +78,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
                                 'label'=>'Generar PDF', 
                                 'url'=>"CHtml::normalizeUrl(array('pdf', 'id'=>\$data->idcompra))",
                                 'imageUrl'=>Yii::app()->request->baseUrl.'/images/pdf_icon.png', 
+                                'options' => array('class'=>'pdf'),
+                        ),
+                    'pagar' => array(
+                                'label'=>'pagar', 
+                                'url'=>"CHtml::normalizeUrl(array('pdf', 'id'=>\$data->idcompra))",
                                 'options' => array('class'=>'pdf'),
                         ),
                 ),

@@ -17,15 +17,21 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#compra-grid').yiiGridView('update', {
+	$('#catalogo-ruta-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
 });
 ");
 ?>
-
-
+<?php echo CHtml::link('Busqueda  avanzada', '#', array('class' => 'search-button')); ?>
+<div class="search-form" style="display:none">
+    <?php
+    $this->renderPartial('_searchRuta', array(
+        'model' => $model,
+    ));
+    ?>
+</div><!-- search-form -->
 <?php
 //Yii::app()->user->setFlash('success', "Data1 saved!");
 //Yii::app()->user->setFlash('notice', "Data3 ignored.");

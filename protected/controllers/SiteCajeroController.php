@@ -54,6 +54,7 @@ public function actionSucursal() {
      * Displays the login page
      */
     public function actionLogin() {
+        
         $model = new CajeroLoginForm;
 
         // if it is ajax validation request

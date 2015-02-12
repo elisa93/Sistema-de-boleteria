@@ -55,6 +55,20 @@ $this->widget('zii.widgets.grid.CGridView', array(
          */
         array(
             'class' => 'CButtonColumn',
+             'header'=>'Operationes',
+            'template'=>'{generar} {view} {update} {delete}',
+            'buttons'=>array
+            (
+                'generar' => array
+                (
+                    'label'=>'Generar',
+                 // 'url'=>'CController::createUrl(/HorarioViaje/index)'
+                  'url'=>'CController::createUrl("/UnidadTransporte/generarBoletos", array("id"=>$data->idunidad_transaporte))'
+                    //   'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+                 //   'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
+                ),
+              
+            ),
         ),
     ),
 ));

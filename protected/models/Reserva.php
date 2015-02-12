@@ -36,8 +36,8 @@ class Reserva extends CActiveRecord {
             array('fecha, hora, total, estado', 'length', 'max' => 45),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('idreserva, fecha, hora, total, estado, idcliente', 'safe', 'on' => 'search'),
-            array('idreserva, fecha, hora, total, estado, idcliente', 'safe', 'on' => 'searchAll'),
+            array('idreserva, fecha, hora,cantidad, total, estado, idcliente', 'safe', 'on' => 'search'),
+            array('idreserva, fecha, hora,cantidad, total, estado, idcliente', 'safe', 'on' => 'searchAll'),
         );
     }
 
@@ -61,6 +61,7 @@ class Reserva extends CActiveRecord {
             'idreserva' => 'Idreserva',
             'fecha' => 'Fecha',
             'hora' => 'Hora',
+            'cantidad' => 'Cantidad',
             'total' => 'Total',
             'estado' => 'Estado',
             'idcliente' => 'Idcliente',
@@ -87,6 +88,7 @@ class Reserva extends CActiveRecord {
         $criteria->compare('idreserva', $this->idreserva);
         $criteria->compare('fecha', $this->fecha, true);
         $criteria->compare('hora', $this->hora, true);
+        $criteria->compare('cantidad', $this->cantidad, true);
         $criteria->compare('total', $this->total, true);
         $criteria->compare('estado', $this->estado, true);
         if(Yii::app()->session['cajero']>=0)

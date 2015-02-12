@@ -27,7 +27,7 @@ $this->widget('zii.widgets.CDetailView', array(
         'hora',
         'cantidad',
         'total',
-        'estado',
+        'estado_pago',
         'idcliente',
     ),
 ));

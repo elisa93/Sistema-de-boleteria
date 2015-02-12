@@ -34,7 +34,7 @@ class CatalogoRutaController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete'),
+                'actions' => array('admin','adminCliente', 'delete'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -137,6 +137,19 @@ class CatalogoRutaController extends Controller {
             'model' => $model,
         ));
     }
+    public function actionAdminCliente() {
+                $this->layout = '//layouts/column1';
+
+        $model = new CatalogoRuta('search');
+        $model->unsetAttributes();  // clear any default values
+        if (isset($_GET['CatalogoRuta']))
+            $model->attributes = $_GET['CatalogoRuta'];
+
+        $this->render('adminCliente', array(
+            'model' => $model,
+        ));
+    }
+
 
     /**
      * Returns the data model based on the primary key given in the GET variable.

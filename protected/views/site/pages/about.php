@@ -8,7 +8,7 @@ $this->breadcrumbs = array(
 ?>
 <h1>Acerca de la Cooperativa</h1>
 <center>
-<section>
+<section id="about">
 <p>Cooperativa de Transportes Unión Cariamanga, es una empresa que  lleva 37 años brindando sus  servicios  en la provincia de Loja, Zamora, El Oro y parte norte del Perú.<br> <br>
 Esta cooperativa de transportes se construyó con el esfuerzo y dedicación de personas del cantón Calvas de la provincia de Loja, de ahí  la denominación de “Cooperativa de <br>
 transportes Unión Cariamanga”. Desde que se consolidó como “Cooperativa de Transportes Unión Cariamanga”, su misión ha sido prestar un servicio de transporte eficiente, cómodo<br>

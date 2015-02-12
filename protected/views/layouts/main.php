@@ -70,7 +70,7 @@
                         array('label' => 'Sucursales', 'url' => array('/site/sucursal')),
                         array('label' => 'Sugerencias', 'url' => array('/site/contact'),'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
-                        array('label' => 'Catalogo Rutas', 'url' => array('/CatalogoRutaCliente/admin'), 'visible' => !Yii::app()->user->isGuest),
+                        array('label' => 'Catalogo Rutas', 'url' => array('/CatalogoRuta/adminCliente'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Compras', 'url' => array('/compra/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Reservas', 'url' => array('/Reserva/admin'), 'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Cuenta', 'url' => array('/cliente/view'), 'visible' => !Yii::app()->user->isGuest),

@@ -260,6 +260,7 @@ class CompraController extends Controller {
      * Manages all models.
      */
     public function actionPdf($id) {
+        
         $this->render('pdf', array(
             'model' => $this->loadModel($id),
         ));
