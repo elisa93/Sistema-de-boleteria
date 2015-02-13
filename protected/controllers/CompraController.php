@@ -142,6 +142,7 @@ class CompraController extends Controller {
         $model->estado_pago = "pendiente";
         $model->estado= "activo";
         $model->idcliente = Yii::app()->session['id'];
+        $model->idboleto =$id;
         //Yii::app()->user->setFlash('notice', "Data3 ignored.");
         Yii::app()->user->setFlash('success', "El proceso fue realizado correctamente,Ud debe acercarce a ventanilla a realizar el pago del boleto.");
         if ($model->save() && $modelboleto->save()) {

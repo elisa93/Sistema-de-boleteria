@@ -34,7 +34,7 @@ class VentaController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete','vender','crear','disponibles'),
+                'actions' => array('admin','datos','pdf', 'delete','vender','crear','disponibles'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -53,6 +53,7 @@ class VentaController extends Controller {
         ));
     }
 
+     
     /**
      * Creates a new model.
      * If creation is successful, the browser will be redirected to the 'view' page.
@@ -143,17 +144,39 @@ class VentaController extends Controller {
         $model->total = $ruta->costo;
         $model->fecha = date('Y-m-d');
         $model->hora = date('H:i:s');
-        $model->estado='vendido';
+        $model->estado='activo';
+//        $model->nombre='Fabricio';
+//        $model->cedula='1105012866';
+        $model->idboleto=$id;
         //$model->estado = "pendiente";
         $model->idcajero = Yii::app()->session['id'];
         Yii::app()->user->setFlash('success',"El proceso fue realizado correctamente.");
-
+         $modeldatos= $this->actionDatos();
+         $model->nombre=$modeldatos->nombre;
+         $model->cedula=$modeldatos->cedula;
         if ($model->save() && $modelboleto->save())
             $this->actionAdmin();
         //   $this->redirect(array('view', 'id' => $model->idcompra));
         // }
     }
     
+    public function actionDatos() {
+        $model= new Venta;
+
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
+        if (isset($_POST['Venta'])) {
+            $model->attributes = $_POST['Venta'];
+            return $model;
+
+          //   $model->idcatalogo_ruta=Yii::app()->session['idcatalogo_ruta'];
+//               $this->redirect(array('admin', 'id' => Yii::app()->session['idcatalogo_ruta']));
+        }
+
+        $this->render('create', array(
+            'model' => $model,
+        ));
+    }
     public function actionCreate() {
          $this->layout = '//layouts/column1_cajero';
 
@@ -242,6 +265,12 @@ class VentaController extends Controller {
         $dataProvider = new CActiveDataProvider('Venta');
         $this->render('index', array(
             'dataProvider' => $dataProvider,
+        ));
+    }
+     public function actionPdf($id) {
+        
+        $this->render('pdf', array(
+            'model' => $this->loadModel($id),
         ));
     }
 

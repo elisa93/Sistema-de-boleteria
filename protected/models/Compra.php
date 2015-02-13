@@ -37,7 +37,7 @@ class Compra extends CActiveRecord {
             array('fecha, hora,cantidad,total, estado', 'length', 'max' => 45),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('idcompra, estado_pago, fecha, hora, total, estado, idcliente', 'safe', 'on' => 'search'),
+            array('idcompra,idboleto, estado_pago, fecha, hora, total, estado, idcliente', 'safe', 'on' => 'search'),
         );
     }
 
@@ -67,6 +67,7 @@ class Compra extends CActiveRecord {
             'estado' => 'Estado',
             'estado_pago' => 'Estado pago',
             'idcliente' => 'Idcliente',
+            'idboleto' => 'IdeBoleto',
         );
     }
 
@@ -88,6 +89,7 @@ class Compra extends CActiveRecord {
         $criteria = new CDbCriteria;
 
         $criteria->compare('idcompra', $this->idcompra);
+        $criteria->compare('idboleto', $this->idboleto);
         $criteria->compare('fecha', $this->fecha, true);
         $criteria->compare('hora', $this->hora, true);
         $criteria->compare('cantidad', $this->cantidad, true);
@@ -109,6 +111,8 @@ class Compra extends CActiveRecord {
         $criteria = new CDbCriteria;
 
         $criteria->compare('idcompra', $this->idcompra);
+                $criteria->compare('idboleto', $this->idboleto);
+
         $criteria->compare('fecha', $this->fecha, true);
         $criteria->compare('hora', $this->hora, true);
         $criteria->compare('cantidad', $this->cantidad, true);
@@ -131,6 +135,8 @@ class Compra extends CActiveRecord {
         $criteria = new CDbCriteria;
 
         $criteria->compare('idcompra', $this->idcompra);
+                $criteria->compare('idboleto', $this->idboleto);
+
         $criteria->compare('fecha', $this->fecha, true);
         $criteria->compare('hora', $this->hora, true);
         $criteria->compare('cantidad', $this->cantidad, true);

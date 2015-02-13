@@ -32,13 +32,13 @@ class Venta extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-     //       array('fecha, hora,cantidad, total, idcajero', 'required'),
+           array('fecha, nombre,cedula', 'required'),
             array('idcajero', 'numerical', 'integerOnly' => true),
             array('total', 'numerical'),
             array('fecha, hora', 'length', 'max' => 45),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('idventa, nombre,cedula,fecha, hora,cantidad, total,estado, idcajero', 'safe', 'on' => 'search'),
+            array('idventa,idboleto, nombre,cedula,fecha, hora,cantidad, total,estado, idcajero', 'safe', 'on' => 'search'),
         );
     }
 
@@ -70,6 +70,7 @@ class Venta extends CActiveRecord {
             'idcajero' => 'Idcajero',
             'nombre' => 'Nombre',
             'cedula' => 'Cedula',
+            'idboleto' => 'IdBoleto',
         );
     }
 
@@ -91,11 +92,12 @@ class Venta extends CActiveRecord {
         $criteria = new CDbCriteria;
 
         $criteria->compare('idventa', $this->idventa);
+        $criteria->compare('idboleto', $this->idboleto);
         $criteria->compare('fecha', $this->fecha, true);
         $criteria->compare('hora', $this->hora, true);
         $criteria->compare('cantidad', $this->cantidad, true);
         $criteria->compare('total', $this->total);
-         $criteria->compare('estado','activos');
+         $criteria->compare('estado','activo');
                  $criteria->compare('nombre', $this->nombre, true);
 
                          $criteria->compare('cedula', $this->cedula, true);

@@ -36,8 +36,8 @@ class Reserva extends CActiveRecord {
             array('fecha, hora, total, estado', 'length', 'max' => 45),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('idreserva, fecha, hora,cantidad, total, estado, idcliente', 'safe', 'on' => 'search'),
-            array('idreserva, fecha, hora,cantidad, total, estado, idcliente', 'safe', 'on' => 'searchAll'),
+            array('idreserva,idboleto, fecha, hora,cantidad, total, estado, idcliente', 'safe', 'on' => 'search'),
+            array('idreserva,idboleto, fecha, hora,cantidad, total, estado, idcliente', 'safe', 'on' => 'searchAll'),
         );
     }
 
@@ -65,6 +65,7 @@ class Reserva extends CActiveRecord {
             'total' => 'Total',
             'estado' => 'Estado',
             'idcliente' => 'Idcliente',
+            'idboleto' => 'IdBoleto',
         );
     }
 
@@ -86,11 +87,13 @@ class Reserva extends CActiveRecord {
         $criteria = new CDbCriteria;
 
         $criteria->compare('idreserva', $this->idreserva);
+        $criteria->compare('idboleto', $this->idboleto);
+        $criteria->compare('idreserva', $this->idreserva);
         $criteria->compare('fecha', $this->fecha, true);
         $criteria->compare('hora', $this->hora, true);
         $criteria->compare('cantidad', $this->cantidad, true);
         $criteria->compare('total', $this->total, true);
-        $criteria->compare('estado', $this->estado, true);
+        $criteria->compare('estado','pendiente');
         if(Yii::app()->session['cajero']>=0)
              $criteria->compare('idcliente', Yii::app()->session['cajero']);
         else 

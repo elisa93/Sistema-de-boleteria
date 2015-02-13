@@ -64,7 +64,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         array(
             'class' => 'CButtonColumn',
             //'template' => ($data->estado_pago == "pendiente")?'{borrar}':'{ok}',
-             'template' => ($model->estado_pago=='pendiente')?"{view} {update}{pdf} {delete} {pagar} ":"{view} {update} {pdf} {delete} ", 
+             'template' => ($model->estado_pago=='pendiente')?"{view} {update} {pdf} {delete} {pagar} ":"{view} {update} {pdf} {delete} ", 
                 'buttons'=>array(
                     'delete' => array
                 (

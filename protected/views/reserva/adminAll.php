@@ -61,6 +61,21 @@ $this->widget('zii.widgets.grid.CGridView', array(
      //   'idcliente',
         array(
             'class' => 'CButtonColumn',
+             'template' =>'{view} {update}{delete} {pagar} ', 
+                'buttons'=>array(
+                     'pdf' => array(
+                                'label'=>'Generar PDF', 
+                                'url'=>"CHtml::normalizeUrl(array('pdf', 'id'=>\$data->idreserva))",
+                                'imageUrl'=>Yii::app()->request->baseUrl.'/images/pdf_icon.png', 
+                                'options' => array('class'=>'pdf'),
+                        ),
+                     'pagar' => array(
+                                'label'=>'pagar', 
+                                 'url'=>'CController::createUrl("/Reserva/pagar", array("id"=>$data->idreserva))',
+                                'options' => array('class'=>'pdf'),
+                        ),
+                    
+                ),
         ),
     ),
 ));

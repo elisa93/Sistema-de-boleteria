@@ -34,7 +34,7 @@ class ReservaOficinaController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete','crear','reservar','disponibles'),
+                'actions' => array('admin','datos','pagar', 'delete','crear','reservar','disponibles'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -145,14 +145,37 @@ public function actionCrear($id) {
         $model->total = $ruta->costo;
         $model->fecha = date('Y-m-d');
         $model->hora = date('H:i:s');
-      //  $model->estado = "reservado";
+        $model->estado = 'reservado';
+       // $model->nombre='Fabricio';
+       // $model->cedula='1105012866';
         $model->idcajero = Yii::app()->session['id'];
         Yii::app()->user->setFlash('success',"Reserva Exitosa..!! debe hacer efectiva la compra en un plazo maximo de un dia antes del viaje");
-
+         $modeldatos= $this->actionDatos();
+         $model->nombre=$modeldatos->nombre;
+         $model->cedula=$modeldatos->cedula;
+        
         if ($model->save() && $modelboleto->save())
-            $this->actionAdmin();
+          $this->actionAdmin();
+        
         //   $this->redirect(array('view', 'id' => $model->idcompra));
         // }
+    }
+     public function actionDatos() {
+        $model = new ReservaOficina;
+
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
+
+        if (isset($_POST['ReservaOficina'])) {
+            $model->attributes = $_POST['ReservaOficina'];
+          //   $model->idcatalogo_ruta=Yii::app()->session['idcatalogo_ruta'];
+            return $model;
+//               $this->redirect(array('admin', 'id' => Yii::app()->session['idcatalogo_ruta']));
+        }
+
+        $this->render('create', array(
+            'model' => $model,
+        ));
     }
     /**
      * Creates a new model.
@@ -191,6 +214,41 @@ public function actionCrear($id) {
         $this->render('update', array(
             'model' => $model,
         ));
+    }
+    public function actionPagar($id) {
+        $model = $this->loadModel($id);
+        $model->estado='pagado';
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
+
+//        if (isset($_POST['Compra'])) {
+//            $model->attributes = $_POST['Compra'];
+//            if ($model->save())
+        $model->save();
+         $modelc = new Venta;
+         $modelc->idcajero=$model->idcajero;
+//         $modelc->estado_pago='pagado';
+         $modelc->estado='activo';
+         $modelc->total=$model->total;
+         $modelc->cantidad=$model->cantidad;
+        $modelc->fecha=$model->fecha;
+        $modelc->hora=$model->hora;
+        $modelc->nombre=$model->nombre;
+        $modelc->cedula=$model->cedula;
+        $modelc->save();
+                $this->loadModel($id)->delete();
+
+         $this->layout = '//layouts/column1_cajero';
+
+      //  Yii::app()->session['cajero']=$id;
+                               $this->actionAdmin();
+
+          //      $this->redirect(array('view', 'id' => $model->idcompra));
+      //  }
+
+//        $this->render('update', array(
+//            'model' => $model,
+//        ));
     }
 
     /**

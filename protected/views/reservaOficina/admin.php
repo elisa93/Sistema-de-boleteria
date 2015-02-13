@@ -64,6 +64,16 @@ $this->widget('zii.widgets.grid.CGridView', array(
        // 'idcajero',
         array(
             'class' => 'CButtonColumn',
+                'template' =>'{view} {update}{delete} {pagar} ', 
+            'buttons'=>array(
+                    
+                     'pagar' => array(
+                                'label'=>'pagar', 
+                                 'url'=>'CController::createUrl("/ReservaOficina/pagar", array("id"=>$data->idreserva_oficina))',
+                                'options' => array('class'=>'pdf'),
+                        ),
+                    
+                ),
         ),
     ),
 ));

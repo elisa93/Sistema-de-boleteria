@@ -34,7 +34,7 @@ class ReservaController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin','adminCajero', 'delete','reservar','disponibles','crear'),
+                'actions' => array('admin','pagar','adminCajero', 'delete','reservar','disponibles','crear'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -139,12 +139,13 @@ public function actionCrear($id) {
         $model->total = $ruta->costo;
         $model->fecha = date('Y-m-d');
         $model->hora = date('H:i:s');
-        $model->estado = "reservado";
+        $model->estado = 'pendiente';
         $model->idcliente = Yii::app()->session['id'];
+        $model->idboleto =$id;
          Yii::app()->user->setFlash('success',"Reserva Exitosa..!! debe hacer efectiva la compra en un plazo maximo de un dia antes del viaje");
 
         if ($model->save() && $modelboleto->save()){
-                        $this->mailsend(Yii::app()->user->name,Yii::app()->params['adminEmail'],'Compra boleto','La reserva de su boleto se ha realizado correctamente.');
+                     //   $this->mailsend(Yii::app()->user->name,Yii::app()->params['adminEmail'],'Compra boleto','La reserva de su boleto se ha realizado correctamente.');
                         $this->actionAdmin();
         }
         //   $this->redirect(array('view', 'id' => $model->idcompra));
@@ -167,7 +168,45 @@ public function actionCrear($id) {
             'bandera' => $bandera,
         ));
     }
+public function actionPagar($id) {
+        $model = $this->loadModel($id);
+        $model->estado='pagado';
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
 
+//        if (isset($_POST['Compra'])) {
+//            $model->attributes = $_POST['Compra'];
+//            if ($model->save())
+        $model->save();
+         $modelc = new Compra;
+         $modelc->idcliente=$model->idcliente;
+         $modelc->estado_pago='pagado';
+         $modelc->estado='activo';
+         $modelc->total=$model->total;
+         $modelc->cantidad=$model->cantidad;
+        $modelc->fecha=$model->fecha;
+        $modelc->hora=$model->hora;
+        $modelc->save();
+                $this->loadModel($id)->delete();
+
+         $this->layout = '//layouts/column1_cajero';
+
+      //  Yii::app()->session['cajero']=$id;
+        $model = new Reserva('search');
+        $model->unsetAttributes();  // clear any default values
+        if (isset($_GET['Reserva']))
+            $model->attributes = $_GET['Reserva'];
+
+        $this->render('adminAll', array(
+            'model' => $model,
+        ));
+          //      $this->redirect(array('view', 'id' => $model->idcompra));
+      //  }
+
+//        $this->render('update', array(
+//            'model' => $model,
+//        ));
+    }
     /**
      * Updates a particular model.
      * If update is successful, the browser will be redirected to the 'view' page.

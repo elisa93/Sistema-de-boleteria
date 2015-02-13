@@ -11,8 +11,8 @@ $this->breadcrumbs = array(
 //    array('label' => 'Crear Compra', 'url' => array('create')),
 //);
 
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
+Yii::app()->clientScript->registerScript('searchruta', "
+$('.search-button-ruta').click(function(){
 	$('.search-form').toggle();
 	return false;
 });
@@ -24,7 +24,7 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
-<?php echo CHtml::link('Busqueda  avanzada', '#', array('class' => 'search-button')); ?>
+<?php // echo CHtml::link('Busqueda  avanzada', '#', array('class' => 'search-button-ruta')); ?>
 <div class="search-form" style="display:none">
     <?php
     $this->renderPartial('_searchRuta', array(

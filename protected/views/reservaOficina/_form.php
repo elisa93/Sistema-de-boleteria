@@ -33,27 +33,27 @@
         <?php echo $form->error($model, 'cedula'); ?>
     </div>
     <div class="row">
-        <?php echo $form->labelEx($model, 'fecha'); ?>
+        <?php echo $form->labelEx($model, 'fecha de Vieje *'); ?>
         <?php echo $form->textField($model, 'fecha', array('size' => 45, 'maxlength' => 45)); ?>
         <?php echo $form->error($model, 'fecha'); ?>
     </div>
 
-    <div class="row">
-        <?php echo $form->labelEx($model, 'hora'); ?>
-        <?php echo $form->textField($model, 'hora', array('size' => 45, 'maxlength' => 45)); ?>
-        <?php echo $form->error($model, 'hora'); ?>
+<!--    <div class="row">
+        <?php // echo $form->labelEx($model, 'hora'); ?>
+        <?php // echo $form->textField($model, 'hora', array('size' => 45, 'maxlength' => 45)); ?>
+        <?php // echo $form->error($model, 'hora'); ?>
     </div>
 
       <div class="row">
-        <?php echo $form->labelEx($model, 'cantidad'); ?>
-        <?php echo $form->textField($model, 'cantidad', array('size' => 45, 'maxlength' => 45)); ?>
-        <?php echo $form->error($model, 'cantidad'); ?>
+        <?php // echo $form->labelEx($model, 'cantidad'); ?>
+        <?php // echo $form->textField($model, 'cantidad', array('size' => 45, 'maxlength' => 45)); ?>
+        <?php // echo $form->error($model, 'cantidad'); ?>
     </div>
     <div class="row">
-        <?php echo $form->labelEx($model, 'total'); ?>
-        <?php echo $form->textField($model, 'total', array('size' => 45, 'maxlength' => 45)); ?>
-        <?php echo $form->error($model, 'total'); ?>
-    </div>
+        <?php // echo $form->labelEx($model, 'total'); ?>
+        <?php // echo $form->textField($model, 'total', array('size' => 45, 'maxlength' => 45)); ?>
+        <?php // echo $form->error($model, 'total'); ?>
+    </div>-->
 
 <!--    <div class="row">
         <?php// echo $form->labelEx($model, 'idcajero'); ?>
@@ -68,3 +68,7 @@
     <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+</br>
+</br>
+</br>
+</br>
